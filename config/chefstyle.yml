@@ -1,0 +1,32 @@
+Lint/ConditionPosition:
+  Enabled: true
+Lint/Debugger:
+  Enabled: true
+Lint/EachWithObjectArgument:
+  Enabled: true
+Lint/ElseLayout:
+  Enabled: true
+Lint/EmptyInterpolation:
+  Enabled: true
+Lint/EndInMethod:
+  Enabled: true
+Lint/EnsureReturn:
+  Enabled: true
+Lint/FormatParameterMismatch:
+  Enabled: true
+Lint/InvalidCharacterLiteral:
+  Enabled: true
+Lint/LiteralInInterpolation:
+  Enabled: true
+Lint/Loop:
+  Enabled: true
+Lint/RequireParentheses:
+  Enabled: true
+Lint/UnneededDisable:
+  Enabled: true
+Lint/UselessComparison:
+  Enabled: true
+Lint/UselessElseWithoutRescue:
+  Enabled: true
+Lint/UselessSetterCall:
+  Enabled: true
