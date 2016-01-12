@@ -36,3 +36,10 @@ Lint/UnusedBlockArgument:
   Enabled: false
 Lint/UnusedMethodArgument:
   Enabled: false
+
+# We ignore Exceptions a lot
+Lint/HandleExceptions:
+  Enabled: false
+# We also decorate Exceptions a lot
+Lint/RescueException:
+  Enabled: false
