@@ -30,3 +30,9 @@ Lint/UselessElseWithoutRescue:
   Enabled: true
 Lint/UselessSetterCall:
   Enabled: true
+
+# These are disabled per https://github.com/chef/chef/pull/3038
+Lint/UnusedBlockArgument:
+  Enabled: false
+Lint/UnusedMethodArgument:
+  Enabled: false
