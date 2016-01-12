@@ -84,3 +84,11 @@ Metrics/ParameterLists:
 Metrics/PerceivedComplexity:
   Enabled: false
 
+
+#
+# Style
+#
+
+# we only 'raise' and do not 'fail'
+Style/SignalException:
+  EnforcedStyle: only_raise
