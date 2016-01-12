@@ -3,15 +3,21 @@
 # Lint
 #
 
+Lint/BlockAlignment:
+  Enabled: true
 Lint/ConditionPosition:
   Enabled: true
 Lint/Debugger:
+  Enabled: true
+Lint/DefEndAlignment:
   Enabled: true
 Lint/EachWithObjectArgument:
   Enabled: true
 Lint/ElseLayout:
   Enabled: true
 Lint/EmptyInterpolation:
+  Enabled: true
+Lint/EndAlignment:
   Enabled: true
 Lint/EndInMethod:
   Enabled: true
@@ -26,6 +32,10 @@ Lint/LiteralInInterpolation:
 Lint/Loop:
   Enabled: true
 Lint/RequireParentheses:
+  Enabled: true
+Lint/SpaceBeforeFirstArg:
+  Enabled: true
+Lint/StringConversionInInterpolation:
   Enabled: true
 Lint/UnneededDisable:
   Enabled: true
