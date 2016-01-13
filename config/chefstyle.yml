@@ -92,3 +92,4 @@ Metrics/PerceivedComplexity:
 # we only 'raise' and do not 'fail'
 Style/SignalException:
   EnforcedStyle: only_raise
+  Enabled: true
