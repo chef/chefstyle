@@ -105,7 +105,7 @@ Style/SignalException:
   Enabled: true
 
 # this makes whitespace formatting of DSL code impossible
-Style/SingleSpaceBeforeFirstArg
+Style/SingleSpaceBeforeFirstArg:
   Enabled: false
 
 # whitespace in expressions is useful to enhance readability
