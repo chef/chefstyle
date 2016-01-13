@@ -103,6 +103,9 @@ Metrics/PerceivedComplexity:
 Style/SignalException:
   EnforcedStyle: only_raise
   Enabled: true
+# rubocop's default gets this completely backwards
+Style/TrailingComma:
+  EnforcedStyleForMultiline: comma
 
 # this makes whitespace formatting of DSL code impossible
 Style/SingleSpaceBeforeFirstArg:
