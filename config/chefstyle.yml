@@ -5,6 +5,8 @@
 
 Lint/BlockAlignment:
   Enabled: true
+Lint/CircularArgumentReference
+  Enabled: true
 Lint/ConditionPosition:
   Enabled: true
 Lint/Debugger:
@@ -21,15 +23,21 @@ Lint/EndAlignment:
   Enabled: true
 Lint/EndInMethod:
   Enabled: true
+Lint/EmptyEnsure:
+  Enabled: true
 Lint/EnsureReturn:
   Enabled: true
 Lint/FormatParameterMismatch:
   Enabled: true
 Lint/InvalidCharacterLiteral:
   Enabled: true
+Lint/LiteralInCondition:
+  Enabled: true
 Lint/LiteralInInterpolation:
   Enabled: true
 Lint/Loop:
+  Enabled: true
+Lint/NonLocalExitFromIterator:
   Enabled: true
 Lint/RequireParentheses:
   Enabled: true
@@ -38,6 +46,8 @@ Lint/SpaceBeforeFirstArg:
 Lint/StringConversionInInterpolation:
   Enabled: true
 Lint/UnneededDisable:
+  Enabled: true
+Lint/UnreachableCode:
   Enabled: true
 Lint/UselessComparison:
   Enabled: true
