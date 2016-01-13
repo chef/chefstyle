@@ -5,7 +5,7 @@
 
 Lint/BlockAlignment:
   Enabled: true
-Lint/CircularArgumentReference
+Lint/CircularArgumentReference:
   Enabled: true
 Lint/ConditionPosition:
   Enabled: true
@@ -103,3 +103,14 @@ Metrics/PerceivedComplexity:
 Style/SignalException:
   EnforcedStyle: only_raise
   Enabled: true
+
+# this makes whitespace formatting of DSL code impossible
+Style/SingleSpaceBeforeFirstArg:
+  Enabled: false
+
+# whitespace in expressions is useful to enhance readability
+Style/SpaceInsideBrackets:
+  Enabled: false
+Style/SpaceInsideParens:
+  Enabled: false
+
