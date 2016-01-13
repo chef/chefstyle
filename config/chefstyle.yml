@@ -111,6 +111,7 @@ Style/SignalException:
   Enabled: true
 # rubocop's default gets this completely backwards
 Style/TrailingComma:
+  Enabled: true
   EnforcedStyleForMultiline: comma
 
 # this makes whitespace formatting of DSL code impossible
