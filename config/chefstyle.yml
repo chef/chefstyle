@@ -110,6 +110,9 @@ Style/SignalException:
   EnforcedStyle: only_raise
   Enabled: true
 # rubocop's default gets this completely backwards
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+  Enabled: true
 Style/TrailingComma:
   Enabled: true
   EnforcedStyleForMultiline: comma
@@ -124,6 +127,16 @@ Style/SpaceInsideBrackets:
 Style/SpaceInsideParens:
   Enabled: false
 
-Style/StringLiterals:
-  EnforcedStyle: double_quotes
+# double negation is perfectly idiomatic ruby
+Style/DoubleNegation:
+  Enabled: false
+# format strings are also perfectly idiomatic ruby
+Style/FormatString:
+  Enabled: false
+# single line if/unless blocks may read more naturally than modifiers
+Style/IfUnlessModifier:
+  Enabled: false
+
+# we are ruby > 2.0 only so can disable the Encoding cop
+Style/Encoding:
   Enabled: true
