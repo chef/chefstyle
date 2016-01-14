@@ -139,4 +139,4 @@ Style/IfUnlessModifier:
 
 # we are ruby > 2.0 only so can disable the Encoding cop
 Style/Encoding:
-  Enabled: true
+  Enabled: false
