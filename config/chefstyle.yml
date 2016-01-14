@@ -109,10 +109,19 @@ Metrics/PerceivedComplexity:
 Style/SignalException:
   EnforcedStyle: only_raise
   Enabled: true
+# core chef community prefers double quotes over single quotes
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+  Enabled: true
 # rubocop's default gets this completely backwards
 Style/TrailingComma:
   Enabled: true
   EnforcedStyleForMultiline: comma
+
+# As of this commit we have 686 modules and classes without docs.
+# This is a cop that we /should/ have enabled, but tactically we can't really enable.
+Style/Documentation:
+  Enabled: false
 
 # this makes whitespace formatting of DSL code impossible
 Style/SingleSpaceBeforeFirstArg:
@@ -124,6 +133,16 @@ Style/SpaceInsideBrackets:
 Style/SpaceInsideParens:
   Enabled: false
 
-Style/StringLiterals:
-  EnforcedStyle: double_quotes
-  Enabled: true
+# double negation is perfectly idiomatic ruby
+Style/DoubleNegation:
+  Enabled: false
+# format strings are also perfectly idiomatic ruby
+Style/FormatString:
+  Enabled: false
+# single line if/unless blocks may read more naturally than modifiers
+Style/IfUnlessModifier:
+  Enabled: false
+
+# we are ruby > 2.0 only so can disable the Encoding cop
+Style/Encoding:
+  Enabled: false
