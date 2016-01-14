@@ -109,10 +109,11 @@ Metrics/PerceivedComplexity:
 Style/SignalException:
   EnforcedStyle: only_raise
   Enabled: true
-# rubocop's default gets this completely backwards
+# core chef community prefers double quotes over single quotes
 Style/StringLiterals:
   EnforcedStyle: double_quotes
   Enabled: true
+# rubocop's default gets this completely backwards
 Style/TrailingComma:
   Enabled: true
   EnforcedStyleForMultiline: comma
