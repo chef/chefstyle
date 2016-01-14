@@ -105,6 +105,7 @@ Metrics/PerceivedComplexity:
 # - The old 1.9 pickaxe book does not use %i
 # - %s is not used in chef code or the pickaxe book, and is %s{} for consistency
 Style/PercentLiteralDelimiters:
+  Enabled: true
   PreferredDelimiters:
     '%':  '{}'
     '%i': '{}'
