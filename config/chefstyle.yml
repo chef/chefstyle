@@ -117,6 +117,11 @@ Style/TrailingComma:
   Enabled: true
   EnforcedStyleForMultiline: comma
 
+# As of this commit we have 686 modules and classes without docs.
+# This is a cop that we /should/ have enabled, but tactically we can't really enable.
+Style/Documentation:
+  Enabled: false
+
 # this makes whitespace formatting of DSL code impossible
 Style/SingleSpaceBeforeFirstArg:
   Enabled: false
