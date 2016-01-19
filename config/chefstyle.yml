@@ -105,6 +105,23 @@ Metrics/PerceivedComplexity:
 # Style
 #
 
+# - The chef source code predominantly uses {} for %,%i,%q,%Q,%r,%w,%W
+# - The old 1.9 pickaxe book predominantly uses {} for %,%q,%Q,%r,%w,%W,%x
+# - The chef source code does not use %x enough to determine a preference
+# - The old 1.9 pickaxe book does not use %i
+# - %s is not used in chef code or the pickaxe book, and is %s{} for consistency
+Style/PercentLiteralDelimiters:
+  Enabled: true
+  PreferredDelimiters:
+    '%':  '{}'
+    '%i': '{}'
+    '%q': '{}'
+    '%Q': '{}'
+    '%r': '{}'
+    '%s': '{}'
+    '%w': '{}'
+    '%W': '{}'
+    '%x': '{}'
 # we only 'raise' and do not 'fail'
 Style/SignalException:
   EnforcedStyle: only_raise
