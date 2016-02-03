@@ -15,21 +15,21 @@ Lint/Debugger:
   Enabled: true
 Lint/DefEndAlignment:
   Enabled: true
-Lint/DuplicatedKey:
-  Enabled: true
 Lint/DuplicateMethods:
+  Enabled: true
+Lint/DuplicatedKey:
   Enabled: true
 Lint/EachWithObjectArgument:
   Enabled: true
 Lint/ElseLayout:
+  Enabled: true
+Lint/EmptyEnsure:
   Enabled: true
 Lint/EmptyInterpolation:
   Enabled: true
 Lint/EndAlignment:
   Enabled: true
 Lint/EndInMethod:
-  Enabled: true
-Lint/EmptyEnsure:
   Enabled: true
 Lint/EnsureReturn:
   Enabled: true
@@ -76,6 +76,50 @@ Lint/RescueException:
   Enabled: false
 
 #
+# Performance
+#
+
+Performance/FixedSize:
+  Enabled: true
+Performance/FlatMap:
+  Enabled: true
+Performance/Sample:
+  Enabled: true
+Performance/Size:
+  Enabled: true
+
+#
+# Rails
+#
+
+Rails/ActionFilter:
+  Enabled: true
+Rails/Date:
+  Enabled: true
+Rails/DefaultScope:
+  Enabled: true
+Rails/Delegate:
+  Enabled: true
+Rails/FindBy:
+  Enabled: true
+Rails/FindEach:
+  Enabled: true
+Rails/HasAndBelongsToMany:
+  Enabled: true
+Rails/Output:
+  Enabled: true
+Rails/PluralizationGrammar:
+  Enabled: true
+Rails/ReadWriteAttribute:
+  Enabled: true
+Rails/ScopeArgs:
+  Enabled: true
+Rails/TimeZone:
+  Enabled: true
+Rails/Validation:
+  Enabled: true
+
+#
 # Metrics
 #
 
@@ -105,6 +149,42 @@ Metrics/PerceivedComplexity:
 # Style
 #
 
+Style/ArrayJoin:
+  Enabled: true
+Style/AsciiIdentifiers:
+  Enabled: true
+Style/Attr:
+  Enabled: true
+Style/BeginBlock:
+  Enabled: true
+Style/CharacterLiteral:
+  Enabled: true
+Style/ClassMethods:
+  Enabled: true
+Style/CommandLiteral:
+  Enabled: true
+Style/EndBlock:
+  Enabled: true
+Style/EndOfLine:
+  Enabled: true
+Style/FlipFlop:
+  Enabled: true
+Style/For:
+  Enabled: true
+Style/IfWithSemicolon:
+  Enabled: true
+Style/InfiniteLoop:
+  Enabled: true
+Style/InitialIndentation:
+  Enabled: true
+Style/LambdaCall:
+  Enabled: true
+Style/NestedModifier:
+  Enabled: true
+Style/NestedTernaryOperator:
+  Enabled: true
+Style/OneLineConditional:
+  Enabled: true
 # - The chef source code predominantly uses {} for %,%i,%q,%Q,%r,%w,%W
 # - The old 1.9 pickaxe book predominantly uses {} for %,%q,%Q,%r,%w,%W,%x
 # - The chef source code does not use %x enough to determine a preference
@@ -122,18 +202,32 @@ Style/PercentLiteralDelimiters:
     '%w': '{}'
     '%W': '{}'
     '%x': '{}'
+Style/RedundantFreeze:
+  Enabled: true
+Style/RescueEnsureAlignment:
+  Enabled: true
 # we only 'raise' and do not 'fail'
 Style/SignalException:
   EnforcedStyle: only_raise
+  Enabled: true
+Style/SpaceBeforeModifierKeyword:
+  Enabled: true
+Style/SpaceInsideRangeLiteral:
+  Enabled: true
+Style/StabbyLambdaParentheses:
   Enabled: true
 # core chef community prefers double quotes over single quotes
 Style/StringLiterals:
   EnforcedStyle: double_quotes
   Enabled: true
+Style/SymbolLiteral:
+  Enabled: true
 # rubocop's default gets this completely backwards
 Style/TrailingComma:
   Enabled: true
   EnforcedStyleForMultiline: comma
+Style/WhenThen:
+  Enabled: true
 
 # As of this commit we have 686 modules and classes without docs.
 # This is a cop that we /should/ have enabled, but tactically we can't really enable.
