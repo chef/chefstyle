@@ -237,7 +237,7 @@ Style/StringLiterals:
 Style/SymbolLiteral:
   Enabled: true
 Style/Tab:
-  enabled: true
+  Enabled: true
 # rubocop's default gets this completely backwards
 Style/TrailingComma:
   Enabled: true
