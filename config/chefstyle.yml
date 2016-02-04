@@ -79,6 +79,8 @@ Lint/RescueException:
 # Performance
 #
 
+Performance/CaseWhenSplat:
+  Enabled: true
 Performance/FixedSize:
   Enabled: true
 Performance/FlatMap:
@@ -163,9 +165,13 @@ Style/ClassMethods:
   Enabled: true
 Style/CommandLiteral:
   Enabled: true
+Style/ElseAlignment:
+  Enabled: true
 Style/EndBlock:
   Enabled: true
 Style/EndOfLine:
+  Enabled: true
+Style/EvenOdd:
   Enabled: true
 Style/FlipFlop:
   Enabled: true
@@ -178,6 +184,8 @@ Style/InfiniteLoop:
 Style/InitialIndentation:
   Enabled: true
 Style/LambdaCall:
+  Enabled: true
+Style/MethodDefParentheses:
   Enabled: true
 Style/NestedModifier:
   Enabled: true
@@ -202,6 +210,8 @@ Style/PercentLiteralDelimiters:
     '%w': '{}'
     '%W': '{}'
     '%x': '{}'
+Style/PercentQLiterals:
+  Enabled: true
 Style/RedundantFreeze:
   Enabled: true
 Style/RescueEnsureAlignment:
@@ -209,6 +219,10 @@ Style/RescueEnsureAlignment:
 # we only 'raise' and do not 'fail'
 Style/SignalException:
   EnforcedStyle: only_raise
+  Enabled: true
+Style/SpaceAfterColon:
+  Enabled: true
+Style/SpaceAfterMethodName:
   Enabled: true
 Style/SpaceBeforeModifierKeyword:
   Enabled: true
@@ -222,10 +236,16 @@ Style/StringLiterals:
   Enabled: true
 Style/SymbolLiteral:
   Enabled: true
+Style/Tab:
+  enabled: true
 # rubocop's default gets this completely backwards
 Style/TrailingComma:
   Enabled: true
   EnforcedStyleForMultiline: comma
+Style/TrailingUnderscoreVariable:
+  Enabled: true
+Style/UnneededCapitalW:
+  Enabled: true
 Style/WhenThen:
   Enabled: true
 
