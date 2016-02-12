@@ -27,9 +27,8 @@ AllCops:
     - '**/Vagabondfile'
   Exclude:
     - 'vendor/**/*'
-  # By default, the rails cops are not run. Override in project or home
-  # directory .rubocop.yml files, or by giving the -R/--rails option.
-  RunRailsCops: false
+  # Default formatter will be used if no -f/--format option is given.
+  DefaultFormatter: progress
   # Cop names are not displayed in offense messages by default. Change behavior
   # by overriding DisplayCopNames, or by giving the -D/--display-cop-names
   # option.
@@ -39,7 +38,7 @@ AllCops:
   # -S/--display-style-guide option.
   DisplayStyleGuide: false
   # Extra details are not displayed in offense messages by default. Change
-  # behaviour by overriding ExtraDetails, or by giving the
+  # behavior by overriding ExtraDetails, or by giving the
   # -E/--extra-details option.
   ExtraDetails: false
   # Additional cops that do not reference a style guide rule may be enabled by
@@ -64,6 +63,9 @@ AllCops:
   # which is "/tmp" on Unix-like systems, but could be something else on other
   # systems.
   CacheRootDirectory: /tmp
+  # What version of the Ruby interpreter is the inspected code intended to
+  # run on? (If there is more than one, set this to the lowest version.)
+  TargetRubyVersion: 2.0
 
 # Indent private/protected/public as deep as method definitions
 Style/AccessModifierIndentation:
@@ -71,6 +73,15 @@ Style/AccessModifierIndentation:
   SupportedStyles:
     - outdent
     - indent
+  # By default, the indentation width from Style/IndentationWidth is used
+  # But it can be overridden by setting this parameter
+  IndentationWidth: ~
+
+Style/Alias:
+  EnforcedStyle: prefer_alias
+  SupportedStyles:
+    - prefer_alias
+    - prefer_alias_method
 
 # Align the elements of a hash literal if they span more than one line.
 Style/AlignHash:
@@ -263,6 +274,10 @@ Style/CaseIndentation:
     - case
     - end
   IndentOneStep: false
+  # By default, the indentation width from Style/IndentationWidth is used
+  # But it can be overridden by setting this parameter
+  # This only matters if IndentOneStep is true
+  IndentationWidth: ~
 
 Style/ClassAndModuleChildren:
   # Checks the style of children definitions at classes and modules.
@@ -408,11 +423,27 @@ Style/ExtraSpacing:
   # things with the previous or next line, not counting empty lines or comment
   # lines.
   AllowForAlignment: true
+  # When true, forces the alignment of = in assignments on consecutive lines.
+  ForceEqualSignAlignment: false
 
 Style/FileName:
   # File names listed in AllCops:Include are excluded by default. Add extra
   # excludes here.
   Exclude: []
+  # When true, requires that each source file should define a class or module
+  # with a name which matches the file name (converted to ... case).
+  # It further expects it to be nested inside modules which match the names
+  # of subdirectories in its path.
+  ExpectMatchingDefinition: false
+  # If non-nil, expect all source file names to match the following regex.
+  # Only the file name itself is matched, not the entire file path.
+  # Use anchors as necessary if you want to match the entire name rather than
+  # just a part of it.
+  Regex: ~
+  # With `IgnoreExecutableScripts` set to `true`, this cop does not
+  # report offending filenames for executable scripts (i.e. source
+  # files with a shebang in the first line).
+  IgnoreExecutableScripts: true
 
 Style/FirstParameterIndentation:
   EnforcedStyle: special_for_inner_method_call_in_parentheses
@@ -428,6 +459,9 @@ Style/FirstParameterIndentation:
     # Same as special_for_inner_method_call except that the special rule only
     # applies if the outer method call encloses its arguments in parentheses.
     - special_for_inner_method_call_in_parentheses
+  # By default, the indentation width from Style/IndentationWidth is used
+  # But it can be overridden by setting this parameter
+  IndentationWidth: ~
 
 # Checks use of for or each in multiline loops.
 Style/For:
@@ -443,6 +477,18 @@ Style/FormatString:
     - format
     - sprintf
     - percent
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: when_needed
+  SupportedStyles:
+    # `when_needed` will add the frozen string literal comment to files
+    # only when the `TargetRubyVersion` is set to 2.3+.
+    - when_needed
+    # `always` will always add the frozen string literal comment to a file
+    # regardless of the Ruby version or if `freeze` or `<<` are called on a
+    # string literal. If you run code against multiple versions of Ruby, it is
+    # possible that this will create errors in Ruby 2.3.0+.
+    - always
 
 # Built-in global variables are allowed by default.
 Style/GlobalVars:
@@ -481,20 +527,55 @@ Style/IndentationWidth:
   # Number of spaces for each indentation level.
   Width: 2
 
+# Checks the indentation of the first element in an array literal.
+Style/IndentArray:
+  # The value `special_inside_parentheses` means that array literals with
+  # brackets that have their opening bracket on the same line as a surrounding
+  # opening round parenthesis, shall have their first element indented relative
+  # to the first position inside the parenthesis.
+  #
+  # The value `consistent` means that the indentation of the first element shall
+  # always be relative to the first position of the line where the opening
+  # bracket is.
+  #
+  # The value `align_brackets` means that the indentation of the first element
+  # shall always be relative to the position of the opening bracket.
+  EnforcedStyle: special_inside_parentheses
+  SupportedStyles:
+    - special_inside_parentheses
+    - consistent
+    - align_brackets
+  # By default, the indentation width from Style/IndentationWidth is used
+  # But it can be overridden by setting this parameter
+  IndentationWidth: ~
+
+# Checks the indentation of assignment RHS, when on a different line from LHS
+Style/IndentAssignment:
+  # By default, the indentation width from Style/IndentationWidth is used
+  # But it can be overridden by setting this parameter
+  IndentationWidth: ~
+
 # Checks the indentation of the first key in a hash literal.
 Style/IndentHash:
   # The value `special_inside_parentheses` means that hash literals with braces
   # that have their opening brace on the same line as a surrounding opening
   # round parenthesis, shall have their first key indented relative to the
   # first position inside the parenthesis.
+  #
   # The value `consistent` means that the indentation of the first key shall
   # always be relative to the first position of the line where the opening
   # brace is.
+  #
+  # The value `align_braces` means that the indentation of the first key shall
+  # always be relative to the position of the opening brace.
   EnforcedStyle: special_inside_parentheses
   SupportedStyles:
     - special_inside_parentheses
     - consistent
     - align_braces
+  # By default, the indentation width from Style/IndentationWidth is used
+  # But it can be overridden by setting this parameter
+  IndentationWidth: ~
 
 Style/LambdaCall:
   EnforcedStyle: call
@@ -536,11 +617,41 @@ Style/MethodName:
     - snake_case
     - camelCase
 
+Style/MultilineAssignmentLayout:
+  # The types of assignments which are subject to this rule.
+  SupportedTypes:
+    - block
+    - case
+    - class
+    - if
+    - kwbegin
+    - module
+  EnforcedStyle: new_line
+  SupportedStyles:
+    # Ensures that the assignment operator and the rhs are on the same line for
+    # the set of supported types.
+    - same_line
+    # Ensures that the assignment operator and the rhs are on separate lines
+    # for the set of supported types.
+    - new_line
+
+Style/MultilineMethodCallIndentation:
+  EnforcedStyle: aligned
+  SupportedStyles:
+    - aligned
+    - indented
+  # By default, the indentation width from Style/IndentationWidth is used
+  # But it can be overridden by setting this parameter
+  IndentationWidth: ~
+
 Style/MultilineOperationIndentation:
   EnforcedStyle: aligned
   SupportedStyles:
     - aligned
     - indented
+  # By default, the indentation width from Style/IndentationWidth is used
+  # But it can be overridden by setting this parameter
+  IndentationWidth: ~
 
 Style/NumericLiterals:
   MinDigits: 5
@@ -621,7 +732,7 @@ Style/Semicolon:
   AllowAsExpressionSeparator: false
 
 Style/SignalException:
-  EnforcedStyle: semantic
+  EnforcedStyle: only_raise
   SupportedStyles:
     - only_raise
     - only_fail
@@ -639,6 +750,18 @@ Style/SingleLineBlockParams:
 Style/SingleLineMethods:
   AllowIfMethodIsEmpty: true
 
+Style/SpaceBeforeFirstArg:
+  # When true, allows most uses of extra spacing if the intent is to align
+  # things with the previous or next line, not counting empty lines or comment
+  # lines.
+  AllowForAlignment: true
+
+Style/SpecialGlobalVars:
+  EnforcedStyle: use_english_names
+  SupportedStyles:
+    - use_perl_names
+    - use_english_names
+
 Style/StabbyLambdaParentheses:
   EnforcedStyle: require_parentheses
   SupportedStyles:
@@ -650,6 +773,9 @@ Style/StringLiterals:
   SupportedStyles:
     - single_quotes
     - double_quotes
+  # If true, strings which span multiple lines using \ for continuation must
+  # use the same type of quotes on each line.
+  ConsistentQuotesInMultiline: false
 
 Style/StringLiteralsInInterpolation:
   EnforcedStyle: single_quotes
@@ -680,9 +806,10 @@ Style/SpaceAroundEqualsInParameterDefault:
     - no_space
 
 Style/SpaceAroundOperators:
-  MultiSpaceAllowedForOperators:
-    - '='
-    - '=>'
+  # When true, allows most uses of extra spacing if the intent is to align
+  # with an operator on the previous or next line, not counting empty lines
+  # or comment lines.
+  AllowForAlignment: true
 
 Style/SpaceBeforeBlockBraces:
   EnforcedStyle: space
@@ -713,6 +840,12 @@ Style/SpaceInsideStringInterpolation:
     - space
     - no_space
 
+Style/SymbolArray:
+  EnforcedStyle: percent
+  SupportedStyles:
+    - percent
+    - brackets
+
 Style/SymbolProc:
   # A list of method names to be ignored by the check.
   # The names should be fairly unique, otherwise you'll end up ignoring lots of code.
@@ -725,11 +858,22 @@ Style/TrailingBlankLines:
     - final_newline
     - final_blank_line
 
-Style/TrailingComma:
-  # If EnforcedStyleForMultiline is comma, the cop requires a comma after the
-  # last item of a list, but only for lists where each item is on its own line.
-  # If EnforcedStyleForMultiline is consistent_comma, the cop requires a comma
-  # after the last item of a list, for all lists.
+Style/TrailingCommaInArguments:
+  # If `comma`, the cop requires a comma after the last argument, but only for
+  # parenthesized method calls where each argument is on its own line.
+  # If `consistent_comma`, the cop requires a comma after the last argument,
+  # for all parenthesized method calls with arguments.
+  EnforcedStyleForMultiline: no_comma
+  SupportedStyles:
+    - comma
+    - consistent_comma
+    - no_comma
+
+Style/TrailingCommaInLiteral:
+  # If `comma`, the cop requires a comma after the last item in an array or
+  # hash, but only when each item is on its own line.
+  # If `consistent_comma`, the cop requires a comma after the last item of all
+  # non-empty array and hash literals.
   EnforcedStyleForMultiline: no_comma
   SupportedStyles:
     - comma
@@ -788,9 +932,13 @@ Style/WhileUntilModifier:
   MaxLineLength: 80
 
 Style/WordArray:
+  EnforcedStyle: percent
+  SupportedStyles:
+    - percent
+    - brackets
   MinSize: 0
   # The regular expression WordRegex decides what is considered a word.
-  WordRegex: !ruby/regexp '/\A[\p{Word}]+\z/'
+  WordRegex: !ruby/regexp '/\A[\p{Word}\n\t]+\z/'
 
 ##################### Metrics ##################################
 
@@ -817,7 +965,8 @@ Metrics/CyclomaticComplexity:
 Metrics/LineLength:
   Max: 80
   # To make it possible to copy or click on URIs in the code, we allow lines
-  # contaning a URI to be longer than Max.
+  # containing a URI to be longer than Max.
+  AllowHeredoc: true
   AllowURI: true
   URISchemes:
     - http
@@ -847,10 +996,13 @@ Lint/EndAlignment:
   # The value `variable` means that in assignments, `end` should be aligned
   # with the start of the variable on the left hand side of `=`. In all other
   # situations, `end` should still be aligned with the keyword.
+  # The value `start_of_line` means that `end` should be aligned with the start
+  # of the line which the matching keyword appears on.
   AlignWith: keyword
   SupportedStyles:
     - keyword
     - variable
+    - start_of_line
   AutoCorrect: false
 
 Lint/DefEndAlignment:
@@ -868,10 +1020,16 @@ Lint/DefEndAlignment:
 Lint/UnusedBlockArgument:
   IgnoreEmptyBlocks: true
 
-# Checks for unused method arguments.  
+# Checks for unused method arguments.
 Lint/UnusedMethodArgument:
   AllowUnusedKeywordArguments: false
   IgnoreEmptyMethods: true
+
+##################### Performance ############################
+
+Performance/RedundantMerge:
+  # Max number of key-value pairs to consider an offense
+  MaxKeyValuePairs: 2
 
 ##################### Rails ##################################
 
@@ -887,16 +1045,12 @@ Rails/Date:
   # The value `strict` disallows usage of `Date.today`, `Date.current`,
   # `Date#to_time` etc.
   # The value `flexible` allows usage of `Date.current`, `Date.yesterday`, etc
-  # (but not `Date.today`) which are overriden by ActiveSupport to handle current
+  # (but not `Date.today`) which are overridden by ActiveSupport to handle current
   # time zone.
   EnforcedStyle: flexible
   SupportedStyles:
     - strict
     - flexible
-
-Rails/DefaultScope:
-  Include:
-    - app/models/**/*.rb
 
 Rails/FindBy:
   Include:
