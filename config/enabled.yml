@@ -10,7 +10,7 @@ Style/AccessorMethodName:
   Enabled: true
 
 Style/Alias:
-  Description: 'Use alias_method instead of alias.'
+  Description: 'Use alias instead of alias_method.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#alias-method'
   Enabled: true
 
@@ -153,6 +153,16 @@ Style/CommentIndentation:
   Description: 'Indentation of comments.'
   Enabled: true
 
+Style/ConditionalAssignment:
+  Description: >-
+                 Use the return value of `if` and `case` statements for
+                 assignment to a variable and variable comparison instead
+                 of assigning that variable inside of each branch.
+  Enabled: true
+  SingleLineConditionsOnly: true
+  # Whether the cop should register offenses for conditionals whose branches
+  # contain more than one statement a piece
+
 Style/ConstantName:
   Description: 'Constants should use SCREAMING_SNAKE_CASE.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#screaming-snake-case'
@@ -255,6 +265,12 @@ Style/FileName:
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#snake-case-files'
   Enabled: true
 
+Style/FrozenStringLiteralComment:
+  Description: >-
+                 Add the frozen_string_literal comment to the top of files
+                 to help transition from Ruby 2.3.0 to Ruby 3.0.
+  Enabled: true
+
 Style/InitialIndentation:
   Description: >-
     Checks the indentation of the first non-blank non-comment line in a file.
@@ -297,6 +313,10 @@ Style/HashSyntax:
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#hash-literals'
   Enabled: true
 
+Style/IfInsideElse:
+  Description: 'Finds if nodes inside else, which can be converted to elsif.'
+  Enabled: true
+
 Style/IfUnlessModifier:
   Description: >-
                  Favor modifier if/unless usage when you have a
@@ -318,10 +338,23 @@ Style/IndentationWidth:
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#spaces-indentation'
   Enabled: true
 
+Style/IdenticalConditionalBranches:
+  Description: >-
+                 Checks that conditional statements do not have an identical
+                 line at the end of each branch, which can validly be moved
+                 out of the conditional.
+  Enabled: true
+
 Style/IndentArray:
   Description: >-
                  Checks the indentation of the first element in an array
                  literal.
+  Enabled: true
+
+Style/IndentAssignment:
+  Description: >-
+                 Checks the indentation of the first line of the
+                 right-hand-side of a multi-line assignment.
   Enabled: true
 
 Style/IndentHash:
@@ -390,6 +423,12 @@ Style/MultilineIfThen:
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-then'
   Enabled: true
 
+Style/MultilineMethodCallIndentation:
+  Description: >-
+                 Checks indentation of method calls with the dot operator
+                 that span more than one line.
+  Enabled: true
+
 Style/MultilineOperationIndentation:
   Description: >-
                  Checks indentation of binary operations that span more than
@@ -401,6 +440,10 @@ Style/MultilineTernaryOperator:
                  Avoid multi-line ?: (the ternary operator);
                  use if/unless instead.
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-multiline-ternary'
+  Enabled: true
+
+Style/MutableConstant:
+  Description: 'Do not assign mutable objects to constants.'
   Enabled: true
 
 Style/NegatedIf:
@@ -417,6 +460,13 @@ Style/NegatedWhile:
 
 Style/NestedModifier:
   Description: 'Avoid using nested modifiers.'
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-nested-modifiers'
+  Enabled: true
+
+Style/NestedParenthesizedCalls:
+  Description: >-
+                 Parenthesize method calls which are nested inside the
+                 argument list of another parenthesized method call.
   Enabled: true
 
 Style/NestedTernaryOperator:
@@ -528,6 +578,10 @@ Style/RedundantFreeze:
   Description: "Checks usages of Object#freeze on immutable objects."
   Enabled: true
 
+Style/RedundantParentheses:
+  Description: "Checks for parentheses that seem not to serve any purpose."
+  Enabled: true
+
 Style/RedundantReturn:
   Description: "Don't use return where it's not required."
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-explicit-return'
@@ -566,7 +620,7 @@ Style/Semicolon:
 
 Style/SignalException:
   Description: 'Checks for proper usage of fail and raise.'
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#fail-method'
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#prefer-raise-over-fail'
   Enabled: true
 
 Style/SingleLineBlockParams:
@@ -579,7 +633,7 @@ Style/SingleLineMethods:
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-single-line-methods'
   Enabled: true
 
-Style/SingleSpaceBeforeFirstArg:
+Style/SpaceBeforeFirstArg:
   Description: >-
                  Checks that exactly one space is used between a method name
                  and the first argument for method calls without parentheses.
@@ -593,10 +647,6 @@ Style/SpaceAfterColon:
 Style/SpaceAfterComma:
   Description: 'Use spaces after commas.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#spaces-operators'
-  Enabled: true
-
-Style/SpaceAfterControlKeyword:
-  Description: 'Use spaces after if/elsif/unless/while/until/case/when.'
   Enabled: true
 
 Style/SpaceAfterMethodName:
@@ -655,13 +705,13 @@ Style/SpaceAroundEqualsInParameterDefault:
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#spaces-around-equals'
   Enabled: true
 
+Style/SpaceAroundKeyword:
+  Description: 'Use a space around keywords if appropriate.'
+  Enabled: true
+
 Style/SpaceAroundOperators:
   Description: 'Use a single space around operators.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#spaces-operators'
-  Enabled: true
-
-Style/SpaceBeforeModifierKeyword:
-  Description: 'Put a space before the modifier keyword.'
   Enabled: true
 
 Style/SpaceInsideBrackets:
@@ -733,8 +783,13 @@ Style/TrailingBlankLines:
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#newline-eof'
   Enabled: true
 
-Style/TrailingComma:
-  Description: 'Checks for trailing comma in parameter lists and literals.'
+Style/TrailingCommaInArguments:
+  Description: 'Checks for trailing comma in argument lists.'
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas'
+  Enabled: true
+
+Style/TrailingCommaInLiteral:
+  Description: 'Checks for trailing comma in array and hash literals.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas'
   Enabled: true
 
@@ -757,6 +812,10 @@ Style/UnlessElse:
 
 Style/UnneededCapitalW:
   Description: 'Checks for %W when interpolation is not needed.'
+  Enabled: true
+
+Style/UnneededInterpolation:
+  Description: 'Checks for strings that are just an interpolated expression.'
   Enabled: true
 
 Style/UnneededPercentQ:
@@ -803,6 +862,10 @@ Style/WhileUntilModifier:
 Style/WordArray:
   Description: 'Use %w or %W for arrays of words.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#percent-w'
+  Enabled: true
+
+Style/ZeroLengthPredicate:
+  Description: 'Use #empty? when testing for objects of length 0.'
   Enabled: true
 
 #################### Metrics ################################
@@ -903,7 +966,7 @@ Lint/DeprecatedClassMethods:
   Enabled: true
 
 Lint/DuplicateMethods:
-  Description: 'Check for duplicate methods calls.'
+  Description: 'Check for duplicate method definitions.'
   Enabled: true
 
 Lint/DuplicatedKey:
@@ -943,6 +1006,12 @@ Lint/Eval:
   Description: 'The use of eval represents a serious security risk.'
   Enabled: true
 
+Lint/FloatOutOfRange:
+  Description: >-
+                 Catches floating-point literals too large or small for Ruby to
+                 represent.
+  Enabled: true
+
 Lint/FormatParameterMismatch:
   Description: 'The number of parameters to format/sprint must match the fields.'
   Enabled: true
@@ -950,6 +1019,18 @@ Lint/FormatParameterMismatch:
 Lint/HandleExceptions:
   Description: "Don't suppress exception."
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#dont-hide-exceptions'
+  Enabled: true
+
+Lint/ImplicitStringConcatenation:
+  Description: >-
+                 Checks for adjacent string literals on the same line, which
+                 could better be represented as a single string literal.
+  Enabled: true
+
+Lint/IneffectiveAccessModifier:
+  Description: >-
+                 Checks for attempts to use `private` or `protected` to set
+                 the visibility of a class method, which does not work.
   Enabled: true
 
 Lint/InvalidCharacterLiteral:
@@ -978,6 +1059,12 @@ Lint/NestedMethodDefinition:
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-nested-methods'
   Enabled: true
 
+Lint/NextWithoutAccumulator:
+  Description:  >-
+                  Do not omit the accumulator when calling `next`
+                  in a `reduce`/`inject` block.
+  Enabled: true
+
 Lint/NonLocalExitFromIterator:
   Description: 'Do not use return in iterator to cause non-local exit.'
   Enabled: true
@@ -987,6 +1074,12 @@ Lint/ParenthesesAsGroupedExpression:
                  Checks for method calls with a space before the opening
                  parenthesis.
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#parens-no-spaces'
+  Enabled: true
+
+Lint/RandOne:
+  Description: >-
+                 Checks for `rand(1)` calls. Such calls always return `0`
+                 and most likely a mistake.
   Enabled: true
 
 Lint/RequireParentheses:
@@ -1004,12 +1097,6 @@ Lint/ShadowingOuterLocalVariable:
   Description: >-
                  Do not use the same name as outer local variable
                  for block arguments or block local variables.
-  Enabled: true
-
-Lint/SpaceBeforeFirstArg:
-  Description: >-
-                 Put a space between a method name and the first argument
-                 in a method call without parentheses.
   Enabled: true
 
 Lint/StringConversionInInterpolation:
@@ -1069,6 +1156,12 @@ Lint/Void:
 
 ##################### Performance #############################
 
+Performance/Casecmp:
+  Description: >-
+             Use `casecmp` rather than `downcase ==`, `upcase ==`, `== downcase`, or `== upcase`..
+  Reference: 'https://github.com/JuanitoFatas/fast-ruby#stringcasecmp-vs-stringdowncase---code'
+  Enabled: true
+
 Performance/CaseWhenSplat:
   Description: >-
                   Place `when` conditions that use splat at the end
@@ -1089,6 +1182,17 @@ Performance/Detect:
   Reference: 'https://github.com/JuanitoFatas/fast-ruby#enumerabledetect-vs-enumerableselectfirst-code'
   Enabled: true
 
+Performance/DoubleStartEndWith:
+  Description: >-
+                  Use `str.{start,end}_with?(x, ..., y, ...)`
+                  instead of `str.{start,end}_with?(x, ...) || str.{start,end}_with?(y, ...)`.
+  Enabled: true
+
+Performance/EndWith:
+  Description: 'Use `end_with?` instead of a regex match anchored to the end of a string.'
+  Reference: 'https://github.com/JuanitoFatas/fast-ruby#stringmatch-vs-stringstart_withstringend_with-code-start-code-end'
+  Enabled: true
+
 Performance/FixedSize:
   Description: 'Do not compute the size of statically sized objects except in constants'
   Enabled: true
@@ -1105,6 +1209,43 @@ Performance/FlatMap:
   # `flatten` being called without any parameters.
   # This can be dangerous since `flat_map` will only flatten 1 level, and
   # `flatten` without any parameters can flatten multiple levels.
+
+Performance/HashEachMethods:
+  Description: >-
+                 Use `Hash#each_key` and `Hash#each_value` instead of
+                 `Hash#keys.each` and `Hash#values.each`.
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#hash-each'
+  Enabled: true
+  AutoCorrect: false
+
+Performance/LstripRstrip:
+  Description: 'Use `strip` instead of `lstrip.rstrip`.'
+  Enabled: true
+
+Performance/RangeInclude:
+  Description: 'Use `Range#cover?` instead of `Range#include?`.'
+  Reference: 'https://github.com/JuanitoFatas/fast-ruby#cover-vs-include-code'
+  Enabled: true
+
+Performance/RedundantBlockCall:
+  Description: 'Use `yield` instead of `block.call`.'
+  Reference: 'https://github.com/JuanitoFatas/fast-ruby#proccall-vs-yield-code'
+  Enabled: true
+
+Performance/RedundantMatch:
+  Description: >-
+                  Use `=~` instead of `String#match` or `Regexp#match` in a context where the
+                  returned `MatchData` is not needed.
+  Enabled: true
+
+Performance/RedundantMerge:
+  Description: 'Use Hash#[]=, rather than Hash#merge! with a single key-value pair.'
+  Reference: 'https://github.com/JuanitoFatas/fast-ruby#hashmerge-vs-hash-code'
+  Enabled: true
+
+Performance/RedundantSortBy:
+  Description: 'Use `sort` instead of `sort_by { |x| x }`.'
+  Enabled: true
 
 Performance/ReverseEach:
   Description: 'Use `reverse_each` instead of `reverse.each`.'
@@ -1125,12 +1266,21 @@ Performance/Size:
   Reference: 'https://github.com/JuanitoFatas/fast-ruby#arraycount-vs-arraysize-code'
   Enabled: true
 
+Performance/StartWith:
+  Description: 'Use `start_with?` instead of a regex match anchored to the beginning of a string.'
+  Reference: 'https://github.com/JuanitoFatas/fast-ruby#stringmatch-vs-stringstart_withstringend_with-code-start-code-end'
+  Enabled: true
+
 Performance/StringReplacement:
   Description: >-
                   Use `tr` instead of `gsub` when you are replacing the same
                   number of characters. Use `delete` instead of `gsub` when
                   you are deleting characters.
   Reference: 'https://github.com/JuanitoFatas/fast-ruby#stringgsub-vs-stringtr-code'
+  Enabled: true
+
+Performance/TimesMap:
+  Description: 'Checks for .times.map calls.'
   Enabled: true
 
 ##################### Rails ##################################
@@ -1143,10 +1293,6 @@ Rails/Date:
   Description: >-
                   Checks the correct usage of date aware methods,
                   such as Date.today, Date.current etc.
-  Enabled: true
-
-Rails/DefaultScope:
-  Description: 'Checks if the argument passed to default_scope is a block.'
   Enabled: true
 
 Rails/Delegate:

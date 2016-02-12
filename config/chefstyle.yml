@@ -47,8 +47,6 @@ Lint/NonLocalExitFromIterator:
   Enabled: true
 Lint/RequireParentheses:
   Enabled: true
-Lint/SpaceBeforeFirstArg:
-  Enabled: true
 Lint/StringConversionInInterpolation:
   Enabled: true
 Lint/UnneededDisable:
@@ -213,6 +211,7 @@ Style/MethodDefParentheses:
   Enabled: true
 Style/MultilineOperationIndentation:
   Enabled: true
+  EnforcedStyle: indented
 Style/NegatedWhile:
   Enabled: true
 Style/NestedModifier:
@@ -263,6 +262,8 @@ Style/SpaceAroundEqualsInParameterDefault:
 Style/SpaceAroundOperators:
   Enabled: true
 Style/SpaceBeforeBlockBraces:
+  Enabled: true
+Style/SpaceBeforeFirstArg:
   Enabled: true
 Style/SpaceBeforeModifierKeyword:
   Enabled: true
