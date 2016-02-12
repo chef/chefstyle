@@ -89,6 +89,8 @@ Performance/FixedSize:
   Enabled: true
 Performance/FlatMap:
   Enabled: true
+Performance/ReverseEach:
+  Enabled: true
 Performance/Sample:
   Enabled: true
 Performance/Size:
@@ -169,6 +171,8 @@ Style/CharacterLiteral:
   Enabled: true
 Style/ClassMethods:
   Enabled: true
+Style/ColonMethodCall:
+  Enabled: true
 Style/CommandLiteral:
   Enabled: true
 Style/ElseAlignment:
@@ -209,11 +213,15 @@ Style/MethodDefParentheses:
   Enabled: true
 Style/MultilineOperationIndentation:
   Enabled: true
+Style/NegatedWhile:
+  Enabled: true
 Style/NestedModifier:
   Enabled: true
 Style/NestedTernaryOperator:
   Enabled: true
 Style/OneLineConditional:
+  Enabled: true
+Style/ParenthesesAroundCondition:
   Enabled: true
 # - The chef source code predominantly uses {} for %,%i,%q,%Q,%r,%w,%W
 # - The old 1.9 pickaxe book predominantly uses {} for %,%q,%Q,%r,%w,%W,%x
@@ -286,7 +294,13 @@ Style/TrailingWhitespace:
   Enabled: true
 Style/UnneededCapitalW:
   Enabled: true
+#Style/UnneededPercentQ:  # would like to enable this one but its buggy as of 0.35.1
+#  Enabled: true
 Style/WhenThen:
+  Enabled: true
+Style/WhileUntilDo:
+  Enabled: true
+Style/WordArray:
   Enabled: true
 
 #
@@ -332,4 +346,9 @@ Style/Encoding:
 
 # Dan is -1 on this one: https://github.com/chef/chef/pull/4526#issuecomment-179950045
 Style/IndentHash:
+  Enabled: false
+
+# This is overly aggressive and autofix broke stuff, would need to exclude classes
+#  - https://github.com/chef/chef/pull/4541
+Style/TrivialAccessors:
   Enabled: false
