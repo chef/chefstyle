@@ -282,11 +282,10 @@ Style/Tab:
   Enabled: true
 Style/TrailingBlankLines:
   Enabled: true
+Style/TrailingCommaInArguments:
+  Enabled: true
 # rubocop's default gets this completely backwards
 Style/TrailingCommaInLiteral:
-  Enabled: true
-  EnforcedStyleForMultiline: comma
-Style/TrailingCommaInArguments:
   Enabled: true
   EnforcedStyleForMultiline: comma
 Style/TrailingUnderscoreVariable:
