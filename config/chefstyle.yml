@@ -80,17 +80,31 @@ Lint/RescueException:
 # Performance
 #
 
+Performance/CaseCmp:
+  Enabled: true
 Performance/CaseWhenSplat:
+  Enabled: true
+Performance/Detect:
   Enabled: true
 Performance/FixedSize:
   Enabled: true
 Performance/FlatMap:
+  Enabled: true
+Performance/RangeInclude:
+  Enabled: true
+Performance/RedundantBlockCall:
+  Enabled: true
+Performance/RedundantMatch:
+  Enabled: true
+Performance/RedundantMerge:
   Enabled: true
 Performance/ReverseEach:
   Enabled: true
 Performance/Sample:
   Enabled: true
 Performance/Size:
+  Enabled: true
+Performance/StringReplacement:
   Enabled: true
 
 #
