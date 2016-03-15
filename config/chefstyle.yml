@@ -168,6 +168,8 @@ Metrics/PerceivedComplexity:
 
 Style/AlignHash:
   Enabled: true
+Style/AndOr:
+  Enabled: true
 Style/ArrayJoin:
   Enabled: true
 Style/AsciiIdentifiers:
