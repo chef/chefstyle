@@ -299,6 +299,8 @@ Style/IfInsideElse:
   Enabled: false
 Style/IfUnlessModifier:
   Enabled: false
+Style/IfUnlessModifierOfIfUnless:
+  Enabled: false
 Style/IfWithSemicolon:
   Enabled: false
 Style/IndentArray:

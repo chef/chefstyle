@@ -344,6 +344,19 @@ Style/CommentAnnotation:
     - HACK
     - REVIEW
 
+Style/ConditionalAssignment:
+  EnforcedStyle: assign_to_condition
+  SupportedStyles:
+    - assign_to_condition
+    - assign_inside_condition
+  # When configured to `assign_to_condition`, `SingleLineConditionsOnly`
+  # will only register an offense when all branches of a condition are
+  # a single line.
+  # When configured to `assign_inside_condition`, `SingleLineConditionsOnly`
+  # will only register an offense for assignment to a condition that has
+  # at least one multiline branch.
+  SingleLineConditionsOnly: true
+
 # Checks that you have put a copyright in a comment before any code.
 #
 # You can override the default Notice in your .rubocop.yml file.
@@ -892,7 +905,7 @@ Style/TrivialAccessors:
   #
   # This way you can uncover "hidden" attributes in your code.
   ExactNameMatch: true
-  AllowPredicates: false
+  AllowPredicates: true
   # Allows trivial writers that don't end in an equal sign. e.g.
   #
   # def on_exception(action)
@@ -988,6 +1001,19 @@ Metrics/PerceivedComplexity:
 # Allow safe assignment in conditions.
 Lint/AssignmentInCondition:
   AllowSafeAssignment: true
+
+# checks whether the end keywords are aligned properly for `do` `end` blocks.
+Lint/BlockAlignment:
+  # The value `start_of_block` means that the `end` should be aligned with line
+  # where the `do` keyword appears.
+  # The value `start_of_line` means it should be aligned with the whole 
+  # expression's starting line.
+  # The value `either` means both are allowed.
+  AlignWith: either
+  SupportedStyles:
+    - either
+    - start_of_block
+    - start_of_line
 
 # Align ends correctly.
 Lint/EndAlignment:
