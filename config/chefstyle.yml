@@ -80,7 +80,7 @@ Lint/RescueException:
 # Performance
 #
 
-Performance/CaseCmp:
+Performance/Casecmp:
   Enabled: true
 Performance/CaseWhenSplat:
   Enabled: true
