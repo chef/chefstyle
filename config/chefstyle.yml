@@ -32,7 +32,11 @@ Lint/EndInMethod:
   Enabled: true
 Lint/EnsureReturn:
   Enabled: true
+Lint/FloatOutOfRange:
+  Enabled: true
 Lint/FormatParameterMismatch:
+  Enabled: true
+Lint/ImplicitStringConcatenation:
   Enabled: true
 Lint/InvalidCharacterLiteral:
   Enabled: true
@@ -42,7 +46,11 @@ Lint/LiteralInInterpolation:
   Enabled: true
 Lint/Loop:
   Enabled: true
+Lint/NextWithoutAccumulator:
+  Enabled: true
 Lint/NonLocalExitFromIterator:
+  Enabled: true
+Lint/RandOne:
   Enabled: true
 Lint/RequireParentheses:
   Enabled: true
@@ -84,11 +92,21 @@ Performance/Casecmp:
   Enabled: true
 Performance/CaseWhenSplat:
   Enabled: true
+Performance/Count:
+  Enabled: true
 Performance/Detect:
+  Enabled: true
+Performance/DoubleStartEndWith:
+  Enabled: true
+Performance/EndWith:
   Enabled: true
 Performance/FixedSize:
   Enabled: true
 Performance/FlatMap:
+  Enabled: true
+Performance/HashEachMethods:
+  Enabled: true
+Performance/LstripRstrip:
   Enabled: true
 Performance/RangeInclude:
   Enabled: true
@@ -98,11 +116,15 @@ Performance/RedundantMatch:
   Enabled: true
 Performance/RedundantMerge:
   Enabled: true
+Performance/RedundantSortBy:
+  Enabled: true
 Performance/ReverseEach:
   Enabled: true
 Performance/Sample:
   Enabled: true
 Performance/Size:
+  Enabled: true
+Performance/StartWith:
   Enabled: true
 Performance/StringReplacement:
   Enabled: true
@@ -208,6 +230,10 @@ Style/FlipFlop:
   Enabled: true
 Style/For:
   Enabled: true
+Style/FrozenStringLiteralComment:
+  Enabled: true
+Style/IfUnlessModifierOfIfUnless:
+  Enabled: true
 Style/IfWithSemicolon:
   Enabled: true
 Style/IndentationConsistency:
@@ -221,6 +247,8 @@ Style/InitialIndentation:
 Style/LambdaCall:
   Enabled: true
 Style/MethodDefParentheses:
+  Enabled: true
+Style/MultilineMethodDefinitionBraceLayout:
   Enabled: true
 Style/MultilineOperationIndentation:
   Enabled: true
@@ -293,6 +321,8 @@ Style/StringLiterals:
   EnforcedStyle: double_quotes
   Enabled: true
 Style/SymbolLiteral:
+  Enabled: true
+Style/StringMethods:
   Enabled: true
 Style/Tab:
   Enabled: true
