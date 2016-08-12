@@ -271,7 +271,7 @@ Style/LambdaCall:
 Style/MethodDefParentheses:
   Enabled: true
 Style/MultilineIfThen:
-  Eanbled: true
+  Enabled: true
 Style/MultilineMethodDefinitionBraceLayout:
   Enabled: true
 Style/MultilineOperationIndentation:
