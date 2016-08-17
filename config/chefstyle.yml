@@ -216,6 +216,8 @@ Style/Attr:
   Enabled: true
 Style/BeginBlock:
   Enabled: true
+Style/BlockDelimiters:
+  Enabled: true
 Style/CharacterLiteral:
   Enabled: true
 Style/ClassMethods:
@@ -267,6 +269,8 @@ Style/InitialIndentation:
 Style/LambdaCall:
   Enabled: true
 Style/MethodDefParentheses:
+  Enabled: true
+Style/MultilineBlockLayout:
   Enabled: true
 Style/MultilineIfThen:
   Enabled: true
