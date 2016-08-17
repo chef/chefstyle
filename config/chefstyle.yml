@@ -210,8 +210,6 @@ Style/AndOr:
   Enabled: true
 Style/ArrayJoin:
   Enabled: true
-Style/AsciiComments:
-  Enabled: true
 Style/AsciiIdentifiers:
   Enabled: true
 Style/Attr:
@@ -317,8 +315,6 @@ Style/RedundantException:
 Style/RedundantFreeze:
   Enabled: true
 Style/RescueEnsureAlignment:
-  Enabled: true
-Style/RescueModifier:
   Enabled: true
 # we only 'raise' and do not 'fail'
 Style/SignalException:
@@ -447,4 +443,12 @@ Style/TrivialAccessors:
 
 # Not a lot of offenses and this seems to catch code that looks otherwise fine to my eye
 Style/MultilineBlockChain:
+  Enabled: false
+
+# We see nothing at all wrong with a trailing `rescue nil`
+Style/RescueModifier:
+  Enabled: false
+
+# Resulted in a bit of a bikeshed over names with unicode chars vs silently hidden unicode chars in comments
+Style/AsciiComments:
   Enabled: false
