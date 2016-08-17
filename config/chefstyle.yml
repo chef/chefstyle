@@ -46,6 +46,8 @@ Lint/LiteralInInterpolation:
   Enabled: true
 Lint/Loop:
   Enabled: true
+Lint/NestedMethodDefinition:
+  Enabled: true
 Lint/NextWithoutAccumulator:
   Enabled: true
 Lint/NonLocalExitFromIterator:
@@ -56,15 +58,21 @@ Lint/RequireParentheses:
   Enabled: true
 Lint/StringConversionInInterpolation:
   Enabled: true
+Lint/UnderscorePrefixedVariableName:
+  Enabled: true
 Lint/UnneededDisable:
   Enabled: true
 Lint/UnreachableCode:
+  Enabled: true
+Lint/UselessAccessModifier:
   Enabled: true
 Lint/UselessComparison:
   Enabled: true
 Lint/UselessElseWithoutRescue:
   Enabled: true
 Lint/UselessSetterCall:
+  Enabled: true
+Lint/Void:
   Enabled: true
 
 #
@@ -82,6 +90,10 @@ Lint/HandleExceptions:
   Enabled: false
 # We also decorate Exceptions a lot
 Lint/RescueException:
+  Enabled: false
+
+# we have lots of not-insecure uses of eval
+Lint/Eval:
   Enabled: false
 
 #
@@ -127,6 +139,8 @@ Performance/Size:
 Performance/StartWith:
   Enabled: true
 Performance/StringReplacement:
+  Enabled: true
+Performance/TimesMap:
   Enabled: true
 
 #
@@ -188,6 +202,8 @@ Metrics/PerceivedComplexity:
 # Style
 #
 
+Style/AccessModifierIndentation:
+  Enabled: true
 Style/AlignHash:
   Enabled: true
 Style/AndOr:
@@ -207,6 +223,8 @@ Style/ClassMethods:
 Style/ColonMethodCall:
   Enabled: true
 Style/CommandLiteral:
+  Enabled: true
+Style/ConstantName:
   Enabled: true
 Style/ElseAlignment:
   Enabled: true
@@ -236,6 +254,8 @@ Style/IfUnlessModifierOfIfUnless:
   Enabled: true
 Style/IfWithSemicolon:
   Enabled: true
+Style/IndentAssignment:
+  Enabled: true
 Style/IndentationConsistency:
   Enabled: true
 Style/IndentationWidth:
@@ -248,11 +268,15 @@ Style/LambdaCall:
   Enabled: true
 Style/MethodDefParentheses:
   Enabled: true
+Style/MultilineIfThen:
+  Enabled: true
 Style/MultilineMethodDefinitionBraceLayout:
   Enabled: true
 Style/MultilineOperationIndentation:
   Enabled: true
   EnforcedStyle: indented
+Style/MultilineTernaryOperator:
+  Enabled: true
 Style/NegatedWhile:
   Enabled: true
 Style/NestedModifier:
@@ -260,6 +284,10 @@ Style/NestedModifier:
 Style/NestedTernaryOperator:
   Enabled: true
 Style/OneLineConditional:
+  Enabled: true
+Style/OpMethod:
+  Enabled: true
+Style/OptionalArguments:
   Enabled: true
 Style/ParenthesesAroundCondition:
   Enabled: true
@@ -282,6 +310,8 @@ Style/PercentLiteralDelimiters:
     '%x': '{}'
 Style/PercentQLiterals:
   Enabled: true
+Style/RedundantException:
+  Enabled: true
 Style/RedundantFreeze:
   Enabled: true
 Style/RescueEnsureAlignment:
@@ -296,6 +326,8 @@ Style/SpaceAfterComma:
   Enabled: true
 Style/SpaceAfterMethodName:
   Enabled: true
+Style/SpaceAfterSemicolon:
+  Enabled: true
 Style/SpaceAroundBlockParameters:
   Enabled: true
 Style/SpaceAroundEqualsInParameterDefault:
@@ -304,7 +336,11 @@ Style/SpaceAroundOperators:
   Enabled: true
 Style/SpaceBeforeBlockBraces:
   Enabled: true
+Style/SpaceBeforeComment:
+  Enabled: true
 Style/SpaceBeforeFirstArg:
+  Enabled: true
+Style/SpaceBeforeSemicolon:
   Enabled: true
 Style/SpaceAroundKeyword:
   Enabled: true
@@ -319,6 +355,8 @@ Style/StabbyLambdaParentheses:
 # core chef community prefers double quotes over single quotes
 Style/StringLiterals:
   EnforcedStyle: double_quotes
+  Enabled: true
+Style/StructInheritance:
   Enabled: true
 Style/SymbolLiteral:
   Enabled: true
@@ -342,9 +380,13 @@ Style/UnneededCapitalW:
   Enabled: true
 #Style/UnneededPercentQ:  # would like to enable this one but its buggy as of 0.35.1
 #  Enabled: true
+Style/VariableName:
+  Enabled: true
 Style/WhenThen:
   Enabled: true
 Style/WhileUntilDo:
+  Enabled: true
+Style/WhileUntilModifier:
   Enabled: true
 Style/WordArray:
   Enabled: true
@@ -397,4 +439,16 @@ Style/IndentHash:
 # This is overly aggressive and autofix broke stuff, would need to exclude classes
 #  - https://github.com/chef/chef/pull/4541
 Style/TrivialAccessors:
+  Enabled: false
+
+# Not a lot of offenses and this seems to catch code that looks otherwise fine to my eye
+Style/MultilineBlockChain:
+  Enabled: false
+
+# We see nothing at all wrong with a trailing `rescue nil`
+Style/RescueModifier:
+  Enabled: false
+
+# Resulted in a bit of a bikeshed over names with unicode chars vs silently hidden unicode chars in comments
+Style/AsciiComments:
   Enabled: false
