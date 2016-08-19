@@ -101,6 +101,28 @@ guard :rubocop, cli: "--config #{Chefstyle.config}" do
 end
 ```
 
+### git pre-commit hoooks
+
+In any repo a pre-commit hook can be used in .git/hooks/pre-commit to catch offenses before checkin:
+
+```ruby
+#!/usr/bin/env ruby
+
+changed_files = `git diff --name-only --cached`.split.select { |f| File.extname(f) == ".rb" }
+
+unless changed_files.empty?
+  system "chefstyle #{changed_files.join(" ")}"
+  unless $?.success?
+    puts "\n\nthere was a chefstyle error, please fix before commiting:"
+    puts "(chefstyle -a may be able to autofix these issues for you)\n\n"
+  end
+end
+exit $?.to_s[-1].to_i
+```
+
+For whatever `$REASON` git does not allow easily distributing hooks in the repo itself so each individual user
+needs to set this up.
+
 ### .rubocop.yml
 
 As with vanilla RuboCop, any custom settings can still be placed in a `.rubocop.yml` file in the root of your project.
