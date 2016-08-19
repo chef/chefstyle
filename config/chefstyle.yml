@@ -60,8 +60,6 @@ Lint/StringConversionInInterpolation:
   Enabled: true
 Lint/UnderscorePrefixedVariableName:
   Enabled: true
-Lint/UnneededDisable:
-  Enabled: true
 Lint/UnreachableCode:
   Enabled: true
 Lint/UselessAccessModifier:
@@ -94,6 +92,10 @@ Lint/RescueException:
 
 # we have lots of not-insecure uses of eval
 Lint/Eval:
+  Enabled: false
+
+# disabling this will make it easier to stage chefstyle rollouts
+Lint/UnneededDisable:
   Enabled: false
 
 #
