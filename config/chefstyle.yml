@@ -456,3 +456,7 @@ Style/RescueModifier:
 # Resulted in a bit of a bikeshed over names with unicode chars vs silently hidden unicode chars in comments
 Style/AsciiComments:
   Enabled: false
+
+# Parens around ternaries often make them more readable and reduces cognitive load over operator precidence
+Style/TernaryParentheses:
+  Enabled: false
