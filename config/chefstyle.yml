@@ -415,7 +415,7 @@ Style/SpaceInsideBrackets:
   Enabled: false
 Style/SpaceInsideParens:
   Enabled: false
-Style/SpaceInsidePercentLiteralDelimiters
+Style/SpaceInsidePercentLiteralDelimiters:
   Enabled: false
 
 # more whitespace cops that we allow since they can enhance readability
