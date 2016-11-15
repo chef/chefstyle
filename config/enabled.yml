@@ -379,6 +379,10 @@ Style/Lambda:
   StyleGuide: '#lambda-multi-line'
   Enabled: true
 
+Style/SpaceInLambdaLiteral:
+  Description: 'Checks for spaces in lambda literals.'
+  Enabled: true
+
 Style/LambdaCall:
   Description: 'Use lambda.call(...) instead of lambda.(...).'
   StyleGuide: '#proc-call'
@@ -448,6 +452,11 @@ Style/MultilineHashBraceLayout:
 Style/MultilineIfThen:
   Description: 'Do not use then for multi-line if/unless.'
   StyleGuide: '#no-then'
+  Enabled: true
+
+Style/MultilineIfModifier:
+  Description: 'Only use if/unless modifiers on single line statements.'
+  StyleGuide: '#no-multiline-if-modifiers'
   Enabled: true
 
 Style/MultilineMemoization:
@@ -698,7 +707,6 @@ Style/SignalException:
 
 Style/SingleLineBlockParams:
   Description: 'Enforces the names of some block params.'
-  StyleGuide: '#reduce-blocks'
   Enabled: true
 
 Style/SingleLineMethods:
@@ -1058,6 +1066,10 @@ Lint/DeprecatedClassMethods:
   Description: 'Check for deprecated class method calls.'
   Enabled: true
 
+Lint/DuplicateCaseCondition:
+  Description: 'Do not repeat values in case conditionals.'
+  Enabled: true
+
 Lint/DuplicateMethods:
   Description: 'Check for duplicate method definitions.'
   Enabled: true
@@ -1078,8 +1090,16 @@ Lint/EmptyEnsure:
   Description: 'Checks for empty ensure block.'
   Enabled: true
 
+Lint/EmptyExpression:
+  Description: 'Checks for empty expressions.'
+  Enabled: true
+
 Lint/EmptyInterpolation:
   Description: 'Checks for empty string interpolation.'
+  Enabled: true
+
+Lint/EmptyWhen:
+  Description: 'Checks for `when` branches with empty bodies.'
   Enabled: true
 
 Lint/EndAlignment:

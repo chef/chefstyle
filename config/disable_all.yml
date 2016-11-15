@@ -17,6 +17,8 @@ Lint/DefEndAlignment:
   Enabled: false
 Lint/DeprecatedClassMethods:
   Enabled: false
+Lint/DuplicateCaseCondition:
+  Enabled: false
 Lint/DuplicateMethods:
   Enabled: false
 Lint/DuplicatedKey:
@@ -27,7 +29,11 @@ Lint/ElseLayout:
   Enabled: false
 Lint/EmptyEnsure:
   Enabled: false
+Lint/EmptyExpression:
+  Enabled: false
 Lint/EmptyInterpolation:
+  Enabled: false
+Lint/EmptyWhen:
   Enabled: false
 Lint/EndAlignment:
   Enabled: false
@@ -377,6 +383,8 @@ Style/MultilineHashBraceLayout:
   Enabled: false
 Style/MultilineIfThen:
   Enabled: false
+Style/MultilineIfModifier:
+  Enabled: false
 Style/MultilineMemoization:
   Enabled: false
 Style/MultilineMethodCallBraceLayout:
@@ -498,6 +506,8 @@ Style/SpaceBeforeComment:
 Style/SpaceBeforeFirstArg:
   Enabled: false
 Style/SpaceBeforeSemicolon:
+  Enabled: false
+Style/SpaceInLambdaLiteral:
   Enabled: false
 Style/SpaceInsideArrayPercentLiteral:
   Enabled: false
