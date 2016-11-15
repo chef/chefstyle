@@ -322,6 +322,9 @@ Style/RedundantFreeze:
   Enabled: true
 Style/RescueEnsureAlignment:
   Enabled: true
+Style/Semicolon:
+  AllowAsExpressionSeparator: true
+  Enabled: true
 # we only 'raise' and do not 'fail'
 Style/SignalException:
   EnforcedStyle: only_raise
