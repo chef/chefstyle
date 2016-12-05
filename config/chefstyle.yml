@@ -485,6 +485,7 @@ Style/AsciiComments:
 Style/TernaryParentheses:
   Enabled: false
 
-# Underscores in numbers are unnecessary, especially for port numbers in attributes where they are unexpected
+# Underscores in numbers are super ugly for port numbers, freebsd versions, etc.
+# If we could mandate that this gets turned on only for numbers >= 1e9 which require three _'s then maybe.
 Style/NumericLiterals:
   Enabled: false
