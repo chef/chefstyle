@@ -484,3 +484,7 @@ Style/AsciiComments:
 # Parens around ternaries often make them more readable and reduces cognitive load over operator precidence
 Style/TernaryParentheses:
   Enabled: false
+
+# Underscores in numbers are unnecessary, especially for port numbers in attributes where they are unexpected
+Style/NumericLiterals:
+  Enabled: false
