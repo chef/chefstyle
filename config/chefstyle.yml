@@ -42,6 +42,8 @@ Lint/FormatParameterMismatch:
   Enabled: true
 Lint/ImplicitStringConcatenation:
   Enabled: true
+Lint/InheritException:
+  Enabled: true
 Lint/InvalidCharacterLiteral:
   Enabled: true
 Lint/LiteralInCondition:
@@ -144,6 +146,8 @@ Performance/Sample:
   Enabled: true
 Performance/Size:
   Enabled: true
+Performance/SortWithBlock:
+  Enabled: true
 Performance/StartWith:
   Enabled: true
 Performance/StringReplacement:
@@ -238,6 +242,8 @@ Style/CommandLiteral:
   Enabled: true
 Style/ConstantName:
   Enabled: true
+Style/DefWithParenthesis:
+  Enabled: true
 Style/ElseAlignment:
   Enabled: true
 Style/EmptyLineBetweenDefs:
@@ -282,6 +288,8 @@ Style/MethodDefParentheses:
   Enabled: true
 Style/MultilineBlockLayout:
   Enabled: true
+Style/MultilineIfModifer:
+  Enabled: true
 Style/MultilineIfThen:
   Enabled: true
 Style/MultilineMemoization:
@@ -298,6 +306,10 @@ Style/NegatedWhile:
 Style/NestedModifier:
   Enabled: true
 Style/NestedTernaryOperator:
+  Enabled: true
+Style/NilComparison:
+  Enabled: true
+Style/NonNilCheck:
   Enabled: true
 Style/OneLineConditional:
   Enabled: true
@@ -335,6 +347,8 @@ Style/RescueEnsureAlignment:
   Enabled: true
 Style/SafeNavigation:
   Enabled: true
+Style/SelfAssignment:
+  Enabled: true
 Style/Semicolon:
   AllowAsExpressionSeparator: true
   Enabled: true
@@ -368,11 +382,15 @@ Style/SpaceAroundKeyword:
   Enabled: true
 Style/SpaceInLambdaLiteral:
   Enabled: true
+Style/SpaceInsideArrayPercentLiteral:
+  Enabled: true
 Style/SpaceInsideBlockBraces:
   Enabled: true
 Style/SpaceInsideHashLiteralBraces:
   Enabled: true
 Style/SpaceInsideRangeLiteral:
+  Enabled: true
+Style/SpaceInsideStringInterpolation:
   Enabled: true
 Style/StabbyLambdaParentheses:
   Enabled: true
@@ -405,6 +423,8 @@ Style/UnneededCapitalW:
 #Style/UnneededPercentQ:  # would like to enable this one but its buggy as of 0.35.1
 #  Enabled: true
 Style/VariableName:
+  Enabled: true
+Style/VariableInterpolation:
   Enabled: true
 Style/WhenThen:
   Enabled: true
@@ -488,4 +508,12 @@ Style/TernaryParentheses:
 # Underscores in numbers are super ugly for port numbers, freebsd versions, etc.
 # If we could mandate that this gets turned on only for numbers >= 1e9 which require three _'s then maybe.
 Style/NumericLiterals:
+  Enabled: false
+
+# I tend to find this more readable than long elsif chains
+Style/EmptyCaseCondition:
+  Enabled: false
+
+# This didn't quite do what we need
+Style/MultilineArrayBraceLayout:
   Enabled: false
