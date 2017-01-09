@@ -311,6 +311,10 @@ Style/NilComparison:
   Enabled: true
 Style/NonNilCheck:
   Enabled: true
+# `foo.zero?` is slower and substantially more annoying to read than `foo == 0`
+Style/NumericPredicate:
+  Enabled: true
+  EnforcedStyle: comparison
 Style/OneLineConditional:
   Enabled: true
 Style/OpMethod:
@@ -516,4 +520,12 @@ Style/EmptyCaseCondition:
 
 # This didn't quite do what we need
 Style/MultilineArrayBraceLayout:
+  Enabled: false
+
+# This rule isn't smart enough to figure out accessors vs. things that set stuff on the system (e.g. set_member method in group providers)
+Style/AccessorMethodName:
+  Enabled: false
+
+# Perl backrefs are just fine and the alternative is a lot of typing.
+Style/PerlBackrefs:
   Enabled: false
