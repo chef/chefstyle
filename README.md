@@ -7,6 +7,11 @@ It is not meant for consumption by cookbooks or for any general
 purpose uses.  It is not intended for any audience outside of chef
 core ruby development.
 
+It will conflict with rubocop defaults, cookstyle, finstyle and other
+ruby style guides entirely by design.  The point is that the core
+chef authors vehemently disagree with them on points of style and this
+point is generally not up for debate.
+
 It will have many rules that are disabled simply because fixing a
 project as large as chef-client would be tedious and have little
 value.  It will have other rules that are disabled because chef
