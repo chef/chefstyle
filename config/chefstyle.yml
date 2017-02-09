@@ -1,4 +1,11 @@
 #
+# Bundler
+#
+
+Bundler/DuplicatedGem:
+  Enabled: true
+
+#
 # Lint
 #
 
@@ -52,21 +59,29 @@ Lint/LiteralInInterpolation:
   Enabled: true
 Lint/Loop:
   Enabled: true
+Lint/MultipleCompare:
+  Enabled: true
 Lint/NestedMethodDefinition:
   Enabled: true
 Lint/NextWithoutAccumulator:
   Enabled: true
 Lint/NonLocalExitFromIterator:
   Enabled: true
+Lint/PercentSymbolArray:
+  Eanbled: true
 Lint/RandOne:
   Enabled: true
 Lint/RequireParentheses:
+  Enabled: true
+Lint/SafeNavigationChain:
   Enabled: true
 Lint/StringConversionInInterpolation:
   Enabled: true
 Lint/UnderscorePrefixedVariableName:
   Enabled: true
 Lint/UnifiedInteger:
+  Enabled: true
+Lint/UnneededDisable:
   Enabled: true
 Lint/UnreachableCode:
   Enabled: true
@@ -114,6 +129,8 @@ Performance/Casecmp:
   Enabled: true
 Performance/CaseWhenSplat:
   Enabled: true
+Performance/CompareWithBlock:
+  Enabled: true
 Performance/Count:
   Enabled: true
 Performance/Detect:
@@ -139,6 +156,8 @@ Performance/RedundantMatch:
 Performance/RedundantMerge:
   Enabled: true
 Performance/RedundantSortBy:
+  Enabled: true
+Performance/RegexpMatch:
   Enabled: true
 Performance/ReverseEach:
   Enabled: true
@@ -242,7 +261,9 @@ Style/CommandLiteral:
   Enabled: true
 Style/ConstantName:
   Enabled: true
-Style/DefWithParenthesis:
+Style/DefWithParentheses:
+  Enabled: true
+Style/EachForSimpleLoop:
   Enabled: true
 Style/ElseAlignment:
   Enabled: true
@@ -288,7 +309,7 @@ Style/MethodDefParentheses:
   Enabled: true
 Style/MultilineBlockLayout:
   Enabled: true
-Style/MultilineIfModifer:
+Style/MultilineIfModifier:
   Enabled: true
 Style/MultilineIfThen:
   Enabled: true
@@ -377,8 +398,6 @@ Style/SpaceAroundOperators:
 Style/SpaceBeforeBlockBraces:
   Enabled: true
 Style/SpaceBeforeComment:
-  Enabled: true
-Style/SpaceBeforeFirstArg:
   Enabled: true
 Style/SpaceBeforeSemicolon:
   Enabled: true
@@ -529,3 +548,4 @@ Style/AccessorMethodName:
 # Perl backrefs are just fine and the alternative is a lot of typing.
 Style/PerlBackrefs:
   Enabled: false
+
