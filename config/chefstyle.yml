@@ -99,7 +99,7 @@ Lint/RescueException:
   Enabled: false
 
 # we have lots of not-insecure uses of eval
-Lint/Eval:
+Security/Eval:
   Enabled: false
 
 # disabling this will make it easier to stage chefstyle rollouts
