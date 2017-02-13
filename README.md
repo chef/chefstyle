@@ -6,8 +6,9 @@ This is an internal style guide for chef ruby projects (chef-client,
 ohai, mixlib-shellout, mixlib-config, etc).
 
 It is not meant for consumption by cookbooks or for any general
-purpose uses.  It is not intended for any audience outside of chef
-core ruby development.
+purpose uses.  **Chef Users and Customers Should Generally Not Use
+This Tool and Should Use Cookstyle**.  It is not intended for any audience
+outside of chef core ruby development.
 
 It will conflict with rubocop defaults, cookstyle, finstyle and other
 ruby style guides entirely by design.  The point is that the core
