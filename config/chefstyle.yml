@@ -364,9 +364,15 @@ Style/PercentLiteralDelimiters:
     '%x': '{}'
 Style/PercentQLiterals:
   Enabled: true
+Style/RedundantBegin:
+  Enabled: true
 Style/RedundantException:
   Enabled: true
 Style/RedundantFreeze:
+  Enabled: true
+Style/RedundantReturn:
+  Enabled: true
+Style/RedundantSelf:
   Enabled: true
 Style/RescueEnsureAlignment:
   Enabled: true
@@ -549,3 +555,6 @@ Style/AccessorMethodName:
 Style/PerlBackrefs:
   Enabled: false
 
+# This has an annoying auto-fix which fails to `require "english"` and then fails silently
+Style/SpecialGlobalVars:
+  Enabled: false
