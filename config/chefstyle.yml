@@ -379,8 +379,9 @@ Style/RedundantSelf:
   Enabled: true
 Style/RescueEnsureAlignment:
   Enabled: true
+# temporarily disabled, but we should do this
 Style/SafeNavigation:
-  Enabled: true
+  Enabled: false
 Style/SelfAssignment:
   Enabled: true
 Style/Semicolon:
@@ -470,6 +471,10 @@ Style/WordArray:
 #
 # Disabled Style
 #
+
+# FIXME: we need to enable this
+Style/FrozenStringLiteralComment:
+  Enabled: false
 
 # As of this commit we have 686 modules and classes without docs.
 # This is a cop that we /should/ have enabled, but tactically we can't really enable.
