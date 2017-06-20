@@ -238,9 +238,9 @@ Metrics/PerceivedComplexity:
 # Style
 #
 
-Style/AccessModifierIndentation:
+Layout/AccessModifierIndentation:
   Enabled: true
-Style/AlignHash:
+Layout/AlignHash:
   Enabled: true
 Style/AndOr:
   Enabled: true
@@ -268,23 +268,23 @@ Style/DefWithParentheses:
   Enabled: true
 Style/EachForSimpleLoop:
   Enabled: true
-Style/ElseAlignment:
+Layout/ElseAlignment:
   Enabled: true
-Style/EmptyLineBetweenDefs:
+Layout/EmptyLineBetweenDefs:
   Enabled: true
-Style/EmptyLines:
+Layout/EmptyLines:
   Enabled: true
-Style/EmptyLinesAroundAccessModifier:
+Layout/EmptyLinesAroundAccessModifier:
   Enabled: true
-Style/EmptyLinesAroundMethodBody:
+Layout/EmptyLinesAroundMethodBody:
   Enabled: true
 Style/EndBlock:
   Enabled: true
-Style/EndOfLine:
+Layout/EndOfLine:
   Enabled: true
 Style/EvenOdd:
   Enabled: true
-Style/ExtraSpacing:
+Layout/ExtraSpacing:
   Enabled: true
 Style/FlipFlop:
   Enabled: true
@@ -296,21 +296,21 @@ Style/IfUnlessModifierOfIfUnless:
   Enabled: true
 Style/IfWithSemicolon:
   Enabled: true
-Style/IndentAssignment:
+Layout/IndentAssignment:
   Enabled: true
-Style/IndentationConsistency:
+Layout/IndentationConsistency:
   Enabled: true
-Style/IndentationWidth:
+Layout/IndentationWidth:
   Enabled: true
 Style/InfiniteLoop:
   Enabled: true
-Style/InitialIndentation:
+Layout/InitialIndentation:
   Enabled: true
 Style/LambdaCall:
   Enabled: true
 Style/MethodDefParentheses:
   Enabled: true
-Style/MultilineBlockLayout:
+Layout/MultilineBlockLayout:
   Enabled: true
 Style/MultilineIfModifier:
   Enabled: true
@@ -318,9 +318,9 @@ Style/MultilineIfThen:
   Enabled: true
 Style/MultilineMemoization:
   Enabled: true
-Style/MultilineMethodDefinitionBraceLayout:
+Layout/MultilineMethodDefinitionBraceLayout:
   Enabled: true
-Style/MultilineOperationIndentation:
+Layout/MultilineOperationIndentation:
   Enabled: true
   EnforcedStyle: indented
 Style/MultilineTernaryOperator:
@@ -377,7 +377,7 @@ Style/RedundantReturn:
   Enabled: true
 Style/RedundantSelf:
   Enabled: true
-Style/RescueEnsureAlignment:
+Layout/RescueEnsureAlignment:
   Enabled: true
 # temporarily disabled, but we should do this
 Style/SafeNavigation:
@@ -391,39 +391,39 @@ Style/Semicolon:
 Style/SignalException:
   EnforcedStyle: only_raise
   Enabled: true
-Style/SpaceAfterColon:
+Layout/SpaceAfterColon:
   Enabled: true
-Style/SpaceAfterComma:
+Layout/SpaceAfterComma:
   Enabled: true
-Style/SpaceAfterMethodName:
+Layout/SpaceAfterMethodName:
   Enabled: true
-Style/SpaceAfterSemicolon:
+Layout/SpaceAfterSemicolon:
   Enabled: true
-Style/SpaceAroundBlockParameters:
+Layout/SpaceAroundBlockParameters:
   Enabled: true
-Style/SpaceAroundEqualsInParameterDefault:
+Layout/SpaceAroundEqualsInParameterDefault:
   Enabled: true
-Style/SpaceAroundOperators:
+Layout/SpaceAroundOperators:
   Enabled: true
-Style/SpaceBeforeBlockBraces:
+Layout/SpaceBeforeBlockBraces:
   Enabled: true
-Style/SpaceBeforeComment:
+Layout/SpaceBeforeComment:
   Enabled: true
-Style/SpaceBeforeSemicolon:
+Layout/SpaceBeforeSemicolon:
   Enabled: true
-Style/SpaceAroundKeyword:
+Layout/SpaceAroundKeyword:
   Enabled: true
-Style/SpaceInLambdaLiteral:
+Layout/SpaceInLambdaLiteral:
   Enabled: true
-Style/SpaceInsideArrayPercentLiteral:
+Layout/SpaceInsideArrayPercentLiteral:
   Enabled: true
-Style/SpaceInsideBlockBraces:
+Layout/SpaceInsideBlockBraces:
   Enabled: true
-Style/SpaceInsideHashLiteralBraces:
+Layout/SpaceInsideHashLiteralBraces:
   Enabled: true
-Style/SpaceInsideRangeLiteral:
+Layout/SpaceInsideRangeLiteral:
   Enabled: true
-Style/SpaceInsideStringInterpolation:
+Layout/SpaceInsideStringInterpolation:
   Enabled: true
 Style/StabbyLambdaParentheses:
   Enabled: true
@@ -437,9 +437,9 @@ Style/SymbolLiteral:
   Enabled: true
 Style/StringMethods:
   Enabled: true
-Style/Tab:
+Layout/Tab:
   Enabled: true
-Style/TrailingBlankLines:
+Layout/TrailingBlankLines:
   Enabled: true
 Style/TrailingCommaInArguments:
   Enabled: true
@@ -449,7 +449,7 @@ Style/TrailingCommaInLiteral:
   EnforcedStyleForMultiline: comma
 Style/TrailingUnderscoreVariable:
   Enabled: true
-Style/TrailingWhitespace:
+Layout/TrailingWhitespace:
   Enabled: true
 Style/UnneededCapitalW:
   Enabled: true
@@ -484,23 +484,23 @@ Style/DocumentationMethod:
   Enabled: false
 
 # this makes whitespace formatting of DSL code impossible
-Style/SpaceBeforeFirstArg:
+Layout/SpaceBeforeFirstArg:
   Enabled: false
 
 # whitespace in expressions is useful to enhance readability
-Style/SpaceInsideBrackets:
+Layout/SpaceInsideBrackets:
   Enabled: false
-Style/SpaceInsideParens:
+Layout/SpaceInsideParens:
   Enabled: false
-Style/SpaceInsidePercentLiteralDelimiters:
+Layout/SpaceInsidePercentLiteralDelimiters:
   Enabled: false
 
 # more whitespace cops that we allow since they can enhance readability
-Style/EmptyLinesAroundBlockBody:
+Layout/EmptyLinesAroundBlockBody:
   Enabled: false
-Style/EmptyLinesAroundClassBody:
+Layout/EmptyLinesAroundClassBody:
   Enabled: false
-Style/EmptyLinesAroundModuleBody:
+Layout/EmptyLinesAroundModuleBody:
   Enabled: false
 
 # double negation is perfectly idiomatic ruby
@@ -518,7 +518,7 @@ Style/Encoding:
   Enabled: false
 
 # Dan is -1 on this one: https://github.com/chef/chef/pull/4526#issuecomment-179950045
-Style/IndentHash:
+Layout/IndentHash:
   Enabled: false
 
 # This is overly aggressive and autofix broke stuff, would need to exclude classes
@@ -552,7 +552,7 @@ Style/EmptyCaseCondition:
   Enabled: false
 
 # This didn't quite do what we need
-Style/MultilineArrayBraceLayout:
+Layout/MultilineArrayBraceLayout:
   Enabled: false
 
 # This rule isn't smart enough to figure out accessors vs. things that set stuff on the system (e.g. set_member method in group providers)
