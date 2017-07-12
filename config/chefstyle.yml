@@ -566,3 +566,7 @@ Style/PerlBackrefs:
 # This has an annoying auto-fix which fails to `require "english"` and then fails silently
 Style/SpecialGlobalVars:
   Enabled: false
+
+# This cop is horrible and I hate the code it produces
+Style/GuardClause:
+  Enabled: false
