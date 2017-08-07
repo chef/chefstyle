@@ -568,6 +568,10 @@ Style/PerlBackrefs:
 Style/SpecialGlobalVars:
   Enabled: false
 
-# This cop is horrible and I hate the code it produces
+# This cop is horrible and I hate the code it produces (even though I tend to like GuardClauses in lots of cases)
 Style/GuardClause:
+  Enabled: false
+
+# Let authors order gems however makes sense
+Bundler/OrderedGems:
   Enabled: false
