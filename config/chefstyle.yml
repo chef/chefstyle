@@ -71,7 +71,7 @@ Lint/NextWithoutAccumulator:
 Lint/NonLocalExitFromIterator:
   Enabled: true
 Lint/PercentSymbolArray:
-  Eanbled: true
+  Enabled: true
 Lint/RandOne:
   Enabled: true
 Lint/RequireParentheses:
