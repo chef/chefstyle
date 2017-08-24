@@ -282,7 +282,7 @@ Style/EndBlock:
   Enabled: true
 Layout/EndOfLine:
   Enabled: true
-  SupportedStyles: lf
+  EnforcedStyle: lf
 Style/EvenOdd:
   Enabled: true
 Layout/ExtraSpacing:
