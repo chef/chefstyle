@@ -55,13 +55,14 @@ AllCops:
     - '**/Vagabondfile'
     - '**/Vagrantfile'
   Exclude:
+    - 'node_modules/**/*'
     - 'vendor/**/*'
   # Default formatter will be used if no `-f/--format` option is given.
   DefaultFormatter: progress
-  # Cop names are not displayed in offense messages by default. Change behavior
-  # by overriding DisplayCopNames, or by giving the `-D/--display-cop-names`
+  # Cop names are displayed in offense messages by default. Change behavior
+  # by overriding DisplayCopNames, or by giving the `--no-display-cop-names`
   # option.
-  DisplayCopNames: false
+  DisplayCopNames: true
   # Style guide URLs are not displayed in offense messages by default. Change
   # behavior by overriding `DisplayStyleGuide`, or by giving the
   # `-S/--display-style-guide` option.
@@ -489,12 +490,29 @@ Layout/SpaceBeforeBlockBraces:
   SupportedStyles:
     - space
     - no_space
+  EnforcedStyleForEmptyBraces: space
+  SupportedStylesForEmptyBraces:
+    - space
+    - no_space
 
 Layout/SpaceBeforeFirstArg:
   # When `true`, allows most uses of extra spacing if the intent is to align
   # things with the previous or next line, not counting empty lines or comment
   # lines.
   AllowForAlignment: true
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  EnforcedStyle: no_space
+  SupportedStyles:
+    - space
+    - no_space
+    # 'compact' normally requires a space inside the brackets, with the exception
+    # that successive left brackets or right brackets are collapsed together
+    - compact
+  EnforcedStyleForEmptyBrackets: no_space
+  SupportedStylesForEmptyBrackets:
+    - space
+    - no_space
 
 Layout/SpaceInsideBlockBraces:
   EnforcedStyle: space
@@ -521,17 +539,161 @@ Layout/SpaceInsideHashLiteralBraces:
     - space
     - no_space
 
+Layout/SpaceInsideReferenceBrackets:
+  EnforcedStyle: no_space
+  SupportedStyles:
+    - space
+    - no_space
+
 Layout/SpaceInsideStringInterpolation:
   EnforcedStyle: no_space
   SupportedStyles:
     - space
     - no_space
 
+Layout/ClassStructure:
+  Categories:
+    module_inclusion:
+      - include
+      - prepend
+      - extend
+  ExpectedOrder:
+      - module_inclusion
+      - constants
+      - public_class_methods
+      - initializer
+      - public_methods
+      - protected_methods
+      - private_methods
+
+Layout/Tab:
+  # By default, the indentation width from Layout/IndentationWidth is used
+  # But it can be overridden by setting this parameter
+  # It is used during auto-correction to determine how many spaces should
+  # replace each tab.
+  IndentationWidth: ~
+
 Layout/TrailingBlankLines:
   EnforcedStyle: final_newline
   SupportedStyles:
     - final_newline
     - final_blank_line
+
+#################### Naming ##########################
+
+Naming/FileName:
+  # File names listed in `AllCops:Include` are excluded by default. Add extra
+  # excludes here.
+  Exclude: []
+  # When `true`, requires that each source file should define a class or module
+  # with a name which matches the file name (converted to ... case).
+  # It further expects it to be nested inside modules which match the names
+  # of subdirectories in its path.
+  ExpectMatchingDefinition: false
+  # If non-`nil`, expect all source file names to match the following regex.
+  # Only the file name itself is matched, not the entire file path.
+  # Use anchors as necessary if you want to match the entire name rather than
+  # just a part of it.
+  Regex: ~
+  # With `IgnoreExecutableScripts` set to `true`, this cop does not
+  # report offending filenames for executable scripts (i.e. source
+  # files with a shebang in the first line).
+  IgnoreExecutableScripts: true
+  AllowedAcronyms:
+    - CLI
+    - DSL
+    - ACL
+    - API
+    - ASCII
+    - CPU
+    - CSS
+    - DNS
+    - EOF
+    - GUID
+    - HTML
+    - HTTP
+    - HTTPS
+    - ID
+    - IP
+    - JSON
+    - LHS
+    - QPS
+    - RAM
+    - RHS
+    - RPC
+    - SLA
+    - SMTP
+    - SQL
+    - SSH
+    - TCP
+    - TLS
+    - TTL
+    - UDP
+    - UI
+    - UID
+    - UUID
+    - URI
+    - URL
+    - UTF8
+    - VM
+    - XML
+    - XMPP
+    - XSRF
+    - XSS
+
+Naming/HeredocDelimiterNaming:
+  Blacklist:
+    - END
+    - !ruby/regexp '/EO[A-Z]{1}/'
+
+Naming/HeredocDelimiterCase:
+  EnforcedStyle: uppercase
+  SupportedStyles:
+    - lowercase
+    - uppercase
+
+Naming/MethodName:
+  EnforcedStyle: snake_case
+  SupportedStyles:
+    - snake_case
+    - camelCase
+
+Naming/PredicateName:
+  # Predicate name prefixes.
+  NamePrefix:
+    - is_
+    - has_
+    - have_
+  # Predicate name prefixes that should be removed.
+  NamePrefixBlacklist:
+    - is_
+    - has_
+    - have_
+  # Predicate names which, despite having a blacklisted prefix, or no `?`,
+  # should still be accepted
+  NameWhitelist:
+    - is_a?
+  # Method definition macros for dynamically generated methods.
+  MethodDefinitionMacros:
+    - define_method
+    - define_singleton_method
+  # Exclude Rspec specs because there is a strong convention to write spec
+  # helpers in the form of `have_something` or `be_something`.
+  Exclude:
+    - 'spec/**/*'
+
+Naming/VariableName:
+  EnforcedStyle: snake_case
+  SupportedStyles:
+    - snake_case
+    - camelCase
+
+Naming/VariableNumber:
+  EnforcedStyle: normalcase
+  SupportedStyles:
+    - snake_case
+    - normalcase
+    - non_integer
 
 #################### Style ###########################
 
@@ -548,6 +710,9 @@ Style/AndOr:
   SupportedStyles:
     - always
     - conditionals
+
+Style/AsciiComments:
+  AllowedChars: []
 
 # Checks if usage of `%()` or `%Q()` matches configuration.
 Style/BarePercentLiterals:
@@ -762,77 +927,6 @@ Style/EmptyMethod:
     - compact
     - expanded
 
-# Checks whether the source file has a utf-8 encoding comment or not
-# AutoCorrectEncodingComment must match the regex
-# /#.*coding\s?[:=]\s?(?:UTF|utf)-8/
-Style/Encoding:
-  EnforcedStyle: never
-  SupportedStyles:
-    - when_needed
-    - always
-    - never
-  AutoCorrectEncodingComment: '# encoding: utf-8'
-
-Style/FileName:
-  # File names listed in `AllCops:Include` are excluded by default. Add extra
-  # excludes here.
-  Exclude: []
-  # When `true`, requires that each source file should define a class or module
-  # with a name which matches the file name (converted to ... case).
-  # It further expects it to be nested inside modules which match the names
-  # of subdirectories in its path.
-  ExpectMatchingDefinition: false
-  # If non-`nil`, expect all source file names to match the following regex.
-  # Only the file name itself is matched, not the entire file path.
-  # Use anchors as necessary if you want to match the entire name rather than
-  # just a part of it.
-  Regex: ~
-  # With `IgnoreExecutableScripts` set to `true`, this cop does not
-  # report offending filenames for executable scripts (i.e. source
-  # files with a shebang in the first line).
-  IgnoreExecutableScripts: true
-  AllowedAcronyms:
-    - CLI
-    - DSL
-    - ACL
-    - API
-    - ASCII
-    - CPU
-    - CSS
-    - DNS
-    - EOF
-    - GUID
-    - HTML
-    - HTTP
-    - HTTPS
-    - ID
-    - IP
-    - JSON
-    - LHS
-    - QPS
-    - RAM
-    - RHS
-    - RPC
-    - SLA
-    - SMTP
-    - SQL
-    - SSH
-    - TCP
-    - TLS
-    - TTL
-    - UDP
-    - UI
-    - UID
-    - UUID
-    - URI
-    - URL
-    - UTF8
-    - VM
-    - XML
-    - XMPP
-    - XSRF
-    - XSS
-
 # Checks use of for or each in multiline loops.
 Style/For:
   EnforcedStyle: each
@@ -857,6 +951,7 @@ Style/FormatStringToken:
     - annotated
     # Prefer simple looking "template" style tokens like `%{name}`, `%{age}`
     - template
+    - unannotated
 
 Style/FrozenStringLiteralComment:
   EnforcedStyle: when_needed
@@ -898,11 +993,7 @@ Style/HashSyntax:
   # Do not suggest { a?: 1 } over { :a? => 1 } in ruby19 style
   PreferHashRocketsForNonAlnumEndingSymbols: false
 
-Style/IfUnlessModifier:
-  MaxLineLength: 80
-
 Style/InverseMethods:
-  Enabled: true
   # `InverseMethods` are methods that can be inverted by a not (`not` or `!`)
   # The relationship of inverse methods only needs to be defined in one direction.
   # Keys and values both need to be defined as symbols.
@@ -947,12 +1038,6 @@ Style/MethodDefParentheses:
     - require_no_parentheses
     - require_no_parentheses_except_multiline
 
-Style/MethodName:
-  EnforcedStyle: snake_case
-  SupportedStyles:
-    - snake_case
-    - camelCase
-
 # Checks the grouping of mixins (`include`, `extend`, `prepend`) in `class` and
 # `module` bodies.
 Style/MixinGrouping:
@@ -984,6 +1069,26 @@ Style/NegatedIf:
     - both
     - prefix
     - postfix
+
+Style/NestedParenthesizedCalls:
+  Whitelist:
+    - be
+    - be_a
+    - be_an
+    - be_between
+    - be_falsey
+    - be_kind_of
+    - be_instance_of
+    - be_truthy
+    - be_within
+    - eq
+    - eql
+    - end_with
+    - include
+    - match
+    - raise_error
+    - respond_to
+    - start_with
 
 Style/Next:
   # With `always` all conditions at the end of an iteration needs to be
@@ -1057,26 +1162,6 @@ Style/PercentQLiterals:
     - lower_case_q # Use `%q` when possible, `%Q` when necessary
     - upper_case_q # Always use `%Q`
 
-Style/PredicateName:
-  # Predicate name prefixes.
-  NamePrefix:
-    - is_
-    - has_
-    - have_
-  # Predicate name prefixes that should be removed.
-  NamePrefixBlacklist:
-    - is_
-    - has_
-    - have_
-  # Predicate names which, despite having a blacklisted prefix, or no `?`,
-  # should still be accepted
-  NameWhitelist:
-    - is_a?
-  # Exclude Rspec specs because there is a strong convention to write spec
-  # helpers in the form of `have_something` or `be_something`.
-  Exclude:
-    - 'spec/**/*'
-
 Style/PreferredHashMethods:
   EnforcedStyle: short
   SupportedStyles:
@@ -1106,6 +1191,20 @@ Style/RegexpLiteral:
   # If `false`, the cop will always recommend using `%r` if one or more slashes
   # are found in the regexp string.
   AllowInnerSlashes: false
+
+Style/RescueStandardError:
+  EnforcedStyle: explicit
+  # implicit: Do not include the error class, `rescue`
+  # explicit: Require an error class `rescue StandardError`
+  SupportedStyles:
+    - implicit
+    - explicit
+
+Style/ReturnNil:
+  EnforcedStyle: return
+  SupportedStyles:
+    - return
+    - return_nil
 
 Style/SafeNavigation:
   # Safe navigation may cause a statement to start returning `nil` in addition
@@ -1258,22 +1357,6 @@ Style/TrivialAccessors:
     - to_s
     - to_sym
 
-Style/VariableName:
-  EnforcedStyle: snake_case
-  SupportedStyles:
-    - snake_case
-    - camelCase
-
-Style/VariableNumber:
-  EnforcedStyle: normalcase
-  SupportedStyles:
-    - snake_case
-    - normalcase
-    - non_integer
-
-Style/WhileUntilModifier:
-  MaxLineLength: 80
-
 # `WordArray` enforces how array literals of word-like strings should be expressed.
 Style/WordArray:
   EnforcedStyle: percent
@@ -1288,6 +1371,14 @@ Style/WordArray:
   MinSize: 0
   # The regular expression `WordRegex` decides what is considered a word.
   WordRegex: !ruby/regexp '/\A[\p{Word}\n\t]+\z/'
+
+Style/YodaCondition:
+  EnforcedStyle: all_comparison_operators
+  SupportedStyles:
+    # check all comparison operators
+    - all_comparison_operators
+    # check only equality operators: `!=` and `==`
+    - equality_operators_only
 
 #################### Metrics ###############################
 
@@ -1398,12 +1489,26 @@ Lint/InheritException:
     - runtime_error
     - standard_error
 
+Lint/MissingCopEnableDirective:
+  # Maximum number of consecutive lines the cop can be disabled for.
+  # 0 allows only single-line disables
+  # 1 would mean the maximum allowed is the following:
+  #   # rubocop:disable SomeCop
+  #   a = 1
+  #   # rubocop:enable SomeCop
+  # .inf for any size
+  MaximumRangeSize: .inf
+
 Lint/SafeNavigationChain:
   Whitelist:
     - present?
     - blank?
     - presence
     - try
+
+# Checks for shadowed arguments
+Lint/ShadowedArgument:
+  IgnoreImplicitReferences: false
 
 # Checks for unused block arguments
 Lint/UnusedBlockArgument:
@@ -1436,6 +1541,10 @@ Rails/ActionFilter:
   Include:
     - app/controllers/**/*.rb
 
+Rails/CreateTableWithTimestamps:
+  Include:
+    - db/migrate/*.rb
+
 Rails/Date:
   # The value `strict` disallows usage of `Date.today`, `Date.current`,
   # `Date#to_time` etc.
@@ -1446,6 +1555,12 @@ Rails/Date:
   SupportedStyles:
     - strict
     - flexible
+
+Rails/Delegate:
+  # When set to true, using the target object as a prefix of the
+  # method name without using the `delegate` method will be a
+  # violation. When set to false, this case is legal.
+  EnforceForPrefixed: true
 
 Rails/DynamicFindBy:
   Whitelist:
@@ -1475,6 +1590,18 @@ Rails/HasAndBelongsToMany:
   Include:
     - app/models/**/*.rb
 
+Rails/HasManyOrHasOneDependent:
+  Include:
+    - app/models/**/*.rb
+
+Rails/InverseOf:
+  Include:
+    - app/models/**/*.rb
+
+Rails/LexicallyScopedActionFilter:
+  Include:
+    - app/controllers/**/*.rb
+
 Rails/NotNullColumn:
   Include:
     - db/migrate/*.rb
@@ -1502,7 +1629,7 @@ Rails/ReversibleMigration:
 
 Rails/SafeNavigation:
   # This will convert usages of `try` to use safe navigation as well as `try!`.
-  # `try` and `try!` work slighly differently. `try!` and safe navigation will
+  # `try` and `try!` work slightly differently. `try!` and safe navigation will
   # both raise a `NoMethodError` if the receiver of the method call does not
   # implement the intended method. `try` will not raise an exception for this.
   ConvertTry: false
@@ -1526,6 +1653,12 @@ Rails/UniqBeforePluck:
     - aggressive
   AutoCorrect: false
 
+Rails/UnknownEnv:
+  Environments:
+    - development
+    - test
+    - production
+
 Rails/SkipsModelValidations:
   Blacklist:
     - decrement!
@@ -1545,4 +1678,7 @@ Rails/Validation:
     - app/models/**/*.rb
 
 Bundler/OrderedGems:
+  TreatCommentsAsGroupSeparators: true
+
+Gemspec/OrderedDependencies:
   TreatCommentsAsGroupSeparators: true
