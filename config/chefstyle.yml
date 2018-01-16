@@ -273,7 +273,7 @@ Style/AndOr:
   Enabled: true
 Style/ArrayJoin:
   Enabled: true
-Style/AsciiIdentifiers:
+Naming/AsciiIdentifiers:
   Enabled: true
 Style/Attr:
   Enabled: true
@@ -289,7 +289,7 @@ Style/ColonMethodCall:
   Enabled: true
 Style/CommandLiteral:
   Enabled: true
-Style/ConstantName:
+Naming/ConstantName:
   Enabled: true
 Style/DefWithParentheses:
   Enabled: true
@@ -483,7 +483,7 @@ Style/UnneededCapitalW:
   Enabled: true
 #Style/UnneededPercentQ:  # would like to enable this one but its buggy as of 0.35.1
 #  Enabled: true
-Style/VariableName:
+Naming/VariableName:
   Enabled: true
 Style/VariableInterpolation:
   Enabled: true
@@ -584,7 +584,7 @@ Layout/MultilineArrayBraceLayout:
   Enabled: false
 
 # This rule isn't smart enough to figure out accessors vs. things that set stuff on the system (e.g. set_member method in group providers)
-Style/AccessorMethodName:
+Naming/AccessorMethodName:
   Enabled: false
 
 # Perl backrefs are just fine and the alternative is a lot of typing.
