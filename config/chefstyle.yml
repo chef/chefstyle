@@ -20,15 +20,15 @@ Lint/AmbiguousRegexpLiteral:
   Enabled: true
 Lint/AssignmentInCondition:
   Enabled: true
-Lint/BlockAlignment:
+Layout/BlockAlignment:
   Enabled: true
 Lint/CircularArgumentReference:
   Enabled: true
-Lint/ConditionPosition:
+Layout/ConditionPosition:
   Enabled: true
 Lint/Debugger:
   Enabled: true
-Lint/DefEndAlignment:
+Layout/DefEndAlignment:
   Enabled: true
 Lint/DeprecatedClassMethods:
   Enabled: true
@@ -50,7 +50,7 @@ Lint/EmptyInterpolation:
   Enabled: true
 Lint/EmptyWhen:
   Enabled: true
-Lint/EndAlignment:
+Layout/EndAlignment:
   Enabled: true
 Lint/EndInMethod:
   Enabled: true
