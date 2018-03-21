@@ -19,6 +19,8 @@ Layout/AlignHash:
   Enabled: false
 Layout/AlignParameters:
   Enabled: false
+Layout/BlockAlignment:
+  Enabled: false
 Layout/BlockEndNewline:
   Enabled: false
 Layout/CaseIndentation:
@@ -29,9 +31,15 @@ Layout/ClosingParenthesisIndentation:
   Enabled: false
 Layout/CommentIndentation:
   Enabled: false
+Layout/ConditionPosition:
+  Enabled: false
+Layout/DefEndAlignment:
+  Enabled: false
 Layout/DotPosition:
   Enabled: false
 Layout/ElseAlignment:
+  Enabled: false
+Layout/EmptyComment:
   Enabled: false
 Layout/EmptyLineAfterMagicComment:
   Enabled: false
@@ -54,6 +62,8 @@ Layout/EmptyLinesAroundMethodBody:
 Layout/EmptyLinesAroundModuleBody:
   Enabled: false
 Layout/EmptyLines:
+  Enabled: false
+Layout/EndAlignment:
   Enabled: false
 Layout/EndOfLine:
   Enabled: false
@@ -165,17 +175,13 @@ Lint/AmbiguousRegexpLiteral:
   Enabled: false
 Lint/AssignmentInCondition:
   Enabled: false
-Lint/BlockAlignment:
+Lint/BigDecimalNew:
   Enabled: false
 Lint/BooleanSymbol:
   Enabled: false
 Lint/CircularArgumentReference:
   Enabled: false
-Lint/ConditionPosition:
-  Enabled: false
 Lint/Debugger:
-  Enabled: false
-Lint/DefEndAlignment:
   Enabled: false
 Lint/DeprecatedClassMethods:
   Enabled: false
@@ -196,8 +202,6 @@ Lint/EmptyExpression:
 Lint/EmptyInterpolation:
   Enabled: false
 Lint/EmptyWhen:
-  Enabled: false
-Lint/EndAlignment:
   Enabled: false
 Lint/EndInMethod:
   Enabled: false
@@ -234,6 +238,10 @@ Lint/NestedPercentLiteral:
 Lint/NextWithoutAccumulator:
   Enabled: false
 Lint/NonLocalExitFromIterator:
+  Enabled: false
+Lint/NumberConversion:
+  Enabled: false
+Lint/OrderedMagicComments:
   Enabled: false
 Lint/ParenthesesAsGroupedExpression:
   Enabled: false
@@ -275,7 +283,9 @@ Lint/UnderscorePrefixedVariableName:
   Enabled: false
 Lint/UnifiedInteger:
   Enabled: false
-Lint/UnneededDisable:
+Lint/UnneededCopDisableDirective:
+  Enabled: false
+Lint/UnneededCopEnableDirective:
   Enabled: false
 Lint/UnneededRequireStatement:
   Enabled: false
@@ -337,11 +347,17 @@ Naming/HeredocDelimiterCase:
   Enabled: false
 Naming/HeredocDelimiterNaming:
   Enabled: false
+Naming/MemoizedInstanceVariableName:
+  Enabled: false
 Naming/MethodName:
   Enabled: false
 Naming/BinaryOperatorParameterName:
   Enabled: false
 Naming/PredicateName:
+  Enabled: false
+Naming/UncommunicativeBlockParamName:
+  Enabled: false
+Naming/UncommunicativeMethodParamName:
   Enabled: false
 Naming/VariableName:
   Enabled: false
@@ -364,8 +380,6 @@ Performance/EndWith:
 Performance/FixedSize:
   Enabled: false
 Performance/FlatMap:
-  Enabled: false
-Performance/HashEachMethods:
   Enabled: false
 Performance/LstripRstrip:
   Enabled: false
@@ -473,6 +487,8 @@ Style/EmptyElse:
   Enabled: false
 Style/EmptyLambdaParameter:
   Enabled: false
+Style/EmptyLineAfterGuardClause:
+  Enabled: false
 Style/EmptyLiteral:
   Enabled: false
 Style/EmptyMethod:
@@ -484,6 +500,8 @@ Style/EndBlock:
 Style/EvalWithLocation:
   Enabled: false
 Style/EvenOdd:
+  Enabled: false
+Style/ExpandPathArguments:
   Enabled: false
 Style/FlipFlop:
   Enabled: false
@@ -669,11 +687,17 @@ Style/SymbolProc:
   Enabled: false
 Style/TernaryParentheses:
   Enabled: false
+Style/TrailingBodyOnClass:
+  Enabled: false
 Style/TrailingBodyOnMethodDefinition:
+  Enabled: false
+Style/TrailingBodyOnModule:
   Enabled: false
 Style/TrailingCommaInArguments:
   Enabled: false
-Style/TrailingCommaInLiteral:
+Style/TrailingCommaInArrayLiteral:
+  Enabled: false
+Style/TrailingCommaInHashLiteral:
   Enabled: false
 Style/TrailingMethodEndStatement:
   Enabled: false
@@ -688,6 +712,8 @@ Style/UnneededCapitalW:
 Style/UnneededInterpolation:
   Enabled: false
 Style/UnneededPercentQ:
+  Enabled: false
+Style/UnpackFirst:
   Enabled: false
 Style/VariableInterpolation:
   Enabled: false
@@ -704,6 +730,8 @@ Style/YodaCondition:
 Style/ZeroLengthPredicate:
   Enabled: false
 Rails/ActionFilter:
+  Enabled: false
+Rails/ActiveRecordAliases:
   Enabled: false
 Rails/ActiveSupportAliases:
   Enabled: false
@@ -740,6 +768,8 @@ Rails/HasAndBelongsToMany:
 Rails/HasManyOrHasOneDependent:
   Enabled: false
 Rails/HttpPositionalArguments:
+  Enabled: false
+Rails/HttpStatus:
   Enabled: false
 Rails/InverseOf:
   Enabled: false
@@ -788,6 +818,8 @@ Security/Eval:
 Security/JSONLoad:
   Enabled: false
 Security/MarshalLoad:
+  Enabled: false
+Security/Open:
   Enabled: false
 Security/YAMLLoad:
   Enabled: false

@@ -34,6 +34,10 @@ Layout/MultilineAssignmentLayout:
   StyleGuide: '#indent-conditional-assignment'
   Enabled: false
 
+Lint/NumberConversion:
+  Description: 'Checks unsafe usage of number conversion methods.'
+  Enabled: false
+
 # By default, the rails cops are not run. Override in project or home
 # directory .rubocop.yml files, or by giving the -R/--rails option.
 Rails:
@@ -64,6 +68,10 @@ Style/DocumentationMethod:
     - 'spec/**/*'
     - 'test/**/*'
 
+Style/EmptyLineAfterGuardClause:
+  Description: 'Add empty line after guard clause.'
+  Enabled: false
+
 Style/ImplicitRuntimeError:
   Description: >-
                  Use `raise` or `fail` with an explicit exception class and
@@ -92,14 +100,6 @@ Style/MissingElse:
                 This will conflict with Style/EmptyElse if
                 Style/EmptyElse is configured to style "both"
   Enabled: false
-  EnforcedStyle: both
-  SupportedStyles:
-    # if - warn when an if expression is missing an else branch
-    # case - warn when a case expression is missing an else branch
-    # both - warn when an if or case expression is missing an else branch
-    - if
-    - case
-    - both
 
 Style/OptionHash:
   Description: "Don't use option hashes when you can use keyword arguments."
