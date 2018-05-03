@@ -265,6 +265,8 @@ Lint/RescueType:
   Enabled: false
 Lint/ReturnInVoidContext:
   Enabled: false
+Lint/SafeNavigationConsistency:
+  Enabled: false
 Lint/SafeNavigationChain:
   Enabled: false
 Lint/ScriptPermission:
@@ -410,6 +412,8 @@ Performance/StringReplacement:
 Performance/TimesMap:
   Enabled: false
 Performance/UnfreezeString:
+  Enabled: false
+Performance/UnneededSort:
   Enabled: false
 Performance/UriDefaultParser:
   Enabled: false
