@@ -269,6 +269,7 @@ Layout/AccessModifierIndentation:
   Enabled: true
 Layout/AlignHash:
   Enabled: true
+  EnforcedLastArgumentHashStyle: ignore_implicit
 Style/AndOr:
   Enabled: true
 Style/ArrayJoin:
