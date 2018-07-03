@@ -286,6 +286,8 @@ Style/CharacterLiteral:
   Enabled: true
 Style/ClassMethods:
   Enabled: true
+Layout/ClosingHeredocIndentation:
+  Enabled: true
 Style/ColonMethodCall:
   Enabled: true
 Style/CommandLiteral:
@@ -294,6 +296,8 @@ Naming/ConstantName:
   Enabled: true
 Style/DefWithParentheses:
   Enabled: true
+Layout/DotPosition:
+  Enabled: True
 Style/EachForSimpleLoop:
   Enabled: true
 Layout/ElseAlignment:
@@ -321,11 +325,17 @@ Style/For:
   Enabled: true
 Style/FrozenStringLiteralComment:
   Enabled: true
+Style/HashSyntax:
+  Enabled: true
+Naming/HeredocDelimiterCase:
+  Enabled: true
 Style/IfUnlessModifierOfIfUnless:
   Enabled: true
 Style/IfWithSemicolon:
   Enabled: true
 Layout/IndentAssignment:
+  Enabled: true
+Layout/IndentHeredoc:
   Enabled: true
 Layout/IndentationConsistency:
   Enabled: true
@@ -336,6 +346,8 @@ Style/InfiniteLoop:
 Layout/InitialIndentation:
   Enabled: true
 Style/LambdaCall:
+  Enabled: true
+Layout/LeadingCommentSpace:
   Enabled: true
 Style/MethodDefParentheses:
   Enabled: true
@@ -353,6 +365,8 @@ Layout/MultilineOperationIndentation:
   Enabled: true
   EnforcedStyle: indented
 Style/MultilineTernaryOperator:
+  Enabled: true
+Style/MutableConstant:
   Enabled: true
 Style/NegatedWhile:
   Enabled: true
@@ -395,6 +409,8 @@ Style/PercentLiteralDelimiters:
     '%W': '{}'
     '%x': '{}'
 Style/PercentQLiterals:
+  Enabled: true
+Style/PreferredHashMethods:
   Enabled: true
 Style/RedundantBegin:
   Enabled: true
@@ -472,6 +488,9 @@ Layout/TrailingBlankLines:
   Enabled: true
 Style/TrailingCommaInArguments:
   Enabled: true
+Style/TrailingCommaInHashLiteral:
+  Enabled: true
+  EnforcedStyleForMultiline: comma
 # rubocop's default gets this completely backwards
 Style/TrailingCommaInLiteral:
   Enabled: true
@@ -481,6 +500,8 @@ Style/TrailingUnderscoreVariable:
 Layout/TrailingWhitespace:
   Enabled: true
 Style/UnneededCapitalW:
+  Enabled: true
+Style/UnneededInterpolation:
   Enabled: true
 #Style/UnneededPercentQ:  # would like to enable this one but its buggy as of 0.35.1
 #  Enabled: true
@@ -522,6 +543,8 @@ Layout/SpaceInsideBrackets:
 Layout/SpaceInsideParens:
   Enabled: false
 Layout/SpaceInsidePercentLiteralDelimiters:
+  Enabled: false
+Layout/SpaceInsideArrayLiteralBrackets:
   Enabled: false
 
 # more whitespace cops that we allow since they can enhance readability
@@ -602,4 +625,12 @@ Style/GuardClause:
 
 # Let authors order gems however makes sense
 Bundler/OrderedGems:
+  Enabled: false
+
+# This produces pointless make-work, EOF is fine
+Naming/HeredocDelimiterNaming:
+  Enabled: false
+
+# This breaks all kinds of specs in chef (i don't think it will ever quite work correctly)
+Style/BracesAroundHashParameters:
   Enabled: false
