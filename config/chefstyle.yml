@@ -627,8 +627,18 @@ Style/GuardClause:
 Bundler/OrderedGems:
   Enabled: false
 
-# This produces pointless make-work, EOF is fine
+# Naming cops produce fairly pointless makework (e.g. EOF on HEREDOC's is
+# perfectly fine and understandable, using 'ip' as a parameter to a function
+# is also perfectly descriptive even though its only 2 characters...).
 Naming/HeredocDelimiterNaming:
+  Enabled: false
+Naming/PredicateName:
+  Enabled: false
+Naming/UncommunicativeMethodParamName:
+  Enabled: false
+Naming/MemoizedInstanceVariableName:
+  Enabled: false
+Naming/VariableNumber:
   Enabled: false
 
 # This breaks all kinds of specs in chef (i don't think it will ever quite work correctly)
