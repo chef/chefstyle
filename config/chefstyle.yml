@@ -502,7 +502,7 @@ Layout/TrailingWhitespace:
 Style/UnneededCapitalW:
   Enabled: true
 Style/UnneededInterpolation:
-  Enabled: true
+  Enabled: false # buggy: https://github.com/rubocop-hq/rubocop/issues/6099
 #Style/UnneededPercentQ:  # would like to enable this one but its buggy as of 0.35.1
 #  Enabled: true
 Naming/VariableName:
