@@ -14,12 +14,12 @@ Gem::Specification.new do |spec|
   spec.license       = "Apache-2.0"
   spec.required_ruby_version = ">= 2.2"
 
-  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
+  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(\..*|Gemfile|Rakefile|chefstyle.gemspec)}) }
   spec.executables    = %w[chefstyle]
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.10"
-  spec.add_development_dependency "rake", "~> 12.0"
+  spec.add_development_dependency "rake", ">= 12.0"
   spec.add_development_dependency "rspec"
   spec.add_dependency("rubocop", Chefstyle::RUBOCOP_VERSION)
 end
