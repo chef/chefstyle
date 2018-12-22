@@ -12,10 +12,10 @@ task :vendor do
   cp(src.join("enabled.yml"), dst.join("enabled.yml"))
   cp(src.join("disabled.yml"), dst.join("disabled.yml"))
 
-  require 'rubocop'
-  require 'yaml'
-  cfg = RuboCop::Cop::Cop.all.inject({}) { |acc, cop| acc[cop.cop_name] = {"Enabled" => false}; acc }
-  File.open(dst.join("disable_all.yml"), "w"){|fh| fh.write cfg.to_yaml }
+  require "rubocop"
+  require "yaml"
+  cfg = RuboCop::Cop::Cop.all.inject({}) { |acc, cop| acc[cop.cop_name] = { "Enabled" => false }; acc }
+  File.open(dst.join("disable_all.yml"), "w") { |fh| fh.write cfg.to_yaml }
 
   sh %{git add #{dst}/{upstream,enabled,disabled,disable_all}.yml}
   sh %{git commit -m "Vendor rubocop-#{upstream.version} upstream configuration."}
@@ -27,4 +27,17 @@ RuboCop::RakeTask.new(:style) do |task|
   task.options << "--display-cop-names"
 end
 
+begin
+  require "yard"
+  YARD::Rake::YardocTask.new(:docs)
+rescue LoadError
+  puts "yard is not available. bundle install first to make sure all dependencies are installed."
+end
+
+task :console do
+  require "irb"
+  require "irb/completion"
+  ARGV.clear
+  IRB.start
+end
 task default: [:build, :install]
