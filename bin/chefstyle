@@ -10,4 +10,7 @@ if ARGV.size == 1 && %w[-v --version].include?(ARGV.first)
   print "  * RuboCop "
 end
 
+ARGV.unshift(Chefstyle::DEFAULT_FILE);
+ARGV.unshift("-c")
+
 load Gem.bin_path("rubocop", "rubocop")

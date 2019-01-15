@@ -4,26 +4,14 @@ require "chefstyle/version"
 gem "rubocop", "= #{Chefstyle::RUBOCOP_VERSION}"
 require "rubocop"
 
-module RuboCop
-  class ConfigLoader
-    RUBOCOP_HOME.gsub!(
-      /^.*$/,
-      File.realpath(File.join(File.dirname(__FILE__), ".."))
-    )
-
-    DEFAULT_FILE.gsub!(
-      /^.*$/,
-      File.join(RUBOCOP_HOME, "config", "default.yml")
-    )
-  end
-end
-
 # Chefstyle patches the RuboCop tool to set a new default configuration that
 # is vendored in the Chefstyle codebase.
 module Chefstyle
-  # @return [String] the absolute path to the main RuboCop configuration YAML
-  #   file
-  def self.config
-    RuboCop::ConfigLoader::DEFAULT_FILE
+  DEFAULT_FILE = File.join(File.dirname(__FILE__), "..", "config", "chefstyle.yml")
+
+  def self.init
+    RuboCop::ConfigStore.new.tap do |config_store|
+      config_store.options_config = DEFAULT_FILE
+    end
   end
 end
