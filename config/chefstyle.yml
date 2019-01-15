@@ -1,6 +1,5 @@
 AllCops:
   TargetRubyVersion: 2.3
-  DisabledByDefault: true
 
 #
 # Bundler
@@ -66,6 +65,8 @@ Lint/ImplicitStringConcatenation:
 Lint/InheritException:
   Enabled: true
 Lint/IneffectiveAccessModifier:
+  Enabled: true
+Lint/InvalidCharacterLiteral:
   Enabled: true
 Lint/LiteralInCondition:
   Enabled: true
@@ -164,6 +165,8 @@ Performance/EndWith:
 Performance/FixedSize:
   Enabled: true
 Performance/FlatMap:
+  Enabled: true
+Performance/HashEachMethods:
   Enabled: true
 Performance/LstripRstrip:
   Enabled: true
@@ -381,7 +384,7 @@ Style/NumericPredicate:
   EnforcedStyle: comparison
 Style/OneLineConditional:
   Enabled: true
-Naming/BinaryOperatorParameterName:
+Style/OpMethod:
   Enabled: true
 Style/OptionalArguments:
   Enabled: true
@@ -489,10 +492,7 @@ Style/TrailingCommaInHashLiteral:
   Enabled: true
   EnforcedStyleForMultiline: comma
 # rubocop's default gets this completely backwards
-Style/TrailingCommaInArrayLiteral:
-  Enabled: true
-  EnforcedStyleForMultiline: comma
-Style/TrailingCommaInHashLiteral:
+Style/TrailingCommaInLiteral:
   Enabled: true
   EnforcedStyleForMultiline: comma
 Style/TrailingUnderscoreVariable:
