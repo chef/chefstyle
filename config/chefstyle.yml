@@ -6,7 +6,7 @@ AllCops:
 #
 
 Bundler/DuplicatedGem:
-  Enabled: true
+  Enabled: false
 
 #
 # Lint
