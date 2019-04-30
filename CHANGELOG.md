@@ -1,14 +1,18 @@
 # chefstyle change log
 
-<!-- latest_release unreleased -->
-## Unreleased
+<!-- latest_release 0.12.1 -->
+## [v0.12.1](https://github.com/chef/chefstyle/tree/v0.12.1) (2019-04-30)
 
 #### Merged Pull Requests
+- disable Bundler/DuplicatedGem [#69](https://github.com/chef/chefstyle/pull/69) ([lamont-granquist](https://github.com/lamont-granquist))
 - rubocop 0.62 engine upgrade [#68](https://github.com/chef/chefstyle/pull/68) ([lamont-granquist](https://github.com/lamont-granquist))
 <!-- latest_release -->
 
 <!-- release_rollup since=0.12.0 -->
 ### Changes not yet released to rubygems.org
+
+#### Merged Pull Requests
+- disable Bundler/DuplicatedGem [#69](https://github.com/chef/chefstyle/pull/69) ([lamont-granquist](https://github.com/lamont-granquist)) <!-- 0.12.1 -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
