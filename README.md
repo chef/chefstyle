@@ -1,6 +1,6 @@
 # Chefstyle - Version Pinned rubocop and sane defaults for Ruby
 
-[![Gem Version](https://badge.fury.io/rb/chefstyle.svg)](https://badge.fury.io/rb/chefstyle) [![Build Status](https://travis-ci.org/chef/chefstyle.svg?branch=master)](https://travis-ci.org/chef/chefstyle)
+[![Gem Version](https://badge.fury.io/rb/chefstyle.svg)](https://badge.fury.io/rb/chefstyle)
 
 This is an internal style guide for chef ruby projects (chef-client,
 ohai, mixlib-shellout, mixlib-config, etc).
