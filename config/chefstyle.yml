@@ -404,7 +404,10 @@ Style/TrailingCommaInHashLiteral:
   Enabled: true
   EnforcedStyleForMultiline: comma
 # rubocop's default gets this completely backwards
-Style/TrailingCommaInLiteral:
+Style/TrailingCommaInArray:
+  Enabled: true
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInHash:
   Enabled: true
   EnforcedStyleForMultiline: comma
 Style/TrailingUnderscoreVariable:
