@@ -1,9 +1,17 @@
 # chefstyle change log
 
-<!-- latest_release -->
+<!-- latest_release 0.13.1 -->
+## [v0.13.1](https://github.com/chef/chefstyle/tree/v0.13.1) (2019-07-02)
+
+#### Merged Pull Requests
+- disable Style/FormatStringToken [#73](https://github.com/chef/chefstyle/pull/73) ([lamont-granquist](https://github.com/lamont-granquist))
 <!-- latest_release -->
 
-<!-- release_rollup -->
+<!-- release_rollup since=0.13.0 -->
+### Changes not yet released to rubygems.org
+
+#### Merged Pull Requests
+- disable Style/FormatStringToken [#73](https://github.com/chef/chefstyle/pull/73) ([lamont-granquist](https://github.com/lamont-granquist)) <!-- 0.13.1 -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
