@@ -296,7 +296,7 @@ Style/NumericPredicate:
   EnforcedStyle: comparison
 Style/OneLineConditional:
   Enabled: true
-Style/OpMethod:
+Naming/BinaryOperatorParameterName:
   Enabled: true
 Style/OptionalArguments:
   Enabled: true
@@ -482,7 +482,7 @@ Style/Encoding:
   Enabled: false
 
 # Dan is -1 on this one: https://github.com/chef/chef/pull/4526#issuecomment-179950045
-Layout/IndentHash:
+Layout/IndentFirstHashElement:
   Enabled: false
 
 # This is overly aggressive and autofix broke stuff, would need to exclude classes
