@@ -1,16 +1,17 @@
 # chefstyle change log
 
-<!-- latest_release 0.12.3 -->
-## [0.12.3](https://github.com/chef/chefstyle/tree/0.12.3) (2019-06-01)
+<!-- latest_release 0.13.0 -->
+## [v0.13.0](https://github.com/chef/chefstyle/tree/v0.13.0) (2019-07-02)
 
 #### Merged Pull Requests
-- Set the owner of this project as the Chef Foundation team [#71](https://github.com/chef/chefstyle/pull/71) ([tas50](https://github.com/tas50))
+- Update the Rubocop engine to 0.72 [#72](https://github.com/chef/chefstyle/pull/72) ([tas50](https://github.com/tas50))
 <!-- latest_release -->
 
 <!-- release_rollup since=0.12.0 -->
 ### Changes not yet released to rubygems.org
 
 #### Merged Pull Requests
+- Update the Rubocop engine to 0.72 [#72](https://github.com/chef/chefstyle/pull/72) ([tas50](https://github.com/tas50)) <!-- 0.13.0 -->
 - Set the owner of this project as the Chef Foundation team [#71](https://github.com/chef/chefstyle/pull/71) ([tas50](https://github.com/tas50)) <!-- 0.12.3 -->
 - Switch from Travis to Buildkite [#70](https://github.com/chef/chefstyle/pull/70) ([tas50](https://github.com/tas50)) <!-- 0.12.2 -->
 - disable Bundler/DuplicatedGem [#69](https://github.com/chef/chefstyle/pull/69) ([lamont-granquist](https://github.com/lamont-granquist)) <!-- 0.12.1 -->
