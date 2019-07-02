@@ -565,3 +565,7 @@ Naming/VariableNumber:
 # This breaks all kinds of specs in chef (i don't think it will ever quite work correctly)
 Style/BracesAroundHashParameters:
   Enabled: false
+
+# We almost never use format strings but this cop triggers on any string with "%{whatever}" in it and is 99% false positives
+Style/FormatStringToken:
+  Enabled: false
