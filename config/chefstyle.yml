@@ -104,8 +104,6 @@ Lint/UnderscorePrefixedVariableName:
   Enabled: true
 Lint/UnifiedInteger:
   Enabled: true
-Lint/UnneededDisable:
-  Enabled: true
 Lint/UnneededSplatExpansion:
   Enabled: true
 Lint/UnreachableCode:
@@ -143,88 +141,6 @@ Lint/RescueException:
 # disabling this will make it easier to stage chefstyle rollouts
 Lint/UnneededDisable:
   Enabled: false
-
-#
-# Performance
-#
-
-Performance/Casecmp:
-  Enabled: true
-Performance/CaseWhenSplat:
-  Enabled: true
-Performance/CompareWithBlock:
-  Enabled: true
-Performance/Count:
-  Enabled: true
-Performance/Detect:
-  Enabled: true
-Performance/DoubleStartEndWith:
-  Enabled: true
-Performance/EndWith:
-  Enabled: true
-Performance/FixedSize:
-  Enabled: true
-Performance/FlatMap:
-  Enabled: true
-Performance/HashEachMethods:
-  Enabled: true
-Performance/LstripRstrip:
-  Enabled: true
-Performance/RangeInclude:
-  Enabled: true
-Performance/RedundantBlockCall:
-  Enabled: true
-Performance/RedundantMatch:
-  Enabled: true
-Performance/RedundantMerge:
-  Enabled: true
-Performance/RedundantSortBy:
-  Enabled: true
-Performance/RegexpMatch:
-  Enabled: true
-Performance/ReverseEach:
-  Enabled: true
-Performance/Sample:
-  Enabled: true
-Performance/Size:
-  Enabled: true
-Performance/SortWithBlock:
-  Enabled: true
-Performance/StartWith:
-  Enabled: true
-Performance/StringReplacement:
-  Enabled: true
-Performance/TimesMap:
-  Enabled: true
-
-#
-# Rails
-#
-
-Rails/ActionFilter:
-  Enabled: true
-Rails/Date:
-  Enabled: true
-Rails/Delegate:
-  Enabled: true
-Rails/FindBy:
-  Enabled: true
-Rails/FindEach:
-  Enabled: true
-Rails/HasAndBelongsToMany:
-  Enabled: true
-Rails/Output:
-  Enabled: true
-Rails/PluralizationGrammar:
-  Enabled: true
-Rails/ReadWriteAttribute:
-  Enabled: true
-Rails/ScopeArgs:
-  Enabled: true
-Rails/TimeZone:
-  Enabled: true
-Rails/Validation:
-  Enabled: true
 
 #
 # Security
@@ -319,11 +235,9 @@ Style/EvenOdd:
   Enabled: true
 Layout/ExtraSpacing:
   Enabled: true
-Style/FlipFlop:
+Lint/FlipFlop:
   Enabled: true
 Style/For:
-  Enabled: true
-Style/FrozenStringLiteralComment:
   Enabled: true
 Style/HashSyntax:
   Enabled: true
@@ -622,6 +536,12 @@ Style/SpecialGlobalVars:
 # This cop is horrible and I hate the code it produces (even though I tend to like GuardClauses in lots of cases)
 Style/GuardClause:
   Enabled: false
+
+Style/RedundantSortBy:
+  Enabled: true
+
+Style/Sample:
+  Enabled: true
 
 # Let authors order gems however makes sense
 Bundler/OrderedGems:
