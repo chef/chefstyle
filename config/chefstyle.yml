@@ -21,6 +21,7 @@ Lint/AmbiguousRegexpLiteral:
 Lint/AssignmentInCondition:
   Enabled: true
 Layout/BlockAlignment:
+  EnforcedStyleAlignWith: start_of_block
   Enabled: true
 Lint/CircularArgumentReference:
   Enabled: true
@@ -176,11 +177,17 @@ Metrics/PerceivedComplexity:
 
 
 #
-# Style
+# Style/Naming/Layout
 #
 
 Layout/AccessModifierIndentation:
   Enabled: true
+Layout/Alias:
+  Enabled: true
+  EnforcedStyle: prefer_alias_method
+Layout/AlignArguments:
+  Enabled: true
+  EnforcedStyle: with_fixed_indentation
 Layout/AlignHash:
   Enabled: true
   EnforcedLastArgumentHashStyle: ignore_implicit
@@ -216,6 +223,8 @@ Style/EachForSimpleLoop:
   Enabled: true
 Layout/ElseAlignment:
   Enabled: true
+Layout/EmptyLineAfterGuardClause:
+  Enabled: true
 Layout/EmptyLineBetweenDefs:
   Enabled: true
 Layout/EmptyLines:
@@ -223,6 +232,10 @@ Layout/EmptyLines:
 Layout/EmptyLinesAroundAccessModifier:
   Enabled: true
 Layout/EmptyLinesAroundMethodBody:
+  Enabled: true
+Style/EmptyLiteral:
+  Enabled: true
+Style/EmptyMethod:
   Enabled: true
 Style/EndBlock:
   Enabled: true
@@ -236,6 +249,8 @@ Layout/ExtraSpacing:
 Lint/FlipFlop:
   Enabled: true
 Style/For:
+  Enabled: true
+Style/FormatStringToken:
   Enabled: true
 Style/HashSyntax:
   Enabled: true
@@ -263,6 +278,8 @@ Layout/LeadingCommentSpace:
   Enabled: true
 Style/MethodDefParentheses:
   Enabled: true
+Style/MethodCallWithoutArgsParentheses:
+  Enabled: true
 Layout/MultilineBlockLayout:
   Enabled: true
 Style/MultilineIfModifier:
@@ -271,6 +288,9 @@ Style/MultilineIfThen:
   Enabled: true
 Style/MultilineMemoization:
   Enabled: true
+Layout/MultilineMethodCallIndentation:
+  Enabled: true
+  EnforcedStyle: indented
 Layout/MultilineMethodDefinitionBraceLayout:
   Enabled: true
 Layout/MultilineOperationIndentation:
@@ -279,6 +299,8 @@ Layout/MultilineOperationIndentation:
 Style/MultilineTernaryOperator:
   Enabled: true
 Style/MutableConstant:
+  Enabled: true
+Style/NegatedIf:
   Enabled: true
 Style/NegatedWhile:
   Enabled: true
@@ -394,20 +416,19 @@ Style/SymbolLiteral:
   Enabled: true
 Style/StringMethods:
   Enabled: true
+Style/SymbolArray:
+  Enabled: true
 Layout/Tab:
   Enabled: true
 Layout/TrailingBlankLines:
   Enabled: true
 Style/TrailingCommaInArguments:
   Enabled: true
-Style/TrailingCommaInHashLiteral:
-  Enabled: true
-  EnforcedStyleForMultiline: comma
 # rubocop's default gets this completely backwards
-Style/TrailingCommaInArray:
+Style/TrailingCommaInArrayLiteral:
   Enabled: true
   EnforcedStyleForMultiline: comma
-Style/TrailingCommaInHash:
+Style/TrailingCommaInHashLiteral:
   Enabled: true
   EnforcedStyleForMultiline: comma
 Style/TrailingUnderscoreVariable:
