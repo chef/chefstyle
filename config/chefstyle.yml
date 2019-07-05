@@ -67,7 +67,7 @@ Lint/InheritException:
   Enabled: true
 Lint/IneffectiveAccessModifier:
   Enabled: true
-Lint/LiteralInCondition:
+Lint/LiteralAsCondition:
   Enabled: true
 Lint/LiteralInInterpolation:
   Enabled: true
@@ -138,7 +138,7 @@ Lint/RescueException:
   Enabled: false
 
 # disabling this will make it easier to stage chefstyle rollouts
-Lint/UnneededDisable:
+Lint/UnneededCopDisableDirective:
   Enabled: false
 
 #
@@ -182,9 +182,6 @@ Metrics/PerceivedComplexity:
 
 Layout/AccessModifierIndentation:
   Enabled: true
-Layout/Alias:
-  Enabled: true
-  EnforcedStyle: prefer_alias_method
 Layout/AlignArguments:
   Enabled: true
   EnforcedStyle: with_fixed_indentation
@@ -474,7 +471,9 @@ Layout/SpaceBeforeFirstArg:
   Enabled: false
 
 # whitespace in expressions is useful to enhance readability
-Layout/SpaceInsideBrackets:
+Layout/SpaceInsideArrayLiteralBrackets:
+  Enabled: false
+Layout/SpaceInsideReferenceBrackets:
   Enabled: false
 Layout/SpaceInsideParens:
   Enabled: false
@@ -589,4 +588,9 @@ Style/BracesAroundHashParameters:
 
 # We almost never use format strings but this cop triggers on any string with "%{whatever}" in it and is 99% false positives
 Style/FormatStringToken:
+  Enabled: false
+
+# This cop is annoying.  The rubocop default of course goes against the most popular community guidelines due to contrariness
+# and then the autocorrect mangles specs in chef/chef.  Burned more time than it was worth looking at this one so its off.
+Style/Alias:
   Enabled: false
