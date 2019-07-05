@@ -202,6 +202,8 @@ Style/BlockDelimiters:
   Enabled: true
 Style/CharacterLiteral:
   Enabled: true
+Style/ClassCheck:
+  Enabled: true
 Style/ClassMethods:
   Enabled: true
 Layout/ClosingHeredocIndentation:
@@ -355,6 +357,8 @@ Style/RedundantSelf:
   Enabled: true
 Layout/RescueEnsureAlignment:
   Enabled: true
+Style/RegexpLiteral:
+  Enabled: true
 # temporarily disabled, but we should do this
 Style/SafeNavigation:
   Enabled: false
@@ -405,6 +409,9 @@ Style/StabbyLambdaParentheses:
   Enabled: true
 # core chef community prefers double quotes over single quotes
 Style/StringLiterals:
+  EnforcedStyle: double_quotes
+  Enabled: true
+Style/StringLiteralsInInterpolation:
   EnforcedStyle: double_quotes
   Enabled: true
 Style/StructInheritance:
@@ -594,3 +601,9 @@ Style/FormatStringToken:
 # and then the autocorrect mangles specs in chef/chef.  Burned more time than it was worth looking at this one so its off.
 Style/Alias:
   Enabled: false
+
+# No autofix for this one, and I don't care to fix 138 instances of it in the chef/chef codebase.  Don't think its worth wasting
+# anyone else's time either.
+Style/CommentedKeyword:
+  Enabled: false
+
