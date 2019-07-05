@@ -253,8 +253,6 @@ Lint/FlipFlop:
   Enabled: true
 Style/For:
   Enabled: true
-Style/FormatStringToken:
-  Enabled: true
 Style/HashSyntax:
   Enabled: true
 Naming/HeredocDelimiterCase:
@@ -496,8 +494,6 @@ Layout/SpaceInsideReferenceBrackets:
 Layout/SpaceInsideParens:
   Enabled: false
 Layout/SpaceInsidePercentLiteralDelimiters:
-  Enabled: false
-Layout/SpaceInsideArrayLiteralBrackets:
   Enabled: false
 
 # more whitespace cops that we allow since they can enhance readability

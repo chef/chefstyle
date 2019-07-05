@@ -38,4 +38,4 @@ task :console do
   ARGV.clear
   IRB.start
 end
-task default: [:build, :install]
+task default: %i{build install}
