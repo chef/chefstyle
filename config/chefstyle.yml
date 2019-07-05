@@ -200,6 +200,8 @@ Style/BeginBlock:
   Enabled: true
 Style/BlockDelimiters:
   Enabled: true
+Layout/BlockEndNewline:
+  Enabled: true
 Style/CharacterLiteral:
   Enabled: true
 Style/ClassCheck:
@@ -207,6 +209,8 @@ Style/ClassCheck:
 Style/ClassMethods:
   Enabled: true
 Layout/ClosingHeredocIndentation:
+  Enabled: true
+Layout/ClosingParenthesisIndentation:
   Enabled: true
 Style/ColonMethodCall:
   Enabled: true
@@ -261,6 +265,9 @@ Style/IfWithSemicolon:
   Enabled: true
 Layout/IndentAssignment:
   Enabled: true
+Layout/IndentFirstArgument:
+  EnforcedStyle: consistent
+  Enabled: true
 Layout/IndentHeredoc:
   Enabled: true
 Layout/IndentationConsistency:
@@ -286,6 +293,8 @@ Style/MultilineIfModifier:
 Style/MultilineIfThen:
   Enabled: true
 Style/MultilineMemoization:
+  Enabled: true
+Layout/MultilineMethodCallBraceLayout:
   Enabled: true
 Layout/MultilineMethodCallIndentation:
   Enabled: true
@@ -421,6 +430,8 @@ Style/SymbolLiteral:
 Style/StringMethods:
   Enabled: true
 Style/SymbolArray:
+  Enabled: true
+Style/SymbolProc:
   Enabled: true
 Layout/Tab:
   Enabled: true
@@ -606,4 +617,3 @@ Style/Alias:
 # anyone else's time either.
 Style/CommentedKeyword:
   Enabled: false
-
