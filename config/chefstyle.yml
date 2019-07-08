@@ -21,6 +21,7 @@ Lint/AmbiguousRegexpLiteral:
 Lint/AssignmentInCondition:
   Enabled: true
 Layout/BlockAlignment:
+  EnforcedStyleAlignWith: start_of_block
   Enabled: true
 Lint/CircularArgumentReference:
   Enabled: true
@@ -66,7 +67,7 @@ Lint/InheritException:
   Enabled: true
 Lint/IneffectiveAccessModifier:
   Enabled: true
-Lint/LiteralInCondition:
+Lint/LiteralAsCondition:
   Enabled: true
 Lint/LiteralInInterpolation:
   Enabled: true
@@ -137,7 +138,7 @@ Lint/RescueException:
   Enabled: false
 
 # disabling this will make it easier to stage chefstyle rollouts
-Lint/UnneededDisable:
+Lint/UnneededCopDisableDirective:
   Enabled: false
 
 #
@@ -176,11 +177,19 @@ Metrics/PerceivedComplexity:
 
 
 #
-# Style
+# Style/Naming/Layout
 #
 
 Layout/AccessModifierIndentation:
   Enabled: true
+Layout/AlignArguments:
+  Enabled: true
+  EnforcedStyle: with_fixed_indentation
+Layout/AlignParameters:
+  Enabled: true
+  EnforcedStyle: with_fixed_indentation
+# the "ignore_implict" is here for keyword args in method calls which are
+# "implicit" hashes, and those should not be treated like normal hashes
 Layout/AlignHash:
   Enabled: true
   EnforcedLastArgumentHashStyle: ignore_implicit
@@ -196,11 +205,17 @@ Style/BeginBlock:
   Enabled: true
 Style/BlockDelimiters:
   Enabled: true
+Layout/BlockEndNewline:
+  Enabled: true
 Style/CharacterLiteral:
+  Enabled: true
+Style/ClassCheck:
   Enabled: true
 Style/ClassMethods:
   Enabled: true
 Layout/ClosingHeredocIndentation:
+  Enabled: true
+Layout/ClosingParenthesisIndentation:
   Enabled: true
 Style/ColonMethodCall:
   Enabled: true
@@ -216,6 +231,8 @@ Style/EachForSimpleLoop:
   Enabled: true
 Layout/ElseAlignment:
   Enabled: true
+Layout/EmptyLineAfterGuardClause:
+  Enabled: true
 Layout/EmptyLineBetweenDefs:
   Enabled: true
 Layout/EmptyLines:
@@ -223,6 +240,10 @@ Layout/EmptyLines:
 Layout/EmptyLinesAroundAccessModifier:
   Enabled: true
 Layout/EmptyLinesAroundMethodBody:
+  Enabled: true
+Style/EmptyLiteral:
+  Enabled: true
+Style/EmptyMethod:
   Enabled: true
 Style/EndBlock:
   Enabled: true
@@ -247,6 +268,9 @@ Style/IfWithSemicolon:
   Enabled: true
 Layout/IndentAssignment:
   Enabled: true
+Layout/IndentFirstArgument:
+  EnforcedStyle: consistent
+  Enabled: true
 Layout/IndentHeredoc:
   Enabled: true
 Layout/IndentationConsistency:
@@ -263,6 +287,8 @@ Layout/LeadingCommentSpace:
   Enabled: true
 Style/MethodDefParentheses:
   Enabled: true
+Style/MethodCallWithoutArgsParentheses:
+  Enabled: true
 Layout/MultilineBlockLayout:
   Enabled: true
 Style/MultilineIfModifier:
@@ -271,6 +297,11 @@ Style/MultilineIfThen:
   Enabled: true
 Style/MultilineMemoization:
   Enabled: true
+Layout/MultilineMethodCallBraceLayout:
+  Enabled: true
+Layout/MultilineMethodCallIndentation:
+  Enabled: true
+  EnforcedStyle: indented
 Layout/MultilineMethodDefinitionBraceLayout:
   Enabled: true
 Layout/MultilineOperationIndentation:
@@ -280,7 +311,11 @@ Style/MultilineTernaryOperator:
   Enabled: true
 Style/MutableConstant:
   Enabled: true
+Style/NegatedIf:
+  Enabled: true
 Style/NegatedWhile:
+  Enabled: true
+Style/NegatedUnless:
   Enabled: true
 Style/NestedModifier:
   Enabled: true
@@ -336,6 +371,8 @@ Style/RedundantSelf:
   Enabled: true
 Layout/RescueEnsureAlignment:
   Enabled: true
+Style/RegexpLiteral:
+  Enabled: true
 # temporarily disabled, but we should do this
 Style/SafeNavigation:
   Enabled: false
@@ -388,11 +425,18 @@ Style/StabbyLambdaParentheses:
 Style/StringLiterals:
   EnforcedStyle: double_quotes
   Enabled: true
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
+  Enabled: true
 Style/StructInheritance:
   Enabled: true
 Style/SymbolLiteral:
   Enabled: true
 Style/StringMethods:
+  Enabled: true
+Style/SymbolArray:
+  Enabled: true
+Style/SymbolProc:
   Enabled: true
 Layout/Tab:
   Enabled: true
@@ -400,14 +444,11 @@ Layout/TrailingBlankLines:
   Enabled: true
 Style/TrailingCommaInArguments:
   Enabled: true
-Style/TrailingCommaInHashLiteral:
-  Enabled: true
-  EnforcedStyleForMultiline: comma
 # rubocop's default gets this completely backwards
-Style/TrailingCommaInArray:
+Style/TrailingCommaInArrayLiteral:
   Enabled: true
   EnforcedStyleForMultiline: comma
-Style/TrailingCommaInHash:
+Style/TrailingCommaInHashLiteral:
   Enabled: true
   EnforcedStyleForMultiline: comma
 Style/TrailingUnderscoreVariable:
@@ -453,13 +494,13 @@ Layout/SpaceBeforeFirstArg:
   Enabled: false
 
 # whitespace in expressions is useful to enhance readability
-Layout/SpaceInsideBrackets:
+Layout/SpaceInsideArrayLiteralBrackets:
+  Enabled: false
+Layout/SpaceInsideReferenceBrackets:
   Enabled: false
 Layout/SpaceInsideParens:
   Enabled: false
 Layout/SpaceInsidePercentLiteralDelimiters:
-  Enabled: false
-Layout/SpaceInsideArrayLiteralBrackets:
   Enabled: false
 
 # more whitespace cops that we allow since they can enhance readability
@@ -568,4 +609,14 @@ Style/BracesAroundHashParameters:
 
 # We almost never use format strings but this cop triggers on any string with "%{whatever}" in it and is 99% false positives
 Style/FormatStringToken:
+  Enabled: false
+
+# This cop is annoying.  The rubocop default of course goes against the most popular community guidelines due to contrariness
+# and then the autocorrect mangles specs in chef/chef.  Burned more time than it was worth looking at this one so its off.
+Style/Alias:
+  Enabled: false
+
+# No autofix for this one, and I don't care to fix 138 instances of it in the chef/chef codebase.  Don't think its worth wasting
+# anyone else's time either.
+Style/CommentedKeyword:
   Enabled: false
