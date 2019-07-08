@@ -1,21 +1,19 @@
 # chefstyle change log
 
-<!-- latest_release 0.13.2 -->
-## [v0.13.2](https://github.com/chef/chefstyle/tree/v0.13.2) (2019-07-08)
-
-#### Merged Pull Requests
-- New Chefstyle Rules [#74](https://github.com/chef/chefstyle/pull/74) ([lamont-granquist](https://github.com/lamont-granquist))
+<!-- latest_release -->
 <!-- latest_release -->
 
-<!-- release_rollup since=0.13.0 -->
-### Changes not yet released to rubygems.org
-
-#### Merged Pull Requests
-- New Chefstyle Rules [#74](https://github.com/chef/chefstyle/pull/74) ([lamont-granquist](https://github.com/lamont-granquist)) <!-- 0.13.2 -->
-- disable Style/FormatStringToken [#73](https://github.com/chef/chefstyle/pull/73) ([lamont-granquist](https://github.com/lamont-granquist)) <!-- 0.13.1 -->
+<!-- release_rollup -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
+## [v0.13.2](https://github.com/chef/chefstyle/tree/v0.13.2) (2019-07-08)
+
+#### Merged Pull Requests
+- disable Style/FormatStringToken [#73](https://github.com/chef/chefstyle/pull/73) ([lamont-granquist](https://github.com/lamont-granquist))
+- New Chefstyle Rules [#74](https://github.com/chef/chefstyle/pull/74) ([lamont-granquist](https://github.com/lamont-granquist))
+<!-- latest_stable_release -->
+
 ## [v0.13.0](https://github.com/chef/chefstyle/tree/v0.13.0) (2019-07-02)
 
 #### Merged Pull Requests
@@ -23,7 +21,6 @@
 - Switch from Travis to Buildkite [#70](https://github.com/chef/chefstyle/pull/70) ([tas50](https://github.com/tas50))
 - Set the owner of this project as the Chef Foundation team [#71](https://github.com/chef/chefstyle/pull/71) ([tas50](https://github.com/tas50))
 - Update the Rubocop engine to 0.72 [#72](https://github.com/chef/chefstyle/pull/72) ([tas50](https://github.com/tas50))
-<!-- latest_stable_release -->
 
 ## [v0.12.0](https://github.com/chef/chefstyle/tree/v0.12.0) (2019-01-15)
 
