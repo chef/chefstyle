@@ -185,6 +185,11 @@ Layout/AccessModifierIndentation:
 Layout/AlignArguments:
   Enabled: true
   EnforcedStyle: with_fixed_indentation
+Layout/AlignParameters:
+  Enabled: true
+  EnforcedStyle: with_fixed_indentation
+# the "ignore_implict" is here for keyword args in method calls which are
+# "implicit" hashes, and those should not be treated like normal hashes
 Layout/AlignHash:
   Enabled: true
   EnforcedLastArgumentHashStyle: ignore_implicit
@@ -309,6 +314,8 @@ Style/MutableConstant:
 Style/NegatedIf:
   Enabled: true
 Style/NegatedWhile:
+  Enabled: true
+Style/NegatedUnless:
   Enabled: true
 Style/NestedModifier:
   Enabled: true
