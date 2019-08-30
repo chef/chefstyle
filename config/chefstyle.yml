@@ -203,8 +203,10 @@ Style/Attr:
   Enabled: true
 Style/BeginBlock:
   Enabled: true
+# there's debate over one-liner vs semantic blockstyle, chef projects should just pick one style
+# and stick with it.
 Style/BlockDelimiters:
-  Enabled: true
+  Enabled: false
 Layout/BlockEndNewline:
   Enabled: true
 Style/CharacterLiteral:
