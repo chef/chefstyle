@@ -1,9 +1,17 @@
 # chefstyle change log
 
-<!-- latest_release -->
+<!-- latest_release 0.14.0 -->
+## [v0.14.0](https://github.com/chef/chefstyle/tree/v0.14.0) (2019-11-05)
+
+#### Merged Pull Requests
+- Bump rubocop to 0.75.1 for multiple bugfixes [#76](https://github.com/chef/chefstyle/pull/76) ([tas50](https://github.com/tas50))
 <!-- latest_release -->
 
-<!-- release_rollup -->
+<!-- release_rollup since=0.13.3 -->
+### Changes not yet released to rubygems.org
+
+#### Merged Pull Requests
+- Bump rubocop to 0.75.1 for multiple bugfixes [#76](https://github.com/chef/chefstyle/pull/76) ([tas50](https://github.com/tas50)) <!-- 0.14.0 -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
