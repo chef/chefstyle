@@ -1,25 +1,22 @@
 # chefstyle change log
 
-<!-- latest_release 0.14.0 -->
-## [v0.14.0](https://github.com/chef/chefstyle/tree/v0.14.0) (2019-11-05)
-
-#### Merged Pull Requests
-- Bump rubocop to 0.75.1 for multiple bugfixes [#76](https://github.com/chef/chefstyle/pull/76) ([tas50](https://github.com/tas50))
+<!-- latest_release -->
 <!-- latest_release -->
 
-<!-- release_rollup since=0.13.3 -->
-### Changes not yet released to rubygems.org
-
-#### Merged Pull Requests
-- Bump rubocop to 0.75.1 for multiple bugfixes [#76](https://github.com/chef/chefstyle/pull/76) ([tas50](https://github.com/tas50)) <!-- 0.14.0 -->
+<!-- release_rollup -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
+## [v0.14](https://github.com/chef/chefstyle/tree/v0.14) (2019-11-08)
+
+#### Merged Pull Requests
+- Bump rubocop to 0.75.1 for multiple bugfixes [#76](https://github.com/chef/chefstyle/pull/76) ([tas50](https://github.com/tas50))
+<!-- latest_stable_release -->
+
 ## [v0.13.3](https://github.com/chef/chefstyle/tree/v0.13.3) (2019-08-30)
 
 #### Merged Pull Requests
 - turn off block delimiters, allow semantic style [#75](https://github.com/chef/chefstyle/pull/75) ([lamont-granquist](https://github.com/lamont-granquist))
-<!-- latest_stable_release -->
 
 ## [v0.13.2](https://github.com/chef/chefstyle/tree/v0.13.2) (2019-07-08)
 
