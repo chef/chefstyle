@@ -1,4 +1,4 @@
-require "chefstyle/version"
+require_relative "chefstyle/version"
 
 # ensure the desired target version of RuboCop is gem activated
 gem "rubocop", "= #{Chefstyle::RUBOCOP_VERSION}"
