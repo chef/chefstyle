@@ -1,9 +1,17 @@
 # chefstyle change log
 
-<!-- latest_release -->
+<!-- latest_release 0.14.2 -->
+## [v0.14.2](https://github.com/chef/chefstyle/tree/v0.14.2) (2020-02-19)
+
+#### Merged Pull Requests
+- enable Lint/UriEscapeUnescape [#78](https://github.com/chef/chefstyle/pull/78) ([lamont-granquist](https://github.com/lamont-granquist))
 <!-- latest_release -->
 
-<!-- release_rollup -->
+<!-- release_rollup since=0.14.1 -->
+### Changes not yet released to rubygems.org
+
+#### Merged Pull Requests
+- enable Lint/UriEscapeUnescape [#78](https://github.com/chef/chefstyle/pull/78) ([lamont-granquist](https://github.com/lamont-granquist)) <!-- 0.14.2 -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
