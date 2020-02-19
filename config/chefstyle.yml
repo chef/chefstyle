@@ -107,6 +107,8 @@ Lint/UnneededSplatExpansion:
   Enabled: true
 Lint/UnreachableCode:
   Enabled: true
+Lint/UriEscapeUnescape:
+  Enabled: true
 Lint/UselessAccessModifier:
   Enabled: true
 Lint/UselessAssignment:
