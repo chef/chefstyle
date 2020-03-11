@@ -31,6 +31,7 @@ Lint/Debugger:
   Enabled: true
 Layout/DefEndAlignment:
   Enabled: true
+  AutoCorrect: true
 Lint/DeprecatedClassMethods:
   Enabled: true
 Lint/DuplicateCaseCondition:
@@ -53,6 +54,7 @@ Lint/EmptyWhen:
   Enabled: true
 Layout/EndAlignment:
   Enabled: true
+  AutoCorrect: true
 Lint/EndInMethod:
   Enabled: true
 Lint/EnsureReturn:
