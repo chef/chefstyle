@@ -1,21 +1,19 @@
 # chefstyle change log
 
-<!-- latest_release 1.0.1 -->
-## [v1.0.1](https://github.com/chef/chefstyle/tree/v1.0.1) (2020-04-16)
-
-#### Merged Pull Requests
-- Update to RuboCop 0.82 engine [#83](https://github.com/chef/chefstyle/pull/83) ([tas50](https://github.com/tas50))
+<!-- latest_release -->
 <!-- latest_release -->
 
-<!-- release_rollup since=0.15.1 -->
-### Changes not yet released to rubygems.org
-
-#### Merged Pull Requests
-- Update to RuboCop 0.82 engine [#83](https://github.com/chef/chefstyle/pull/83) ([tas50](https://github.com/tas50)) <!-- 1.0.1 -->
-- Update to Rubocop 0.81.0 [#82](https://github.com/chef/chefstyle/pull/82) ([tas50](https://github.com/tas50)) <!-- 1.0.0 -->
+<!-- release_rollup -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
+## [v1.0.1](https://github.com/chef/chefstyle/tree/v1.0.1) (2020-04-16)
+
+#### Merged Pull Requests
+- Update to Rubocop 0.81.0 [#82](https://github.com/chef/chefstyle/pull/82) ([tas50](https://github.com/tas50))
+- Update to RuboCop 0.82 engine [#83](https://github.com/chef/chefstyle/pull/83) ([tas50](https://github.com/tas50))
+<!-- latest_stable_release -->
+
 ## [v0.15.1](https://github.com/chef/chefstyle/tree/v0.15.1) (2020-03-25)
 
 #### Merged Pull Requests
@@ -23,7 +21,6 @@
 - Update the RuboCop engine to 0.80.1 [#79](https://github.com/chef/chefstyle/pull/79) ([tas50](https://github.com/tas50))
 - Update buildkite testing [#80](https://github.com/chef/chefstyle/pull/80) ([tas50](https://github.com/tas50))
 - Allow chefstyle to autocorrect indentation issues [#81](https://github.com/chef/chefstyle/pull/81) ([tas50](https://github.com/tas50))
-<!-- latest_stable_release -->
 
 ## [v0.14.1](https://github.com/chef/chefstyle/tree/v0.14.1) (2020-02-12)
 
