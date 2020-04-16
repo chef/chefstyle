@@ -1,5 +1,5 @@
 AllCops:
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 2.4
 
 #
 # Bundler
@@ -444,7 +444,7 @@ Style/SymbolArray:
   Enabled: true
 Style/SymbolProc:
   Enabled: true
-Layout/Tab:
+Layout/IndentationStyle:
   Enabled: true
 Layout/TrailingBlankLines:
   Enabled: true
