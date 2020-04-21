@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.license       = "Apache-2.0"
   spec.required_ruby_version = ">= 2.4"
 
-  spec.files = %w{LICENSE} + Dir.glob("{bin,config,lib}/**/*", File::FNM_DOTMATCH).reject { |f| File.directory?(f) }
+  spec.files = %w{LICENSE chefstyle.gemspec} + Dir.glob("{bin,config,lib}/**/*", File::FNM_DOTMATCH).reject { |f| File.directory?(f) }
   spec.executables = %w{chefstyle}
   spec.require_paths = ["lib"]
 
