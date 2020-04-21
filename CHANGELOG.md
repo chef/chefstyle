@@ -1,9 +1,17 @@
 # chefstyle change log
 
-<!-- latest_release -->
+<!-- latest_release 1.0.3 -->
+## [v1.0.3](https://github.com/chef/chefstyle/tree/v1.0.3) (2020-04-21)
+
+#### Merged Pull Requests
+- Add back the Gemspec, but remove gemfile dev groups [#85](https://github.com/chef/chefstyle/pull/85) ([tas50](https://github.com/tas50))
 <!-- latest_release -->
 
-<!-- release_rollup -->
+<!-- release_rollup since=1.0.2 -->
+### Changes not yet released to rubygems.org
+
+#### Merged Pull Requests
+- Add back the Gemspec, but remove gemfile dev groups [#85](https://github.com/chef/chefstyle/pull/85) ([tas50](https://github.com/tas50)) <!-- 1.0.3 -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
