@@ -123,6 +123,8 @@ Lint/UselessSetterCall:
   Enabled: true
 Lint/Void:
   Enabled: true
+Layout/CommentIndentation:
+  Enabled: true
 
 #
 # Disabled Lint
