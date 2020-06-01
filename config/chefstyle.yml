@@ -628,3 +628,7 @@ Style/Alias:
 # anyone else's time either.
 Style/CommentedKeyword:
   Enabled: false
+
+# make sure we catch this Ruby 3.0 breaking change now
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: true
