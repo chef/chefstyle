@@ -1,27 +1,24 @@
 # chefstyle change log
 
-<!-- latest_release 1.1.0 -->
-## [v1.1.0](https://github.com/chef/chefstyle/tree/v1.1.0) (2020-06-01)
-
-#### Merged Pull Requests
-- Update RuboCop engine from 0.83 to 0.85 [#89](https://github.com/chef/chefstyle/pull/89) ([tas50](https://github.com/tas50))
+<!-- latest_release -->
 <!-- latest_release -->
 
-<!-- release_rollup since=1.0.5 -->
-### Changes not yet released to rubygems.org
-
-#### Merged Pull Requests
-- Update RuboCop engine from 0.83 to 0.85 [#89](https://github.com/chef/chefstyle/pull/89) ([tas50](https://github.com/tas50)) <!-- 1.1.0 -->
+<!-- release_rollup -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
+## [v1.1.0](https://github.com/chef/chefstyle/tree/v1.1.0) (2020-06-02)
+
+#### Merged Pull Requests
+- Update RuboCop engine from 0.83 to 0.85 [#89](https://github.com/chef/chefstyle/pull/89) ([tas50](https://github.com/tas50))
+<!-- latest_stable_release -->
+
 ## [v1.0.5](https://github.com/chef/chefstyle/tree/v1.0.5) (2020-05-12)
 
 #### Merged Pull Requests
 - Add back the Gemspec, but remove gemfile dev groups [#85](https://github.com/chef/chefstyle/pull/85) ([tas50](https://github.com/tas50))
 - Make sure our comments line up with our code [#86](https://github.com/chef/chefstyle/pull/86) ([tas50](https://github.com/tas50))
 - Update RuboCop to 0.83 [#87](https://github.com/chef/chefstyle/pull/87) ([tas50](https://github.com/tas50))
-<!-- latest_stable_release -->
 
 ## [v1.0.2](https://github.com/chef/chefstyle/tree/v1.0.2) (2020-04-20)
 
