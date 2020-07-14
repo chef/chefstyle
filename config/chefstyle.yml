@@ -482,11 +482,15 @@ Style/WhileUntilModifier:
 Style/WordArray:
   Enabled: true
 
+# we are ruby > 2.0 only so we can remove encoding comments for utf-8
+Style/Encoding:
+  Enabled: true
+
 #
 # Disabled Style
 #
 
-# FIXME: we need to enable this
+# reduces memory usage, but isn't a simple autocorrect so we need to do this one project at a time
 Style/FrozenStringLiteralComment:
   Enabled: false
 
@@ -527,10 +531,6 @@ Style/FormatString:
   Enabled: false
 # single line if/unless blocks may read more naturally than modifiers
 Style/IfUnlessModifier:
-  Enabled: false
-
-# we are ruby > 2.0 only so can disable the Encoding cop
-Style/Encoding:
   Enabled: false
 
 # Dan is -1 on this one: https://github.com/chef/chef/pull/4526#issuecomment-179950045

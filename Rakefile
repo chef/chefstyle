@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require "bundler/gem_tasks"
 
 upstream = Gem::Specification.find_by_name("rubocop")
