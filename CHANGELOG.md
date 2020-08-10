@@ -1,26 +1,23 @@
 # chefstyle change log
 
-<!-- latest_release 1.2.1 -->
+<!-- latest_release -->
+<!-- latest_release -->
+
+<!-- release_rollup -->
+<!-- release_rollup -->
+
+<!-- latest_stable_release -->
 ## [v1.2.1](https://github.com/chef/chefstyle/tree/v1.2.1) (2020-08-10)
 
 #### Merged Pull Requests
 - Bump to RuboCop 0.89.1 [#96](https://github.com/chef/chefstyle/pull/96) ([tas50](https://github.com/tas50))
-<!-- latest_release -->
-
-<!-- release_rollup since=1.2.0 -->
-### Changes not yet released to rubygems.org
-
-#### Merged Pull Requests
-- Bump to RuboCop 0.89.1 [#96](https://github.com/chef/chefstyle/pull/96) ([tas50](https://github.com/tas50)) <!-- 1.2.1 -->
-<!-- release_rollup -->
-
 <!-- latest_stable_release -->
+
 ## [v1.2.0](https://github.com/chef/chefstyle/tree/v1.2.0) (2020-07-14)
 
 #### Merged Pull Requests
 - Enable Style/Encoding cop [#94](https://github.com/chef/chefstyle/pull/94) ([tas50](https://github.com/tas50))
 - Vendor rubocop-0.88.0 upstream configuration. [#95](https://github.com/chef/chefstyle/pull/95) ([tas50](https://github.com/tas50))
-<!-- latest_stable_release -->
 
 ## [v1.1.3](https://github.com/chef/chefstyle/tree/v1.1.3) (2020-07-09)
 
