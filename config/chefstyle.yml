@@ -639,7 +639,7 @@ ChefRuby/Ruby27KeywordArgumentWarnings:
   VersionAdded: '1.3.0'
 
 ChefRuby/UnlessDefinedRequire:
-  Description: Workaround rubygems slow requires by only running require if the class isn't already defined
+  Description: Workaround RubyGems' slow requires by only running require if the constant isn't already defined
   Enabled: true
   VersionAdded: '1.3.0'
   Exclude:
