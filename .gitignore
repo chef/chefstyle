@@ -7,3 +7,4 @@
 /pkg/
 /spec/reports/
 /tmp/
+/test.rb # used for quick testing of cops

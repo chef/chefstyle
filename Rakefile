@@ -12,7 +12,7 @@ task :vendor do
   cp(src.join("default.yml"), dst.join("upstream.yml"))
 
   require "rubocop"
-  require "yaml"
+  require "yaml" unless defined?(YAML)
   cfg = RuboCop::Cop::Cop.all.inject({}) { |acc, cop| acc[cop.cop_name] = { "Enabled" => false }; acc }
   File.open(dst.join("disable_all.yml"), "w") { |fh| fh.write cfg.to_yaml }
 
@@ -27,7 +27,7 @@ RuboCop::RakeTask.new(:style) do |task|
 end
 
 begin
-  require "yard"
+  require "yard" unless defined?(YARD)
   YARD::Rake::YardocTask.new(:docs)
 rescue LoadError
   puts "yard is not available. bundle install first to make sure all dependencies are installed."
