@@ -18,7 +18,4 @@ RSpec.configure do |config|
   config.include RuboCop::RSpec::ExpectOffense
 end
 
-$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "..", "lib"))
-$LOAD_PATH.unshift(File.dirname(__FILE__))
-
 require "chefstyle"
