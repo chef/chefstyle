@@ -20,14 +20,12 @@ module RuboCop
   module Cop
     module Chef
       module ChefRuby
-        # Rubygems is VERY slow to require gems even if they've already been loaded. To work around this
-        # wrap your require statement with an `if defined?()` check.
-        #
+        # Rubygems does not need to be required in a Gemspec. It's already loaded out of the box in Ruby now.
         class GemspecRequireRubygems < Base
           extend RuboCop::Cop::AutoCorrector
           include RangeHelp
 
-          MSG = "Rubygems does not need to be required in a Gemspec"
+          MSG = "Rubygems does not need to be required in a Gemspec. It's already loaded out of the box in Ruby now."
 
           def_node_matcher :require_rubygems?, <<-PATTERN
             (send nil? :require (str "rubygems") )
@@ -35,7 +33,7 @@ module RuboCop
 
           def on_send(node)
             require_rubygems?(node) do |r|
-              node = node.parent if node.parent.conditional? # make sure we identify conditionals on the require
+              node = node.parent if node.parent && node.parent.conditional? # make sure we identify conditionals on the require
               add_offense(node.loc.expression, message: MSG, severity: :refactor) do |corrector|
                 corrector.remove(range_with_surrounding_space(range: node.loc.expression, side: :left))
               end
