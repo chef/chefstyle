@@ -554,7 +554,7 @@ Style/RescueModifier:
 Style/AsciiComments:
   Enabled: false
 
-# Parens around ternaries often make them more readable and reduces cognitive load over operator precidence
+# Parens around ternaries often make them more readable and reduces cognitive load over operator precedence
 Style/TernaryParentheses:
   Enabled: false
 
