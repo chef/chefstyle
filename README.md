@@ -1,4 +1,4 @@
-# Chefstyle - Version Pinned rubocop and sane defaults for Ruby
+# Chefstyle - Version Pinned RuboCop with Chef approved Cop list for linting
 
 [![Gem Version](https://badge.fury.io/rb/chefstyle.svg)](https://badge.fury.io/rb/chefstyle)
 
