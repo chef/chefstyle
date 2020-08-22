@@ -22,9 +22,17 @@ end
 # Chefstyle patches the RuboCop tool to set a new default configuration that
 # is vendored in the Chefstyle codebase.
 module Chefstyle
-  # @return [String] the absolute path to the main RuboCop configuration YAML
-  #   file
+  # @return [String] the absolute path to the main RuboCop configuration YAML file
   def self.config
     RuboCop::ConfigLoader::DEFAULT_FILE
   end
+end
+
+require_relative "rubocop/chef"
+
+# Chef custom cops
+Dir.glob(File.dirname(__FILE__) + "/rubocop/cop/chef/**/*.rb") do |file|
+  next if File.directory?(file)
+
+  require_relative file # not actually relative but require_relative is faster
 end

@@ -554,7 +554,7 @@ Style/RescueModifier:
 Style/AsciiComments:
   Enabled: false
 
-# Parens around ternaries often make them more readable and reduces cognitive load over operator precidence
+# Parens around ternaries often make them more readable and reduces cognitive load over operator precedence
 Style/TernaryParentheses:
   Enabled: false
 
@@ -632,3 +632,22 @@ Style/CommentedKeyword:
 # make sure we catch this Ruby 3.0 breaking change now
 Lint/DeprecatedOpenSSLConstant:
   Enabled: true
+
+ChefRuby/Ruby27KeywordArgumentWarnings:
+  Description: Pass options to shell_out helpers without the brackets to avoid Ruby 2.7 deprecation warnings.
+  Enabled: true
+  VersionAdded: '1.3.0'
+
+ChefRuby/UnlessDefinedRequire:
+  Description: Workaround RubyGems' slow requires by only running require if the constant isn't already defined
+  Enabled: true
+  VersionAdded: '1.3.0'
+  Include:
+    - 'lib/**/*'
+
+ChefRuby/GemspecRequireRubygems:
+  Description: Rubygems does not need to be required in a Gemspec
+  Enabled: true
+  VersionAdded: '1.3.0'
+  Include:
+    - '**/*.gemspec'
