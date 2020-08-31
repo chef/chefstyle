@@ -35,6 +35,7 @@ module RuboCop
             "benchmark" => "Benchmark",
             "cgi" => "CGI",
             "chef-utils" => "ChefUtils",
+            "chef-utils/dist" => "ChefUtils::Dist",
             "csv" => "CSV",
             "digest" => "Digest",
             "digest/md5" => "Digest::MD5",
