@@ -1,16 +1,17 @@
 # chefstyle change log
 
-<!-- latest_release 1.3.1 -->
-## [v1.3.1](https://github.com/chef/chefstyle/tree/v1.3.1) (2020-08-24)
+<!-- latest_release 1.3.2 -->
+## [v1.3.2](https://github.com/chef/chefstyle/tree/v1.3.2) (2020-09-01)
 
 #### Merged Pull Requests
-- Add ChefRuby/RequireNetHttps [#98](https://github.com/chef/chefstyle/pull/98) ([tas50](https://github.com/tas50))
+- Update RuboCop to 0.90 [#100](https://github.com/chef/chefstyle/pull/100) ([tas50](https://github.com/tas50))
 <!-- latest_release -->
 
 <!-- release_rollup since=1.2.1 -->
 ### Changes not yet released to rubygems.org
 
 #### Merged Pull Requests
+- Update RuboCop to 0.90 [#100](https://github.com/chef/chefstyle/pull/100) ([tas50](https://github.com/tas50)) <!-- 1.3.2 -->
 - Add ChefRuby/RequireNetHttps [#98](https://github.com/chef/chefstyle/pull/98) ([tas50](https://github.com/tas50)) <!-- 1.3.1 -->
 - Add custom cops to Chefstyle [#97](https://github.com/chef/chefstyle/pull/97) ([tas50](https://github.com/tas50)) <!-- 1.3.0 -->
 <!-- release_rollup -->
