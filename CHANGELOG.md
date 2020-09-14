@@ -1,9 +1,17 @@
 # chefstyle change log
 
-<!-- latest_release -->
+<!-- latest_release 1.3.3 -->
+## [v1.3.3](https://github.com/chef/chefstyle/tree/v1.3.3) (2020-09-14)
+
+#### Merged Pull Requests
+- Add cop for chef-utils/dist requires [#99](https://github.com/chef/chefstyle/pull/99) ([ramereth](https://github.com/ramereth))
 <!-- latest_release -->
 
-<!-- release_rollup -->
+<!-- release_rollup since=1.3.2 -->
+### Changes not yet released to rubygems.org
+
+#### Merged Pull Requests
+- Add cop for chef-utils/dist requires [#99](https://github.com/chef/chefstyle/pull/99) ([ramereth](https://github.com/ramereth)) <!-- 1.3.3 -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
