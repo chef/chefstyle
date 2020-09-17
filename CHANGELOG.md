@@ -1,16 +1,17 @@
 # chefstyle change log
 
-<!-- latest_release 1.3.4 -->
-## [v1.3.4](https://github.com/chef/chefstyle/tree/v1.3.4) (2020-09-14)
+<!-- latest_release 1.3.5 -->
+## [v1.3.5](https://github.com/chef/chefstyle/tree/v1.3.5) (2020-09-17)
 
 #### Merged Pull Requests
-- Enable Lint/Syntax [#101](https://github.com/chef/chefstyle/pull/101) ([tas50](https://github.com/tas50))
+- Enable 7 more cops to simplify our code [#102](https://github.com/chef/chefstyle/pull/102) ([tas50](https://github.com/tas50))
 <!-- latest_release -->
 
 <!-- release_rollup since=1.3.2 -->
 ### Changes not yet released to rubygems.org
 
 #### Merged Pull Requests
+- Enable 7 more cops to simplify our code [#102](https://github.com/chef/chefstyle/pull/102) ([tas50](https://github.com/tas50)) <!-- 1.3.5 -->
 - Enable Lint/Syntax [#101](https://github.com/chef/chefstyle/pull/101) ([tas50](https://github.com/tas50)) <!-- 1.3.4 -->
 - Add cop for chef-utils/dist requires [#99](https://github.com/chef/chefstyle/pull/99) ([ramereth](https://github.com/ramereth)) <!-- 1.3.3 -->
 <!-- release_rollup -->
