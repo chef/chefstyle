@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
-$LOAD_PATH.unshift File.join(File.dirname(__FILE__), %w{.. lib})
+$LOAD_PATH.unshift File.join(__dir__, %w{.. lib})
 
 require "chefstyle"
 
