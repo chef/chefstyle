@@ -1,30 +1,27 @@
 # chefstyle change log
 
-<!-- latest_release 1.4.0 -->
-## [v1.4.0](https://github.com/chef/chefstyle/tree/v1.4.0) (2020-09-17)
-
-#### Merged Pull Requests
-- Update RuboCop engine to 0.91 [#103](https://github.com/chef/chefstyle/pull/103) ([tas50](https://github.com/tas50))
+<!-- latest_release -->
 <!-- latest_release -->
 
-<!-- release_rollup since=1.3.2 -->
-### Changes not yet released to rubygems.org
-
-#### Merged Pull Requests
-- Update RuboCop engine to 0.91 [#103](https://github.com/chef/chefstyle/pull/103) ([tas50](https://github.com/tas50)) <!-- 1.4.0 -->
-- Enable 7 more cops to simplify our code [#102](https://github.com/chef/chefstyle/pull/102) ([tas50](https://github.com/tas50)) <!-- 1.3.5 -->
-- Enable Lint/Syntax [#101](https://github.com/chef/chefstyle/pull/101) ([tas50](https://github.com/tas50)) <!-- 1.3.4 -->
-- Add cop for chef-utils/dist requires [#99](https://github.com/chef/chefstyle/pull/99) ([ramereth](https://github.com/ramereth)) <!-- 1.3.3 -->
+<!-- release_rollup -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
+## [v1.4.0](https://github.com/chef/chefstyle/tree/v1.4.0) (2020-09-17)
+
+#### Merged Pull Requests
+- Add cop for chef-utils/dist requires [#99](https://github.com/chef/chefstyle/pull/99) ([ramereth](https://github.com/ramereth))
+- Enable Lint/Syntax [#101](https://github.com/chef/chefstyle/pull/101) ([tas50](https://github.com/tas50))
+- Enable 7 more cops to simplify our code [#102](https://github.com/chef/chefstyle/pull/102) ([tas50](https://github.com/tas50))
+- Update RuboCop engine to 0.91 [#103](https://github.com/chef/chefstyle/pull/103) ([tas50](https://github.com/tas50))
+<!-- latest_stable_release -->
+
 ## [v1.3.2](https://github.com/chef/chefstyle/tree/v1.3.2) (2020-09-01)
 
 #### Merged Pull Requests
 - Add custom cops to Chefstyle [#97](https://github.com/chef/chefstyle/pull/97) ([tas50](https://github.com/tas50))
 - Add ChefRuby/RequireNetHttps [#98](https://github.com/chef/chefstyle/pull/98) ([tas50](https://github.com/tas50))
 - Update RuboCop to 0.90 [#100](https://github.com/chef/chefstyle/pull/100) ([tas50](https://github.com/tas50))
-<!-- latest_stable_release -->
 
 ## [v1.2.1](https://github.com/chef/chefstyle/tree/v1.2.1) (2020-08-10)
 
