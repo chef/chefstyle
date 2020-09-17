@@ -637,6 +637,34 @@ Lint/DeprecatedOpenSSLConstant:
 Lint/Syntax:
   Enabled: true
 
+# remove extra requires like 'thread'
+Lint/RedundantRequireStatement:
+  Enabled: true
+
+# simplify stripping strings
+Style/Strip:
+  Enabled: true
+
+# simplify getting min/max
+Style/RedundantSort:
+  Enabled: true
+
+# no need for .rb in requires
+Style/RedundantFileExtensionInRequire:
+  Enabled: true
+
+# more code you don't need
+Style/RedundantCondition:
+  Enabled: true
+
+# Use  __dir__ to simplify things
+Style/Dir:
+  Enabled: true
+
+# Use __FILE__ or __dir__ to simplify expand_paths
+Style/ExpandPathArguments:
+  Enabled: true
+
 ChefRuby/Ruby27KeywordArgumentWarnings:
   Description: Pass options to shell_out helpers without the brackets to avoid Ruby 2.7 deprecation warnings.
   Enabled: true
