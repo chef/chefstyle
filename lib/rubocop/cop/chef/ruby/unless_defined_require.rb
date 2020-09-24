@@ -34,7 +34,7 @@ module RuboCop
             "base64" => "Base64",
             "benchmark" => "Benchmark",
             "cgi" => "CGI",
-            "chef-utils" => "ChefUtils",
+            "chef-utils" => "ChefUtils::CANARY",
             "chef-utils/dist" => "ChefUtils::Dist",
             "csv" => "CSV",
             "digest" => "Digest",
@@ -99,6 +99,7 @@ module RuboCop
             "yard" => "YARD",
             "zip" => "Zip",
             "zlib" => "Zlib",
+            "pastel" => "Pastel",
           }.freeze
 
           def_node_matcher :require?, <<-PATTERN
