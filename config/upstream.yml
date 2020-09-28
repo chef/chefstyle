@@ -2463,7 +2463,7 @@ Style/ArrayCoercion:
                   with a variable you want to treat as an Array, but you're not certain it's an array.
   StyleGuide: '#array-coercion'
   Safe: false
-  Enabled: 'pending'
+  Enabled: false
   VersionAdded: '0.88'
 
 Style/ArrayJoin:
@@ -2863,7 +2863,8 @@ Style/DateTime:
   StyleGuide: '#date--time'
   Enabled: false
   VersionAdded: '0.51'
-  VersionChanged: '0.59'
+  VersionChanged: '0.92'
+  SafeAutoCorrect: false
   AllowCoercion: false
 
 Style/DefWithParentheses:
@@ -3283,11 +3284,16 @@ Style/IpAddresses:
   Description: "Don't include literal IP addresses in code."
   Enabled: false
   VersionAdded: '0.58'
-  VersionChanged: '0.77'
+  VersionChanged: '0.91'
   # Allow addresses to be permitted
   AllowedAddresses:
     - "::"
     # :: is a valid IPv6 address, but could potentially be legitimately in code
+  Exclude:
+    - '**/*.gemfile'
+    - '**/Gemfile'
+    - '**/gems.rb'
+    - '**/*.gemspec'
 
 Style/KeywordParametersOrder:
   Description: 'Enforces that optional keyword parameters are placed at the end of the parameters list.'
@@ -3720,6 +3726,8 @@ Style/OptionalBooleanParameter:
   Enabled: pending
   Safe: false
   VersionAdded: '0.89'
+  AllowedMethods:
+    - respond_to_missing?
 
 Style/OrAssignment:
   Description: 'Recommend usage of double pipe equals (||=) where applicable.'
@@ -3988,6 +3996,8 @@ Style/SafeNavigation:
                   This cop transforms usages of a method call safeguarded by
                   a check for the existence of the object to
                   safe navigation (`&.`).
+                  Auto-correction is unsafe as it assumes the object will
+                  be `nil` or truthy, but never `false`.
   Enabled: true
   VersionAdded: '0.43'
   VersionChanged: '0.77'
@@ -4000,6 +4010,7 @@ Style/SafeNavigation:
     - presence
     - try
     - try!
+  SafeAutoCorrect: false
 
 Style/Sample:
   Description: >-
