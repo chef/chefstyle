@@ -1,21 +1,19 @@
 # chefstyle change log
 
-<!-- latest_release 1.4.2 -->
-## [v1.4.2](https://github.com/chef/chefstyle/tree/v1.4.2) (2020-09-28)
-
-#### Merged Pull Requests
-- Update RuboCop engine to 0.92 [#105](https://github.com/chef/chefstyle/pull/105) ([tas50](https://github.com/tas50))
+<!-- latest_release -->
 <!-- latest_release -->
 
-<!-- release_rollup since=1.4.0 -->
-### Changes not yet released to rubygems.org
-
-#### Merged Pull Requests
-- Update RuboCop engine to 0.92 [#105](https://github.com/chef/chefstyle/pull/105) ([tas50](https://github.com/tas50)) <!-- 1.4.2 -->
-- Update classs in unless_defined_required [#104](https://github.com/chef/chefstyle/pull/104) ([tas50](https://github.com/tas50)) <!-- 1.4.1 -->
+<!-- release_rollup -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
+## [v1.4.2](https://github.com/chef/chefstyle/tree/v1.4.2) (2020-09-28)
+
+#### Merged Pull Requests
+- Update classs in unless_defined_required [#104](https://github.com/chef/chefstyle/pull/104) ([tas50](https://github.com/tas50))
+- Update RuboCop engine to 0.92 [#105](https://github.com/chef/chefstyle/pull/105) ([tas50](https://github.com/tas50))
+<!-- latest_stable_release -->
+
 ## [v1.4.0](https://github.com/chef/chefstyle/tree/v1.4.0) (2020-09-17)
 
 #### Merged Pull Requests
@@ -23,7 +21,6 @@
 - Enable Lint/Syntax [#101](https://github.com/chef/chefstyle/pull/101) ([tas50](https://github.com/tas50))
 - Enable 7 more cops to simplify our code [#102](https://github.com/chef/chefstyle/pull/102) ([tas50](https://github.com/tas50))
 - Update RuboCop engine to 0.91 [#103](https://github.com/chef/chefstyle/pull/103) ([tas50](https://github.com/tas50))
-<!-- latest_stable_release -->
 
 ## [v1.3.2](https://github.com/chef/chefstyle/tree/v1.3.2) (2020-09-01)
 
