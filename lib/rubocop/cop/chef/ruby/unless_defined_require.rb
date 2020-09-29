@@ -95,7 +95,6 @@ module RuboCop
             "win32/registry" => "Win32::Registry",
             "win32ole" => "WIN32OLE",
             "winrm" => "WinRM::Connection",
-            "yaml" => "YAML",
             "yard" => "YARD",
             "zip" => "Zip",
             "zlib" => "Zlib",
