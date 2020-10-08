@@ -665,6 +665,10 @@ Style/Dir:
 Style/ExpandPathArguments:
   Enabled: true
 
+# more code you don't need
+Lint/RedundantSafeNavigation:
+  Enabled: true
+
 ChefRuby/Ruby27KeywordArgumentWarnings:
   Description: Pass options to shell_out helpers without the brackets to avoid Ruby 2.7 deprecation warnings.
   Enabled: true
