@@ -18,7 +18,7 @@
 
 require "spec_helper"
 
-describe RuboCop::Cop::Chef::ChefRuby::Ruby27KeywordArgumentWarnings, :config do
+describe RuboCop::Cop::Chef::Ruby::Ruby27KeywordArgumentWarnings, :config do
   subject(:cop) { described_class.new(config) }
 
   it "registers an offense when passing a hash with brackets to shell_out" do
