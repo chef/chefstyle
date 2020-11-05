@@ -19,7 +19,7 @@
 module RuboCop
   module Cop
     module Chef
-      module ChefRuby
+      module Ruby
         # Pass options to shell_out helpers without the brackets to avoid Ruby 2.7 deprecation warnings.
         #
         # @example

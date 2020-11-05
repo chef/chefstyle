@@ -19,7 +19,7 @@
 module RuboCop
   module Cop
     module Chef
-      module ChefRuby
+      module Ruby
         # net/https is deprecated and just includes net/http and openssl. We should include those directly instead.
         #
         # @example

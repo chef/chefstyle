@@ -19,7 +19,7 @@
 module RuboCop
   module Cop
     module Chef
-      module ChefRuby
+      module Ruby
         # Rubygems is VERY slow to require gems even if they've already been loaded. To work around this
         # wrap your require statement with an `if defined?()` check.
         #

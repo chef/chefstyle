@@ -19,7 +19,7 @@
 module RuboCop
   module Cop
     module Chef
-      module ChefRuby
+      module Ruby
         # Rubygems does not need to be required in a Gemspec. It's already loaded out of the box in Ruby now.
         class GemspecRequireRubygems < Base
           extend RuboCop::Cop::AutoCorrector

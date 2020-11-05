@@ -18,7 +18,7 @@
 
 require "spec_helper"
 
-describe RuboCop::Cop::Chef::ChefRuby::UnlessDefinedRequire, :config do
+describe RuboCop::Cop::Chef::Ruby::UnlessDefinedRequire, :config do
   subject(:cop) { described_class.new(config) }
 
   context "with a require known to the cop" do

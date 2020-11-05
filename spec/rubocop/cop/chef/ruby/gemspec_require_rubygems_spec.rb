@@ -18,7 +18,7 @@
 
 require "spec_helper"
 
-describe RuboCop::Cop::Chef::ChefRuby::GemspecRequireRubygems, :config do
+describe RuboCop::Cop::Chef::Ruby::GemspecRequireRubygems, :config do
   subject(:cop) { described_class.new(config) }
 
   it "registers an offense when requiring rubygems" do

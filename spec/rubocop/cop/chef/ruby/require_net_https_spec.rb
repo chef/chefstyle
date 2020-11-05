@@ -18,7 +18,7 @@
 
 require "spec_helper"
 
-describe RuboCop::Cop::Chef::ChefRuby::RequireNetHttps, :config do
+describe RuboCop::Cop::Chef::Ruby::RequireNetHttps, :config do
   subject(:cop) { described_class.new(config) }
 
   it "registers an offense when when requiring net/https" do
