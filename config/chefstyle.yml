@@ -669,6 +669,22 @@ Style/ExpandPathArguments:
 Lint/RedundantSafeNavigation:
   Enabled: true
 
+# Eases readability
+Lint/RedundantStringCoercion:
+  Enabled: true
+
+# unnecessary complexity
+Lint/RedundantWithObject:
+  Enabled: true
+
+# unnecessary complexity
+Lint/RedundantWithIndex:
+  Enabled: true
+
+# avoid requiring twice
+Lint/DuplicateRequire:
+  Enabled: true
+
 Chef/Ruby/Ruby27KeywordArgumentWarnings:
   Description: Pass options to shell_out helpers without the brackets to avoid Ruby 2.7 deprecation warnings.
   Enabled: true
