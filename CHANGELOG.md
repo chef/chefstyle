@@ -1,20 +1,18 @@
 # chefstyle change log
 
-<!-- latest_release 1.5.7 -->
+<!-- latest_release -->
+<!-- latest_release -->
+
+<!-- release_rollup -->
+<!-- release_rollup -->
+
+<!-- latest_stable_release -->
 ## [v1.5.7](https://github.com/chef/chefstyle/tree/v1.5.7) (2020-12-04)
 
 #### Merged Pull Requests
 - Update to RuboCop 1.5.2 [#118](https://github.com/chef/chefstyle/pull/118) ([tas50](https://github.com/tas50))
-<!-- latest_release -->
-
-<!-- release_rollup since=1.5.6 -->
-### Changes not yet released to rubygems.org
-
-#### Merged Pull Requests
-- Update to RuboCop 1.5.2 [#118](https://github.com/chef/chefstyle/pull/118) ([tas50](https://github.com/tas50)) <!-- 1.5.7 -->
-<!-- release_rollup -->
-
 <!-- latest_stable_release -->
+
 ## [v1.5.6](https://github.com/chef/chefstyle/tree/v1.5.6) (2020-12-01)
 
 #### Merged Pull Requests
@@ -22,7 +20,6 @@
 - Allow 1 line defs w/o a space between [#115](https://github.com/chef/chefstyle/pull/115) ([tas50](https://github.com/tas50))
 - Update RuboCop engine to 1.4.2 [#116](https://github.com/chef/chefstyle/pull/116) ([tas50](https://github.com/tas50))
 - Update RuboCop to 1.5.0 [#117](https://github.com/chef/chefstyle/pull/117) ([tas50](https://github.com/tas50))
-<!-- latest_stable_release -->
 
 ## [v1.5.2](https://github.com/chef/chefstyle/tree/v1.5.2) (2020-11-16)
 
