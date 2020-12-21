@@ -1,9 +1,17 @@
 # chefstyle change log
 
-<!-- latest_release -->
+<!-- latest_release 1.5.8 -->
+## [v1.5.8](https://github.com/chef/chefstyle/tree/v1.5.8) (2020-12-21)
+
+#### Merged Pull Requests
+- Update to RuboCop 1.6.1 [#119](https://github.com/chef/chefstyle/pull/119) ([tas50](https://github.com/tas50))
 <!-- latest_release -->
 
-<!-- release_rollup -->
+<!-- release_rollup since=1.5.7 -->
+### Changes not yet released to rubygems.org
+
+#### Merged Pull Requests
+- Update to RuboCop 1.6.1 [#119](https://github.com/chef/chefstyle/pull/119) ([tas50](https://github.com/tas50)) <!-- 1.5.8 -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
