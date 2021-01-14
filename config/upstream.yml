@@ -132,12 +132,13 @@ AllCops:
   # If a value is specified for TargetRubyVersion then it is used. Acceptable
   # values are specificed as a float (i.e. 2.5); the teeny version of Ruby
   # should not be included. If the project specifies a Ruby version in the
-  # .ruby-version file, Gemfile or gems.rb file, RuboCop will try to determine
-  # the desired version of Ruby by inspecting the .ruby-version file first,
-  # followed by the Gemfile.lock or gems.locked file. (Although the Ruby version
-  # is specified in the Gemfile or gems.rb file, RuboCop reads the final value
-  # from the lock file.) If the Ruby version is still unresolved, RuboCop will
-  # use the oldest officially supported Ruby version (currently Ruby 2.4).
+  # .tool-versions or .ruby-version files, Gemfile or gems.rb file, RuboCop will
+  # try to determine the desired version of Ruby by inspecting the
+  # .tool-versions file first, then .ruby-version, followed by the Gemfile.lock
+  # or gems.locked file. (Although the Ruby version is specified in the Gemfile
+  # or gems.rb file, RuboCop reads the final value from the lock file.) If the
+  # Ruby version is still unresolved, RuboCop will use the oldest officially
+  # supported Ruby version (currently Ruby 2.4).
   TargetRubyVersion: ~
   # Determines if a notification for extension libraries should be shown when
   # rubocop is run. Keys are the name of the extension, and values are an array
@@ -1197,7 +1198,6 @@ Layout/SpaceBeforeBrackets:
   StyleGuide: '#space-in-brackets-access'
   Enabled: pending
   VersionAdded: '1.7'
-  Safe: false
 
 Layout/SpaceBeforeComma:
   Description: 'No spaces before commas.'
@@ -1469,6 +1469,34 @@ Lint/DeprecatedClassMethods:
   Enabled: true
   VersionAdded: '0.19'
 
+Lint/DeprecatedConstants:
+  Description: 'Checks for deprecated constants.'
+  Enabled: pending
+  VersionAdded: '1.8'
+  # You can configure deprecated constants.
+  # If there is an alternative method, you can set alternative value as `Alternative`.
+  # And you can set the deprecated version as `DeprecatedVersion`.
+  # These options can be omitted if they are not needed.
+  #
+  # DeprecatedConstants:
+  #   'DEPRECATED_CONSTANT':
+  #     Alternative: 'alternative_value'
+  #     DeprecatedVersion: 'deprecated_version'
+  #
+  DeprecatedConstants:
+    'NIL':
+      Alternative: 'nil'
+      DeprecatedVersion: '2.4'
+    'TRUE':
+      Alternative: 'true'
+      DeprecatedVersion: '2.4'
+    'FALSE':
+      Alternative: 'false'
+      DeprecatedVersion: '2.4'
+    'Random::DEFAULT':
+      Alternative: 'Random.new'
+      DeprecatedVersion: '3.0'
+
 Lint/DeprecatedOpenSSLConstant:
   Description: "Don't use algorithm constants for `OpenSSL::Cipher` and `OpenSSL::Digest`."
   Enabled: true
@@ -1674,6 +1702,11 @@ Lint/InterpolationCheck:
   VersionAdded: '0.50'
   VersionChanged: '0.87'
 
+Lint/LambdaWithoutLiteralBlock:
+  Description: 'Checks uses of lambda without a literal block.'
+  Enabled: pending
+  VersionAdded: '1.8'
+
 Lint/LiteralAsCondition:
   Description: 'Checks of literals used in conditions.'
   Enabled: true
@@ -1835,6 +1868,11 @@ Lint/RedundantCopEnableDirective:
   Description: Checks for rubocop:enable comments that can be removed.
   Enabled: true
   VersionAdded: '0.76'
+
+Lint/RedundantDirGlobSort:
+  Description: 'Checks for redundant `sort` method to `Dir.glob` and `Dir[]`.'
+  Enabled: pending
+  VersionAdded: '1.8'
 
 Lint/RedundantRequireStatement:
   Description: 'Checks for unnecessary `require` statement.'
@@ -2502,10 +2540,12 @@ Naming/VariableName:
   StyleGuide: '#snake-case-symbols-methods-vars'
   Enabled: true
   VersionAdded: '0.50'
+  VersionChanged: '1.8'
   EnforcedStyle: snake_case
   SupportedStyles:
     - snake_case
     - camelCase
+  AllowedIdentifiers: []
 
 Naming/VariableNumber:
   Description: 'Use the configured style when numbering symbols, methods and variables.'
@@ -3197,6 +3237,17 @@ Style/EndBlock:
   VersionAdded: '0.9'
   VersionChanged: '0.81'
 
+Style/EndlessMethod:
+  Description: 'Avoid the use of multi-lined endless method definitions.'
+  StyleGuide: '#endless-methods'
+  Enabled: pending
+  VersionAdded: '1.8'
+  EnforcedStyle: allow_single_line
+  SupportedStyles:
+    - allow_single_line
+    - allow_always
+    - disallow
+
 Style/EvalWithLocation:
   Description: 'Pass `__FILE__` and `__LINE__` to `eval` method, as they are used by backtraces.'
   Enabled: true
@@ -3220,9 +3271,8 @@ Style/ExplicitBlockArgument:
                   that just passes its arguments to another block.
   StyleGuide: '#block-argument'
   Enabled: true
-  # May change the yielding arity.
-  Safe: false
   VersionAdded: '0.89'
+  VersionChanged: '1.8'
 
 Style/ExponentialNotation:
   Description: 'When using exponential notation, favor a mantissa between 1 (inclusive) and 10 (exclusive).'
@@ -3726,7 +3776,8 @@ Style/MutableConstant:
   Description: 'Do not assign mutable objects to constants.'
   Enabled: true
   VersionAdded: '0.34'
-  VersionChanged: '0.65'
+  VersionChanged: '1.8'
+  SafeAutoCorrect: false
   EnforcedStyle: literals
   SupportedStyles:
     # literals: freeze literals assigned to constants
@@ -4330,7 +4381,7 @@ Style/SingleLineMethods:
   StyleGuide: '#no-single-line-methods'
   Enabled: true
   VersionAdded: '0.9'
-  VersionChanged: '1.7'
+  VersionChanged: '1.8'
   AllowIfMethodIsEmpty: true
 
 Style/SlicingWithRange:
