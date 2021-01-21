@@ -229,6 +229,8 @@ Lint/Debugger:
   Enabled: false
 Lint/DeprecatedClassMethods:
   Enabled: false
+Lint/DeprecatedConstants:
+  Enabled: false
 Lint/DeprecatedOpenSSLConstant:
   Enabled: false
 Lint/DisjunctiveAssignmentInConstructor:
@@ -295,6 +297,8 @@ Lint/IneffectiveAccessModifier:
   Enabled: false
 Lint/InterpolationCheck:
   Enabled: false
+Lint/LambdaWithoutLiteralBlock:
+  Enabled: false
 Lint/LiteralAsCondition:
   Enabled: false
 Lint/LiteralInInterpolation:
@@ -340,6 +344,8 @@ Lint/RandOne:
 Lint/RedundantCopDisableDirective:
   Enabled: false
 Lint/RedundantCopEnableDirective:
+  Enabled: false
+Lint/RedundantDirGlobSort:
   Enabled: false
 Lint/RedundantRequireStatement:
   Enabled: false
@@ -582,6 +588,8 @@ Style/EmptyLambdaParameter:
 Style/EmptyLiteral:
   Enabled: false
 Style/EmptyMethod:
+  Enabled: false
+Style/EndlessMethod:
   Enabled: false
 Style/Encoding:
   Enabled: false

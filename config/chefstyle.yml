@@ -687,6 +687,10 @@ Lint/RedundantWithIndex:
 Lint/DuplicateRequire:
   Enabled: true
 
+# detect assignment typos
+Lint/AmbiguousAssignment:
+  Enabled: true
+
 Chef/Ruby/Ruby27KeywordArgumentWarnings:
   Description: Pass options to shell_out helpers without the brackets to avoid Ruby 2.7 deprecation warnings.
   Enabled: true
