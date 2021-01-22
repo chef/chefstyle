@@ -1,16 +1,17 @@
 # chefstyle change log
 
-<!-- latest_release 1.5.10 -->
-## [v1.5.10](https://github.com/chef/chefstyle/tree/v1.5.10) (2021-01-21)
+<!-- latest_release 1.6.0 -->
+## [v1.6.0](https://github.com/chef/chefstyle/tree/v1.6.0) (2021-01-22)
 
 #### Merged Pull Requests
-- Update RuboCop to 1.8.1 [#122](https://github.com/chef/chefstyle/pull/122) ([tas50](https://github.com/tas50))
+- Add a cop for detecting legacy powershell methods [#123](https://github.com/chef/chefstyle/pull/123) ([tas50](https://github.com/tas50))
 <!-- latest_release -->
 
 <!-- release_rollup since=1.5.9 -->
 ### Changes not yet released to rubygems.org
 
 #### Merged Pull Requests
+- Add a cop for detecting legacy powershell methods [#123](https://github.com/chef/chefstyle/pull/123) ([tas50](https://github.com/tas50)) <!-- 1.6.0 -->
 - Update RuboCop to 1.8.1 [#122](https://github.com/chef/chefstyle/pull/122) ([tas50](https://github.com/tas50)) <!-- 1.5.10 -->
 <!-- release_rollup -->
 
