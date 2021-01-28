@@ -327,6 +327,10 @@ Lint/NonLocalExitFromIterator:
   Enabled: false
 Lint/NumberConversion:
   Enabled: false
+Lint/NumberedParameterAssignment:
+  Enabled: false
+Lint/OrAssignmentToConstant:
+  Enabled: false
 Lint/OrderedMagicComments:
   Enabled: false
 Lint/OutOfRangeRegexpRef:
@@ -391,6 +395,8 @@ Lint/StructNewOverride:
   Enabled: false
 Lint/SuppressedException:
   Enabled: false
+Lint/SymbolConversion:
+  Enabled: false
 Lint/Syntax:
   Enabled: false
 Lint/ToEnumArguments:
@@ -400,6 +406,8 @@ Lint/ToJSON:
 Lint/TopLevelReturnWithArgument:
   Enabled: false
 Lint/TrailingCommaInAttributeDeclaration:
+  Enabled: false
+Lint/TripleQuotes:
   Enabled: false
 Lint/UnderscorePrefixedVariableName:
   Enabled: false
@@ -642,6 +650,8 @@ Style/IfInsideElse:
 Style/IfUnlessModifier:
   Enabled: false
 Style/IfUnlessModifierOfIfUnless:
+  Enabled: false
+Style/IfWithBooleanLiteralBranches:
   Enabled: false
 Style/IfWithSemicolon:
   Enabled: false
