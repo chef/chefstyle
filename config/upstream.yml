@@ -1806,6 +1806,17 @@ Lint/NumberConversion:
     - Time
     - DateTime
 
+Lint/NumberedParameterAssignment:
+  Description: 'Checks for uses of numbered parameter assignment.'
+  Enabled: pending
+  VersionAdded: '1.9'
+
+Lint/OrAssignmentToConstant:
+  Description: 'Checks unintended or-assignment to constant.'
+  Enabled: pending
+  Safe: false
+  VersionAdded: '1.9'
+
 Lint/OrderedMagicComments:
   Description: 'Checks the proper ordering of magic comments and whether a magic comment is not placed before a shebang.'
   Enabled: true
@@ -2032,11 +2043,15 @@ Lint/SuppressedException:
   VersionAdded: '0.9'
   VersionChanged: '0.81'
 
+Lint/SymbolConversion:
+  Description: 'Checks for unnecessary symbol conversions.'
+  Enabled: pending
+  VersionAdded: '1.9'
+
 Lint/Syntax:
-  Description: 'Checks syntax error.'
+  Description: 'Checks for syntax errors.'
   Enabled: true
   VersionAdded: '0.9'
-
 
 Lint/ToEnumArguments:
   Description: 'This cop ensures that `to_enum`/`enum_for`, called for the current method, has correct arguments.'
@@ -2057,6 +2072,11 @@ Lint/TrailingCommaInAttributeDeclaration:
   Description: 'This cop checks for trailing commas in attribute declarations.'
   Enabled: true
   VersionAdded: '0.90'
+
+Lint/TripleQuotes:
+  Description: 'Checks for useless triple quote constructs.'
+  Enabled: pending
+  VersionAdded: '1.9'
 
 Lint/UnderscorePrefixedVariableName:
   Description: 'Do not use prefix `_` for a variable that is used.'
@@ -2689,7 +2709,8 @@ Style/AsciiComments:
   Enabled: true
   VersionAdded: '0.9'
   VersionChanged: '0.52'
-  AllowedChars: []
+  AllowedChars:
+    - ©
 
 Style/Attr:
   Description: 'Checks for uses of Module#attr.'
@@ -3120,6 +3141,8 @@ Style/DisableCopsWithinSourceCodeDirective:
                  Forbids disabling/enabling cops within source code.
   Enabled: false
   VersionAdded: '0.82'
+  VersionChanged: '1.9'
+  AllowedCops: []
 
 Style/DocumentDynamicEvalDefinition:
   Description: >-
@@ -3291,7 +3314,8 @@ Style/FloatDivision:
   Reference: 'https://blog.rubystyle.guide/ruby/2019/06/21/float-division.html'
   Enabled: true
   VersionAdded: '0.72'
-  VersionChanged: '1.6'
+  VersionChanged: '1.9'
+  Safe: false
   EnforcedStyle: single_coerce
   SupportedStyles:
     - left_coerce
@@ -3339,6 +3363,7 @@ Style/FormatStringToken:
   MaxUnannotatedPlaceholdersAllowed: 1
   VersionAdded: '0.49'
   VersionChanged: '1.0'
+  IgnoredMethods: []
 
 Style/FrozenStringLiteralComment:
   Description: >-
@@ -3491,6 +3516,11 @@ Style/IfUnlessModifierOfIfUnless:
   Enabled: true
   VersionAdded: '0.39'
   VersionChanged: '0.87'
+
+Style/IfWithBooleanLiteralBranches:
+  Description: 'Checks for redundant `if` with boolean literal branches.'
+  Enabled: pending
+  VersionAdded: '1.9'
 
 Style/IfWithSemicolon:
   Description: 'Do not use if x; .... Use the ternary operator instead.'
