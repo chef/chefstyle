@@ -710,6 +710,16 @@ Chef/Ruby/GemspecRequireRubygems:
   Include:
     - '**/*.gemspec'
 
+Chef/Ruby/GemspecLicense:
+  Description: 'All gemspec files should define their license.'
+  Enabled: true
+  VersionAdded: '1.7.0'
+  Include:
+    - '**/*.gemspec'
+  Exclude:
+    - '/**/spec/**/*'
+    - '/**/test/**/*'
+
 Chef/Ruby/RequireNetHttps:
   Description: net/https is deprecated and just includes net/http and openssl. We should include those directly instead
   Enabled: true
