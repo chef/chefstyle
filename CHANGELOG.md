@@ -1,16 +1,17 @@
 # chefstyle change log
 
-<!-- latest_release 1.7.0 -->
-## [v1.7.0](https://github.com/chef/chefstyle/tree/v1.7.0) (2021-02-15)
+<!-- latest_release 1.7.1 -->
+## [v1.7.1](https://github.com/chef/chefstyle/tree/v1.7.1) (2021-02-15)
 
 #### Merged Pull Requests
-- Add new Chef/Ruby/GemspecLicense cop [#127](https://github.com/chef/chefstyle/pull/127) ([tas50](https://github.com/tas50))
+- Update to RuboCop 1.10 [#128](https://github.com/chef/chefstyle/pull/128) ([tas50](https://github.com/tas50))
 <!-- latest_release -->
 
 <!-- release_rollup since=1.6.2 -->
 ### Changes not yet released to rubygems.org
 
 #### Merged Pull Requests
+- Update to RuboCop 1.10 [#128](https://github.com/chef/chefstyle/pull/128) ([tas50](https://github.com/tas50)) <!-- 1.7.1 -->
 - Add new Chef/Ruby/GemspecLicense cop [#127](https://github.com/chef/chefstyle/pull/127) ([tas50](https://github.com/tas50)) <!-- 1.7.0 -->
 <!-- release_rollup -->
 
