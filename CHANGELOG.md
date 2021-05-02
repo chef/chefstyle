@@ -1,9 +1,17 @@
 # chefstyle change log
 
-<!-- latest_release -->
+<!-- latest_release 2.0.0 -->
+## [v2.0.0](https://github.com/chef/chefstyle/tree/v2.0.0) (2021-05-02)
+
+#### Merged Pull Requests
+- Update to RuboCop 1.13 and remove Ruby 2.4 support [#134](https://github.com/chef/chefstyle/pull/134) ([tas50](https://github.com/tas50))
 <!-- latest_release -->
 
-<!-- release_rollup -->
+<!-- release_rollup since=1.7.5 -->
+### Changes not yet released to rubygems.org
+
+#### Merged Pull Requests
+- Update to RuboCop 1.13 and remove Ruby 2.4 support [#134](https://github.com/chef/chefstyle/pull/134) ([tas50](https://github.com/tas50)) <!-- 2.0.0 -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
