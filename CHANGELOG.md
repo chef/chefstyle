@@ -1,16 +1,17 @@
 # chefstyle change log
 
-<!-- latest_release 2.0.2 -->
-## [v2.0.2](https://github.com/chef/chefstyle/tree/v2.0.2) (2021-05-05)
+<!-- latest_release 2.0.3 -->
+## [v2.0.3](https://github.com/chef/chefstyle/tree/v2.0.3) (2021-05-05)
 
 #### Merged Pull Requests
-- Update RuboCop to 1.14 [#136](https://github.com/chef/chefstyle/pull/136) ([tas50](https://github.com/tas50))
+- Make sure the gem requires Ruby 2.5+ [#137](https://github.com/chef/chefstyle/pull/137) ([tas50](https://github.com/tas50))
 <!-- latest_release -->
 
 <!-- release_rollup since=1.7.5 -->
 ### Changes not yet released to rubygems.org
 
 #### Merged Pull Requests
+- Make sure the gem requires Ruby 2.5+ [#137](https://github.com/chef/chefstyle/pull/137) ([tas50](https://github.com/tas50)) <!-- 2.0.3 -->
 - Update RuboCop to 1.14 [#136](https://github.com/chef/chefstyle/pull/136) ([tas50](https://github.com/tas50)) <!-- 2.0.2 -->
 - Upgrade to GitHub-native Dependabot [#135](https://github.com/chef/chefstyle/pull/135) ([dependabot-preview[bot]](https://github.com/dependabot-preview[bot])) <!-- 2.0.1 -->
 - Update to RuboCop 1.13 and remove Ruby 2.4 support [#134](https://github.com/chef/chefstyle/pull/134) ([tas50](https://github.com/tas50)) <!-- 2.0.0 -->
