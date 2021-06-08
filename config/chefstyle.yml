@@ -1,6 +1,8 @@
 AllCops:
   TargetRubyVersion: 2.5
   SuggestExtensions: false
+  Exclude:
+  - vendor/**/*.rb # we don't want to scan anything in a vendor dir
 
 #
 # Bundler
