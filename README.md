@@ -2,13 +2,13 @@
 
 [![Gem Version](https://badge.fury.io/rb/chefstyle.svg)](https://badge.fury.io/rb/chefstyle)
 
-**Umbrella Project**: [Chef Foundation](https://github.com/chef/chef-oss-practices/blob/master/projects/chef-foundation.md)
+**Umbrella Project**: [Chef Foundation](https://github.com/chef/chef-oss-practices/blob/main/projects/chef-foundation.md)
 
-**Project State**: [Active](https://github.com/chef/chef-oss-practices/blob/master/repo-management/repo-states.md#active)
+**Project State**: [Active](https://github.com/chef/chef-oss-practices/blob/main/repo-management/repo-states.md#active)
 
-**Issues [Response Time Maximum](https://github.com/chef/chef-oss-practices/blob/master/repo-management/repo-states.md)**: 14 days
+**Issues [Response Time Maximum](https://github.com/chef/chef-oss-practices/blob/main/repo-management/repo-states.md)**: 14 days
 
-**Pull Request [Response Time Maximum](https://github.com/chef/chef-oss-practices/blob/master/repo-management/repo-states.md)**: 14 days
+**Pull Request [Response Time Maximum](https://github.com/chef/chef-oss-practices/blob/main/repo-management/repo-states.md)**: 14 days
 
 This is an internal style guide for chef ruby projects (chef-client,
 ohai, mixlib-shellout, mixlib-config, etc).
