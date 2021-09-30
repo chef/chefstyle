@@ -9,6 +9,10 @@ AllCops:
 Bundler/DuplicatedGem:
   Enabled: false
 
+Bundler/InsecureProtocolSource:
+  Enabled: true
+  AllowHttpProtocol: false
+
 #
 # Lint
 #
