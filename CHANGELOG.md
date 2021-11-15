@@ -1,9 +1,17 @@
 # chefstyle change log
 
-<!-- latest_release -->
+<!-- latest_release 2.1.3 -->
+## [v2.1.3](https://github.com/chef/chefstyle/tree/v2.1.3) (2021-11-15)
+
+#### Merged Pull Requests
+- Update RuboCop to 1.23 [#152](https://github.com/chef/chefstyle/pull/152) ([tas50](https://github.com/tas50))
 <!-- latest_release -->
 
-<!-- release_rollup -->
+<!-- release_rollup since=2.1.2 -->
+### Changes not yet released to rubygems.org
+
+#### Merged Pull Requests
+- Update RuboCop to 1.23 [#152](https://github.com/chef/chefstyle/pull/152) ([tas50](https://github.com/tas50)) <!-- 2.1.3 -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
