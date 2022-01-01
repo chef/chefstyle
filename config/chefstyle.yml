@@ -131,6 +131,18 @@ Lint/Void:
 Layout/CommentIndentation:
   Enabled: true
 
+# remove pointless code
+Lint/UselessRuby2Keywords:
+  Enabled: true
+
+# remove pointless requires
+Lint/RequireRelativeSelfPath:
+  Enabled: true
+
+# catch breaking changes in ruby
+Lint/DeprecatedConstants:
+  Enabled: true
+
 #
 # Disabled Lint
 #
@@ -186,10 +198,17 @@ Metrics/ParameterLists:
 Metrics/PerceivedComplexity:
   Enabled: false
 
-
 #
 # Style/Naming/Layout
 #
+
+# simplify .map{}.to_h to just .to_h{}
+Style/MapToHash:
+  Enabled: true
+
+# simplify .select { |x| x.match? /regexp/ } to just .grep(/regexp/) which is faster
+Style/SelectByRegexp:
+  Enabled: true
 
 Layout/AccessModifierIndentation:
   Enabled: true
