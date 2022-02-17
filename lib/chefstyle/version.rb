@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 module Chefstyle
-  VERSION = "2.2.1"
+  VERSION = "2.2.2"
   RUBOCOP_VERSION = "1.25.1"
 end
