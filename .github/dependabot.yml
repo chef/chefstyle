@@ -1,6 +1,7 @@
 version: 2
 updates:
 - package-ecosystem: bundler
+  target-branch: "main"
   directory: "/"
   schedule:
     interval: daily
