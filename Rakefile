@@ -1,25 +1,6 @@
 # frozen_string_literal: true
 require "bundler/gem_tasks"
 
-upstream = Gem::Specification.find_by_name("rubocop")
-
-desc "Vendor rubocop-#{upstream.version} configuration into gem"
-task :vendor do
-  src = Pathname.new(upstream.gem_dir).join("config")
-  dst = Pathname.new(__FILE__).dirname.join("config")
-
-  mkdir_p dst
-  cp(src.join("default.yml"), dst.join("upstream.yml"))
-
-  require "rubocop"
-  require "yaml" unless defined?(YAML)
-  cfg = RuboCop::Cop::Cop.all.each_with_object({}) { |cop, acc| acc[cop.cop_name] = { "Enabled" => false } unless cop.cop_name.start_with?("Chef") }
-  File.open(dst.join("disable_all.yml"), "w") { |fh| fh.write YAML.dump(cfg) }
-
-  sh %{git add #{dst}/{upstream,disable_all}.yml}
-  sh %{git commit -m "Vendor rubocop-#{upstream.version} upstream configuration." -m "Obvious fix; these changes are the result of automation not creative thinking."}
-end
-
 require "chefstyle"
 require "rubocop/rake_task"
 RuboCop::RakeTask.new(:style) do |task|
