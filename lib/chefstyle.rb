@@ -5,26 +5,12 @@ require_relative "chefstyle/version"
 gem "rubocop", "= #{Chefstyle::RUBOCOP_VERSION}"
 require "rubocop"
 
-module RuboCop
-  class ConfigLoader
-    RUBOCOP_HOME.gsub!(
-      /^.*$/,
-      File.realpath(File.join(__dir__, ".."))
-    )
-
-    DEFAULT_FILE.gsub!(
-      /^.*$/,
-      File.join(RUBOCOP_HOME, "config", "default.yml")
-    )
-  end
-end
-
 # Chefstyle patches the RuboCop tool to set a new default configuration that
 # is vendored in the Chefstyle codebase.
 module Chefstyle
   # @return [String] the absolute path to the main RuboCop configuration YAML file
   def self.config
-    RuboCop::ConfigLoader::DEFAULT_FILE
+    File.realpath(File.join(__dir__, "..", "config", "default.yml"))
   end
 end
 
@@ -36,3 +22,5 @@ Dir.glob(__dir__ + "/rubocop/cop/chef/**/*.rb") do |file|
 
   require_relative file # not actually relative but require_relative is faster
 end
+
+RuboCop::ConfigLoader.default_configuration = RuboCop::ConfigLoader.configuration_from_file(Chefstyle.config)

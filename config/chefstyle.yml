@@ -1,5 +1,7 @@
 AllCops:
   TargetRubyVersion: 2.5
+  NewCops: disable
+  DisabledByDefault: true
   SuggestExtensions: false
 
 #
@@ -43,8 +45,8 @@ Lint/DuplicateCaseCondition:
   Enabled: true
 Lint/DuplicateMethods:
   Enabled: true
-Lint/DuplicatedKey:
-  Enabled: true
+# Lint/DuplicatedKey: TODO broken with rubocop 1.25.1 move
+#   Enabled: true
 Lint/EachWithObjectArgument:
   Enabled: true
 Lint/ElseLayout:
@@ -60,8 +62,8 @@ Lint/EmptyWhen:
 Layout/EndAlignment:
   Enabled: true
   AutoCorrect: true
-Lint/EndInMethod:
-  Enabled: true
+# Lint/EndInMethod: TODO broken with rubocop 1.25.1 move
+#  Enabled: true
 Lint/EnsureReturn:
   Enabled: true
 Lint/FloatOutOfRange:
@@ -80,8 +82,8 @@ Lint/LiteralInInterpolation:
   Enabled: true
 Lint/Loop:
   Enabled: true
-Lint/MultipleCompare:
-  Enabled: true
+# Lint/MultipleCompare: TODO broken with rubocop 1.25.1 move
+#  Enabled: true
 Lint/NestedMethodDefinition:
   Enabled: true
 Lint/NextWithoutAccumulator:
@@ -104,14 +106,14 @@ Lint/ShadowedException:
   Enabled: true
 Lint/ShadowingOuterLocalVariable:
   Enabled: true
-Lint/StringConversionInInterpolation:
-  Enabled: true
+# Lint/StringConversionInInterpolation: TODO broken with rubocop 1.25.1 move
+#  Enabled: true
 Lint/UnderscorePrefixedVariableName:
   Enabled: true
 Lint/UnifiedInteger:
   Enabled: true
-Lint/UnneededSplatExpansion:
-  Enabled: true
+# Lint/UnneededSplatExpansion: TODO broken with rubocop 1.25.1 move
+#   Enabled: true
 Lint/UnreachableCode:
   Enabled: true
 Lint/UriEscapeUnescape:
@@ -120,8 +122,8 @@ Lint/UselessAccessModifier:
   Enabled: true
 Lint/UselessAssignment:
   Enabled: true
-Lint/UselessComparison:
-  Enabled: true
+# Lint/UselessComparison: TODO broken with rubocop 1.25.1 move
+#   Enabled: true
 Lint/UselessElseWithoutRescue:
   Enabled: true
 Lint/UselessSetterCall:
@@ -142,14 +144,14 @@ Lint/UnusedMethodArgument:
   Enabled: false
 
 # We ignore Exceptions a lot
-Lint/HandleExceptions:
+Lint/SuppressedException:
   Enabled: false
 # We also decorate Exceptions a lot
 Lint/RescueException:
   Enabled: false
 
 # disabling this will make it easier to stage chefstyle rollouts
-Lint/UnneededCopDisableDirective:
+Lint/RedundantCopDisableDirective:
   Enabled: false
 
 #
@@ -193,17 +195,17 @@ Metrics/PerceivedComplexity:
 
 Layout/AccessModifierIndentation:
   Enabled: true
-Layout/AlignArguments:
-  Enabled: true
-  EnforcedStyle: with_fixed_indentation
-Layout/AlignParameters:
-  Enabled: true
-  EnforcedStyle: with_fixed_indentation
+# Layout/AlignArguments: TODO broken with rubocop 1.25.1 move
+#   Enabled: true
+#   EnforcedStyle: with_fixed_indentation
+# Layout/AlignParameters: TODO broken with rubocop 1.25.1 move
+#   Enabled: true
+#   EnforcedStyle: with_fixed_indentation
 # the "ignore_implict" is here for keyword args in method calls which are
 # "implicit" hashes, and those should not be treated like normal hashes
-Layout/AlignHash:
-  Enabled: true
-  EnforcedLastArgumentHashStyle: ignore_implicit
+# Layout/AlignHash: TODO broken with rubocop 1.25.1 move
+#   Enabled: true
+#   EnforcedLastArgumentHashStyle: ignore_implicit
 Style/AndOr:
   Enabled: true
 Style/ArrayJoin:
@@ -280,13 +282,13 @@ Style/IfUnlessModifierOfIfUnless:
   Enabled: true
 Style/IfWithSemicolon:
   Enabled: true
-Layout/IndentAssignment:
-  Enabled: true
-Layout/IndentFirstArgument:
-  EnforcedStyle: consistent
-  Enabled: true
-Layout/IndentHeredoc:
-  Enabled: true
+# Layout/IndentAssignment: TODO broken with rubocop 1.25.1 move
+#   Enabled: true
+# Layout/IndentFirstArgument: TODO broken with rubocop 1.25.1 move
+#   EnforcedStyle: consistent
+#   Enabled: true
+# Layout/IndentHeredoc: TODO broken with rubocop 1.25.1 move
+#   Enabled: true
 Layout/IndentationConsistency:
   Enabled: true
 Layout/IndentationWidth:
@@ -454,8 +456,8 @@ Style/SymbolProc:
   Enabled: true
 Layout/IndentationStyle:
   Enabled: true
-Layout/TrailingBlankLines:
-  Enabled: true
+# Layout/TrailingBlankLines: TODO broken with rubocop 1.25.1 move
+#   Enabled: true
 Style/TrailingCommaInArguments:
   Enabled: true
 # rubocop's default gets this completely backwards
@@ -469,9 +471,9 @@ Style/TrailingUnderscoreVariable:
   Enabled: true
 Layout/TrailingWhitespace:
   Enabled: true
-Style/UnneededCapitalW:
-  Enabled: true
-Style/UnneededInterpolation:
+# Style/UnneededCapitalW: TODO broken with rubocop 1.25.1 move
+#   Enabled: true
+Style/RedundantInterpolation:
   Enabled: false # buggy: https://github.com/rubocop-hq/rubocop/issues/6099
 #Style/UnneededPercentQ:  # would like to enable this one but its buggy as of 0.35.1
 #  Enabled: true
@@ -540,7 +542,7 @@ Style/IfUnlessModifier:
   Enabled: false
 
 # Dan is -1 on this one: https://github.com/chef/chef/pull/4526#issuecomment-179950045
-Layout/IndentFirstHashElement:
+Layout/FirstHashElementIndentation:
   Enabled: false
 
 # This is overly aggressive and autofix broke stuff, would need to exclude classes
@@ -610,15 +612,11 @@ Naming/HeredocDelimiterNaming:
   Enabled: false
 Naming/PredicateName:
   Enabled: false
-Naming/UncommunicativeMethodParamName:
+Naming/MethodParameterName:
   Enabled: false
 Naming/MemoizedInstanceVariableName:
   Enabled: false
 Naming/VariableNumber:
-  Enabled: false
-
-# This breaks all kinds of specs in chef (i don't think it will ever quite work correctly)
-Style/BracesAroundHashParameters:
   Enabled: false
 
 # We almost never use format strings but this cop triggers on any string with "%{whatever}" in it and is 99% false positives
