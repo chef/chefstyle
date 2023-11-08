@@ -1,25 +1,22 @@
 # chefstyle change log
 
-<!-- latest_release 2.2.3 -->
-## [v2.2.3](https://github.com/chef/chefstyle/tree/v2.2.3) (2023-10-31)
-
-#### Merged Pull Requests
-- Simplify setting default cops [#157](https://github.com/chef/chefstyle/pull/157) ([dafyddcrosby](https://github.com/dafyddcrosby))
+<!-- latest_release -->
 <!-- latest_release -->
 
-<!-- release_rollup since=2.2.2 -->
-### Changes not yet released to rubygems.org
-
-#### Merged Pull Requests
-- Simplify setting default cops [#157](https://github.com/chef/chefstyle/pull/157) ([dafyddcrosby](https://github.com/dafyddcrosby)) <!-- 2.2.3 -->
+<!-- release_rollup -->
 <!-- release_rollup -->
 
 <!-- latest_stable_release -->
+## [v2.2.3](https://github.com/chef/chefstyle/tree/v2.2.3) (2023-11-08)
+
+#### Merged Pull Requests
+- Simplify setting default cops [#157](https://github.com/chef/chefstyle/pull/157) ([dafyddcrosby](https://github.com/dafyddcrosby))
+<!-- latest_stable_release -->
+
 ## [v2.2.2](https://github.com/chef/chefstyle/tree/v2.2.2) (2022-02-17)
 
 #### Merged Pull Requests
 - Vendor rubocop-1.25.1 upstream configuration. [#156](https://github.com/chef/chefstyle/pull/156) ([tas50](https://github.com/tas50))
-<!-- latest_stable_release -->
 
 ## [v2.2.1](https://github.com/chef/chefstyle/tree/v2.2.1) (2022-01-18)
 
