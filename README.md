@@ -4,11 +4,11 @@
 
 **Umbrella Project**: [Chef Foundation](https://github.com/chef/chef-oss-practices/blob/main/projects/chef-foundation.md)
 
-**Project State**: [Active](https://github.com/chef/chef-oss-practices/blob/main/repo-management/repo-states.md#active)
+**Project State**: [Deprecated](https://github.com/chef/chef-oss-practices/blob/main/repo-management/repo-states.md#deprecated)
 
-**Issues [Response Time Maximum](https://github.com/chef/chef-oss-practices/blob/main/repo-management/repo-states.md)**: 14 days
-
-**Pull Request [Response Time Maximum](https://github.com/chef/chef-oss-practices/blob/main/repo-management/repo-states.md)**: 14 days
+This project has been merged into
+[Cookstyle](https://github.com/chef/cookstyle) as of Cookstyle 7.32.7, where it
+can be triggered by running `cookstyle --chefstyle`.
 
 This is an internal style guide for chef ruby projects (chef-client,
 ohai, mixlib-shellout, mixlib-config, etc).
